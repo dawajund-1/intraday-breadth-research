@@ -163,7 +163,7 @@ function render(d) {
       body += `<tr>
         <td>${lab}</td>
         <td class="${cls(m.mean_net_per_trade)}">${pct(m.mean_net_per_trade)}</td>
-        <td>${pct(m.win_rate ? m.win_rate : 0).replace("%","")}%</td>
+        <td>${m.win_rate === null ? "—" : (m.win_rate*100).toFixed(1) + "%"}</td>
         <td>${pct(bs.ci_lo)} … ${pct(bs.ci_hi)}</td>
         <td>${ctl.pct === null ? "—" : ctl.pct.toFixed(1)}</td>
         <td>${ctl.p === null ? "—" : ctl.p.toFixed(4)}</td>
