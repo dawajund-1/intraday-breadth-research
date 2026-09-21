@@ -1,0 +1,167 @@
+{
+ "generated_utc": "2026-09-21T23:44:22Z",
+ "universe_size": 150,
+ "universe_criteria": {
+  "listing": "US common stock, NYSE/NASDAQ, one share class per issuer",
+  "history": "continuous daily bars covering 2010-01-01..2017-12-31 (>= 1912 bars, first bar on/before 2010-01-08)",
+  "min_median_close_usd": 5.0,
+  "min_median_dollar_volume_usd": 50000000.0,
+  "ranking": "median training-period dollar volume, descending",
+  "top_n": 150,
+  "measured_on": "TRAINING PERIOD ONLY (2010-01-01..2017-12-31)"
+ },
+ "rule": {
+  "indicator": "Wilder RSI(2) on daily closes",
+  "entry": "RSI < 30",
+  "exit": "RSI > 70",
+  "execution": "next session close (signal on D, fill on D+1)",
+  "optimization": "none - all parameters frozen in advance"
+ },
+ "holm_tests": 6,
+ "live_tracker_trips_per_year": 110,
+ "splits": {
+  "train": {
+   "range": [
+    "2010-01-01",
+    "2017-12-31"
+   ],
+   "trades": 26710,
+   "years": 7.98,
+   "trades_per_year": 3345.6,
+   "distinct_entry_dates": 1875,
+   "median_hold_sessions": 4,
+   "tickers_traded": 150,
+   "costs": {
+    "0.01%": {
+     "mean_net_per_trade": 0.004972,
+     "median_net_per_trade": 0.007124,
+     "win_rate": 0.6415,
+     "total_net_sum": 132.7953,
+     "bootstrap": {
+      "mean": 0.004972,
+      "ci_lo": 0.003565,
+      "ci_hi": 0.006306,
+      "p_gt_zero": 0.0
+     },
+     "control": {
+      "real": 0.004972,
+      "null_mean": 0.003441,
+      "pct": 99.6,
+      "p": 0.004,
+      "p_holm": 0.024
+     }
+    },
+    "0.05%": {
+     "mean_net_per_trade": 0.004572,
+     "median_net_per_trade": 0.006724,
+     "win_rate": 0.6337,
+     "total_net_sum": 122.1113,
+     "bootstrap": {
+      "mean": 0.004572,
+      "ci_lo": 0.003165,
+      "ci_hi": 0.005906,
+      "p_gt_zero": 0.0
+     },
+     "control": {
+      "real": 0.004572,
+      "null_mean": 0.003041,
+      "pct": 99.6,
+      "p": 0.004,
+      "p_holm": 0.024
+     }
+    },
+    "0.10%": {
+     "mean_net_per_trade": 0.004072,
+     "median_net_per_trade": 0.006224,
+     "win_rate": 0.6238,
+     "total_net_sum": 108.7563,
+     "bootstrap": {
+      "mean": 0.004072,
+      "ci_lo": 0.002665,
+      "ci_hi": 0.005406,
+      "p_gt_zero": 0.0
+     },
+     "control": {
+      "real": 0.004072,
+      "null_mean": 0.002541,
+      "pct": 99.6,
+      "p": 0.004,
+      "p_holm": 0.024
+     }
+    }
+   }
+  },
+  "validation": {
+   "range": [
+    "2018-01-01",
+    "2021-12-31"
+   ],
+   "trades": 13249,
+   "years": 3.99,
+   "trades_per_year": 3316.8,
+   "distinct_entry_dates": 947,
+   "median_hold_sessions": 4,
+   "tickers_traded": 150,
+   "costs": {
+    "0.01%": {
+     "mean_net_per_trade": 0.003709,
+     "median_net_per_trade": 0.008464,
+     "win_rate": 0.6434,
+     "total_net_sum": 49.1394,
+     "bootstrap": {
+      "mean": 0.003709,
+      "ci_lo": 0.00083,
+      "ci_hi": 0.006305,
+      "p_gt_zero": 0.005
+     },
+     "control": {
+      "real": 0.003709,
+      "null_mean": 0.003367,
+      "pct": 61.0,
+      "p": 0.39,
+      "p_holm": 1.0
+     }
+    },
+    "0.05%": {
+     "mean_net_per_trade": 0.003309,
+     "median_net_per_trade": 0.008064,
+     "win_rate": 0.6353,
+     "total_net_sum": 43.8398,
+     "bootstrap": {
+      "mean": 0.003309,
+      "ci_lo": 0.00043,
+      "ci_hi": 0.005905,
+      "p_gt_zero": 0.009
+     },
+     "control": {
+      "real": 0.003309,
+      "null_mean": 0.002967,
+      "pct": 61.0,
+      "p": 0.39,
+      "p_holm": 1.0
+     }
+    },
+    "0.10%": {
+     "mean_net_per_trade": 0.002809,
+     "median_net_per_trade": 0.007564,
+     "win_rate": 0.6271,
+     "total_net_sum": 37.2153,
+     "bootstrap": {
+      "mean": 0.002809,
+      "ci_lo": -7e-05,
+      "ci_hi": 0.005405,
+      "p_gt_zero": 0.026
+     },
+     "control": {
+      "real": 0.002809,
+      "null_mean": 0.002467,
+      "pct": 61.0,
+      "p": 0.39,
+      "p_holm": 1.0
+     }
+    }
+   }
+  }
+ },
+ "holdout_examined": false
+}
