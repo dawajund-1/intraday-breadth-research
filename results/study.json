@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-09-21T23:44:22Z",
+ "generated_utc": "2026-09-21T23:48:11Z",
  "universe_size": 150,
  "universe_criteria": {
   "listing": "US common stock, NYSE/NASDAQ, one share class per issuer",
@@ -17,7 +17,7 @@
   "execution": "next session close (signal on D, fill on D+1)",
   "optimization": "none - all parameters frozen in advance"
  },
- "holm_tests": 6,
+ "holm_tests": 9,
  "live_tracker_trips_per_year": 110,
  "splits": {
   "train": {
@@ -48,7 +48,7 @@
       "null_mean": 0.003441,
       "pct": 99.6,
       "p": 0.004,
-      "p_holm": 0.024
+      "p_holm": 0.036
      }
     },
     "0.05%": {
@@ -67,7 +67,7 @@
       "null_mean": 0.003041,
       "pct": 99.6,
       "p": 0.004,
-      "p_holm": 0.024
+      "p_holm": 0.036
      }
     },
     "0.10%": {
@@ -86,7 +86,7 @@
       "null_mean": 0.002541,
       "pct": 99.6,
       "p": 0.004,
-      "p_holm": 0.024
+      "p_holm": 0.036
      }
     }
    }
@@ -161,7 +161,78 @@
      }
     }
    }
+  },
+  "holdout": {
+   "range": [
+    "2022-01-01",
+    "2099-12-31"
+   ],
+   "trades": 15735,
+   "years": 4.71,
+   "trades_per_year": 3343.3,
+   "distinct_entry_dates": 1131,
+   "median_hold_sessions": 4,
+   "tickers_traded": 150,
+   "costs": {
+    "0.01%": {
+     "mean_net_per_trade": 0.00364,
+     "median_net_per_trade": 0.007646,
+     "win_rate": 0.6234,
+     "total_net_sum": 57.2805,
+     "bootstrap": {
+      "mean": 0.00364,
+      "ci_lo": 0.001828,
+      "ci_hi": 0.005546,
+      "p_gt_zero": 0.0
+     },
+     "control": {
+      "real": 0.00364,
+      "null_mean": 0.002516,
+      "pct": 90.2,
+      "p": 0.098,
+      "p_holm": 0.588
+     }
+    },
+    "0.05%": {
+     "mean_net_per_trade": 0.00324,
+     "median_net_per_trade": 0.007246,
+     "win_rate": 0.6181,
+     "total_net_sum": 50.9865,
+     "bootstrap": {
+      "mean": 0.00324,
+      "ci_lo": 0.001428,
+      "ci_hi": 0.005146,
+      "p_gt_zero": 0.001
+     },
+     "control": {
+      "real": 0.00324,
+      "null_mean": 0.002116,
+      "pct": 90.2,
+      "p": 0.098,
+      "p_holm": 0.588
+     }
+    },
+    "0.10%": {
+     "mean_net_per_trade": 0.00274,
+     "median_net_per_trade": 0.006746,
+     "win_rate": 0.6104,
+     "total_net_sum": 43.119,
+     "bootstrap": {
+      "mean": 0.00274,
+      "ci_lo": 0.000928,
+      "ci_hi": 0.004646,
+      "p_gt_zero": 0.002
+     },
+     "control": {
+      "real": 0.00274,
+      "null_mean": 0.001616,
+      "pct": 90.2,
+      "p": 0.098,
+      "p_holm": 0.588
+     }
+    }
+   }
   }
  },
- "holdout_examined": false
+ "holdout_examined": true
 }
