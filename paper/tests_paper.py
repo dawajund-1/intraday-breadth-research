@@ -276,6 +276,24 @@ eq(mo[0]["net_pl_sar"], 1.0, "September nets +1.0")
 eq(mo[1]["net_pl_sar"], 3.0, "October nets +3.0")
 eq(rollup([], [], "week"), [], "an empty ledger yields no rows, not invented ones")
 
+print("\n=== Shipped config is internally consistent ===")
+# A config whose slots x target size exceeds 100% cannot deploy its own capital:
+# the last slots would silently never fill. Guard the shipped file, not a fixture.
+_cfg = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                   "config.json"), encoding="utf-8"))
+_cm = _cfg["capital_model"]
+_deploy = _cm["max_concurrent_positions"] * _cm["target_position_pct"]
+ok(abs(_deploy - 1.0) < 1e-9,
+   "slots x target size deploys exactly 100%% of the account (got %.4f)" % _deploy)
+ok(_cm["leverage"] is False and _cm["margin"] is False and _cm["shorting"] is False,
+   "leverage, margin and shorting are all off in the shipped config")
+eq(_cfg["account"]["initial_capital"], 100, "shipped capital is 100")
+eq(_cfg["account"]["currency"], "SAR", "shipped currency is SAR")
+ok(_cfg["account"]["fx"]["locked_utc"] is not None, "shipped FX rate is locked")
+eq(_cfg["strategy"]["entry_below"], 30, "entry threshold is still 30")
+eq(_cfg["strategy"]["exit_above"], 70, "exit threshold is still 70")
+ok(_cfg["strategy"]["frozen"] is True, "strategy is still marked frozen")
+
 print("\n=== No real-money or notification surface ===")
 src = ""
 for fn in ("paper_engine.py", "run_paper.py", "rollups.py"):

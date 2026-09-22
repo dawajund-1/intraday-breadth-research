@@ -10,13 +10,15 @@
   }
  },
  "capital_model": {
-  "max_concurrent_positions": 10,
-  "target_position_pct": 0.1,
+  "max_concurrent_positions": 25,
+  "target_position_pct": 0.04,
   "leverage": false,
   "margin": false,
   "shorting": false,
   "fractional_shares": true,
-  "fractional_note": "Allowed solely because 100 SAR (~27 USD) cannot buy one share of most US names. Not a claim that fractional execution is available anywhere."
+  "fractional_note": "Allowed solely because 100 SAR (~27 USD) cannot buy one share of most US names. Not a claim that fractional execution is available anywhere.",
+  "sizing_note": "25 slots at 4% of equity each fully deploys the account. Raised from 10 slots / 10% on 2026-09-22 to reach ~10x the live tracker's trade count. MEASURED over the 2022-2026 holdout, replaying the unchanged rule with only the slot count varied: 10 slots = 442 round trips/yr (4.0x), 25 slots = 1097 (10.0x), 50 slots = 2063 (18.8x). The live tracker does 110/yr. This is a capital-model parameter, not a strategy parameter - the rule, thresholds, universe and execution are untouched.",
+  "not_an_edge_note": "More trades is more SAMPLE, not more edge. The holdout found this rule indistinguishable from random entry, so a higher trade count accumulates out-of-sample evidence faster; it does not create a profit source. Cost drag is ~2.2% of equity per year at either slot count, because capital turnover is what sets it."
  },
  "costs": {
   "round_trip_pct": 0.0005,
