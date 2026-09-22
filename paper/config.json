@@ -1,0 +1,48 @@
+{
+ "_status": "RESEARCH ONLY. This strategy failed its holdout validation (see PREREGISTRATION.md and the NOT GENERALIZED verdict). The 100 SAR below is hypothetical and is not real, allocated, invested, validated or investable capital.",
+ "account": {
+  "initial_capital": 100,
+  "currency": "SAR",
+  "fx": {
+   "sar_per_usd": 3.75,
+   "locked_utc": "2026-09-22T12:03:29Z",
+   "note": "Locked at initialization and never re-read from a live feed. A paper result can therefore never move because the exchange rate moved. Changing this value invalidates the experiment."
+  }
+ },
+ "capital_model": {
+  "max_concurrent_positions": 10,
+  "target_position_pct": 0.1,
+  "leverage": false,
+  "margin": false,
+  "shorting": false,
+  "fractional_shares": true,
+  "fractional_note": "Allowed solely because 100 SAR (~27 USD) cannot buy one share of most US names. Not a claim that fractional execution is available anywhere."
+ },
+ "costs": {
+  "round_trip_pct": 0.0005,
+  "per_side_pct": 0.00025,
+  "note": "0.05% round trip, charged as 0.025% on entry and 0.025% on exit. This is the 'base' scenario pre-registered for the study."
+ },
+ "purification": {
+  "rate": 0.1,
+  "basis": "realized net paper profit only; never on a loss, never on unrealized marks"
+ },
+ "strategy": {
+  "frozen": true,
+  "indicator": "Wilder RSI(2) on daily closes",
+  "entry_below": 30,
+  "exit_above": 70,
+  "execution": "signal on completed bar D, fill at the next eligible completed bar's close",
+  "note": "Identical to the pre-registered rule. Not tuned, not re-fitted, and not to be varied."
+ },
+ "schedule": {
+  "proposed_cron_utc": "0 22 * * 1-5",
+  "note": "PROPOSED, NOT ENABLED. 22:00 UTC is after the US close in both EDT (18:00 ET) and EST (17:00 ET), and 30 minutes after the unrelated live tracker's own window, so the two never contend."
+ },
+ "safety": {
+  "broker": null,
+  "order_api": null,
+  "notifications": "none - no alert path exists in this repository",
+  "real_money": false
+ }
+}

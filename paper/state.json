@@ -1,0 +1,16 @@
+{
+ "schema": 1,
+ "initialized_utc": "2026-09-22T12:03:29Z",
+ "bar_guard": {
+  "bar_id": null,
+  "decided": false
+ },
+ "cash_sar": 100.0,
+ "positions": [],
+ "pending_orders": [],
+ "realized_pl_sar": 0.0,
+ "purified_sar": 0.0,
+ "closed_trades": 0,
+ "last_run_utc": null,
+ "last_decided_bar": null
+}

@@ -1,240 +1,429 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RSI(2) Breadth Research</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Breadth Paper">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Breadth Paper Experiment</title>
 <style>
   :root {
-    --bg:#f7f8fa; --card:#fff; --ink:#15181d; --muted:#5b6472; --line:#e2e6ec;
-    --good:#0f7b3f; --bad:#b0243a; --warn:#8a6100; --warnbg:rgba(184,134,11,.12);
-    --accent:#1f4f8f;
+    --bg: #f5f6f8; --card: #ffffff; --text: #1a1c20; --muted: #6b7280;
+    --border: #e5e7eb; --bull: #16a34a; --bear: #dc2626; --accent: #2563eb;
+    --bull-bg: #dcfce7; --bear-bg: #fee2e2;
   }
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg:#0f1216; --card:#171b21; --ink:#e8ecf1; --muted:#9aa5b4; --line:#272d36;
-      --good:#4ec27f; --bad:#ef6b83; --warn:#d9a441; --warnbg:rgba(217,164,65,.12);
-      --accent:#7aa7e0;
+    :root {
+      --bg: #0e0f12; --card: #17181c; --text: #f3f4f6; --muted: #9ca3af;
+      --border: #2a2c31; --bull: #4ade80; --bear: #f87171; --accent: #60a5fa;
+      --bull-bg: #14311f; --bear-bg: #3a1414;
     }
   }
-  :root[data-theme="dark"] {
-    --bg:#0f1216; --card:#171b21; --ink:#e8ecf1; --muted:#9aa5b4; --line:#272d36;
-    --good:#4ec27f; --bad:#ef6b83; --warn:#d9a441; --warnbg:rgba(217,164,65,.12);
-    --accent:#7aa7e0;
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 16px 14px 40px; max-width: 680px; margin-inline: auto;
   }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);
-    font:15px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-    padding:24px 16px 64px}
-  .wrap{max-width:960px;margin:0 auto}
-  h1{font-size:1.5rem;margin:0 0 4px}
-  h2{font-size:1.05rem;margin:28px 0 10px;letter-spacing:.02em;text-transform:uppercase;
-    color:var(--muted);font-weight:600}
-  .sub{color:var(--muted);font-size:.85rem;margin-bottom:18px}
-  .banner{border:1px solid var(--warn);border-left-width:4px;border-radius:8px;
-    background:var(--warnbg);padding:14px 16px;margin:16px 0 8px;font-size:.92rem}
-  .banner strong{display:block;font-size:1rem;margin-bottom:4px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;
-    padding:16px 18px;margin-bottom:14px}
-  table{width:100%;border-collapse:collapse;font-size:.88rem}
-  th,td{text-align:right;padding:8px 6px;border-bottom:1px solid var(--line);
-    font-variant-numeric:tabular-nums}
-  th:first-child,td:first-child{text-align:left}
-  th{color:var(--muted);font-weight:600;font-size:.75rem;text-transform:uppercase;
-    letter-spacing:.04em}
-  tbody tr:last-child td{border-bottom:none}
-  .good{color:var(--good)} .bad{color:var(--bad)}
-  .pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:.72rem;
-    font-weight:600;border:1px solid var(--line)}
-  .pill.pass{color:var(--good);border-color:var(--good)}
-  .pill.fail{color:var(--bad);border-color:var(--bad)}
-  .pill.hold{color:var(--warn);border-color:var(--warn)}
-  .kv{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:.87rem}
-  .kv dt{color:var(--muted)} .kv dd{margin:0}
-  code{background:var(--bg);padding:1px 5px;border-radius:4px;font-size:.85em}
-  .note{color:var(--muted);font-size:.82rem;margin-top:10px}
-  .split-h{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-  .split-h h3{margin:0;font-size:1rem}
-  footer{color:var(--muted);font-size:.8rem;margin-top:36px;text-align:center}
-  .cap{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
-  .cap .amt{font-size:1.9rem;font-weight:650;font-variant-numeric:tabular-nums;
-    color:var(--muted)}
-  .cap .cur{font-size:1rem;color:var(--muted);font-weight:600}
-  .inert{border:1px dashed var(--line);border-radius:6px;padding:2px 8px;font-size:.7rem;
-    text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
-  @media(max-width:640px){ body{padding:16px} th,td{padding:7px 4px;font-size:.8rem} }
+  h1 { font-size: 1.15rem; margin: 4px 0 2px; }
+  .nav-link { font-size: 0.8rem; color: var(--accent); text-decoration: none; }
+  .updated { color: var(--muted); font-size: 0.8rem; margin-bottom: 4px; margin-top: 8px; }
+  .live-indicator { display: flex; align-items: center; gap: 6px; color: var(--muted);
+    font-size: 0.72rem; margin-bottom: 16px; }
+  .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); }
+  .live-dot.on { background: var(--bull); }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 14px 16px; margin-bottom: 14px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .stat-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+  .stat-value { font-size: 1.15rem; font-weight: 600; margin-top: 2px; }
+  .stat-sub { font-size: 0.7rem; color: var(--muted); margin-top: 2px; }
+  .section-title { font-size: 0.85rem; font-weight: 600; color: var(--muted);
+    margin: 18px 4px 8px; text-transform: uppercase; letter-spacing: .03em; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { color: var(--muted); font-weight: 500; font-size: 0.72rem; text-transform: uppercase; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.72rem; font-weight: 600; }
+  .badge.bull { color: var(--bull); background: var(--bull-bg); }
+  .badge.bear { color: var(--bear); background: var(--bear-bg); }
+  .badge.warn { color: #92620a; background: #fdf0d5; }
+  .badge.flat { color: var(--muted); background: var(--bg); }
+  @media (prefers-color-scheme: dark) { .badge.warn { color: #f0c674; background: #3a2f14; } }
+  .pl-pos { color: var(--bull); font-weight: 600; }
+  .pl-neg { color: var(--bear); font-weight: 600; }
+  .empty { color: var(--muted); font-size: 0.85rem; padding: 10px 4px; }
+  .table-wrap { overflow-x: auto; }
+  .footer { color: var(--muted); font-size: 0.75rem; line-height: 1.5; margin-top: 24px; text-align: center; }
+  .calc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .calc-field { display: flex; flex-direction: column; gap: 4px; }
+  .calc-field label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+  .calc-field input, .calc-field textarea {
+    background: var(--bg); color: var(--text); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 10px; font-size: 0.9rem; font-family: inherit; resize: vertical; }
+  .calc-result { font-size: 1.05rem; font-weight: 600; margin-top: 12px; color: var(--accent); }
+  .calc-btn { margin-top: 10px; background: var(--accent); color: white; border: none;
+    border-radius: 8px; padding: 8px 14px; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
+  .calc-btn:hover { opacity: 0.9; }
+  .calc-del { background: none; border: none; color: var(--bear); cursor: pointer; font-size: 0.9rem; }
+  .warn-box { border: 1px solid #b8860b; border-left-width: 4px; border-radius: 8px;
+    background: rgba(184,134,11,0.12); padding: 12px 14px; margin: 12px 0 14px;
+    font-size: 0.85rem; line-height: 1.5; }
+  .warn-box strong { display: block; margin-bottom: 3px; }
+  .note { color: var(--muted); font-size: 0.75rem; line-height: 1.5; margin: 10px 0 0; }
+  code { background: var(--bg); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>RSI(2) Breadth Research</h1>
-  <div class="sub" id="sub">Loading…</div>
+  <a class="nav-link" href="research.html">📊 Research study &amp; holdout verdict →</a>
+  <h1>🧪 Breadth Paper Experiment</h1>
+  <div class="updated" id="updated">Loading…</div>
 
-  <div class="banner">
-    <strong>Research only — not approved for trading.</strong>
-    This project has no trading logic, no paper-trading ledger, no alerts and no
-    allocated capital. The balance shown below is an inert display constant, not a
-    position. This page measures whether one frozen rule generalizes — and on the
-    untouched holdout, it did not. Nothing here may be traded, on paper or otherwise,
-    without an explicit decision and a separate capital model.
+  <div class="warn-box">
+    <strong>Research-only paper-trading experiment.</strong>
+    This breadth strategy failed its holdout validation and is not approved for real trading.
   </div>
 
-  <div id="capital" class="card"></div>
+  <div class="live-indicator">
+    <span class="live-dot" id="status-dot"></span><span id="status-text">Checking status…</span>
+  </div>
 
-  <div id="prereg" class="card"></div>
+  <div class="card">
+    <div class="grid">
+      <div>
+        <div class="stat-label">Paper balance</div>
+        <div class="stat-value" id="s-equity">—</div>
+        <div class="stat-sub" id="s-equity-sub">hypothetical, never invested</div>
+      </div>
+      <div>
+        <div class="stat-label">Open positions</div>
+        <div class="stat-value" id="s-open">—</div>
+        <div class="stat-sub" id="s-open-sub"></div>
+      </div>
+      <div>
+        <div class="stat-label">Realized paper P/L</div>
+        <div class="stat-value" id="s-realized">—</div>
+        <div class="stat-sub" id="s-unrealized"></div>
+      </div>
+      <div>
+        <div class="stat-label">Purified</div>
+        <div class="stat-value" id="s-purified">—</div>
+        <div class="stat-sub" id="s-purified-sub"></div>
+      </div>
+    </div>
+    <p class="note" id="model-note"></p>
+  </div>
 
-  <h2>Universe</h2>
-  <div id="universe" class="card"></div>
+  <div class="section-title">My Purification Calculator</div>
+  <div class="card">
+    <div class="calc-row">
+      <div class="calc-field">
+        <label for="calc-profit">Profit amount (SAR)</label>
+        <input type="number" id="calc-profit" step="0.01" placeholder="e.g. 5.20">
+      </div>
+      <div class="calc-field">
+        <label for="calc-pct">Purification %</label>
+        <input type="number" id="calc-pct" step="0.1" value="10">
+      </div>
+    </div>
+    <div class="calc-result" id="calc-result">Amount to purify: —</div>
+    <div class="calc-field" style="margin-top:10px;">
+      <label for="calc-notes">Research notes (your own reasoning/method)</label>
+      <textarea id="calc-notes" rows="2" placeholder="Optional notes…"></textarea>
+    </div>
+    <button class="calc-btn" id="calc-add-btn">+ Add to my log</button>
+    <div class="table-wrap" style="margin-top:12px">
+      <table id="calc-log-table">
+        <thead><tr><th>Date</th><th>Profit</th><th>%</th><th>Purified</th><th>Notes</th><th></th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="note">Saved only in this browser. Nothing here is sent anywhere or used by the simulation.</p>
+  </div>
 
-  <h2>Trade opportunity</h2>
-  <div id="breadth" class="card"></div>
+  <div class="section-title">Watchlist &amp; Signal Status</div>
+  <div class="card table-wrap">
+    <table id="watch-table">
+      <thead><tr><th>Ticker</th><th>Price (SAR)</th><th>RSI(2)</th><th>Signal</th><th>Position</th><th>Unrealized</th></tr></thead>
+      <tbody><tr><td colspan="6" class="empty">Loading…</td></tr></tbody>
+    </table>
+    <p class="note" id="watch-note"></p>
+  </div>
 
-  <h2>Fixed-rule performance vs matched random controls</h2>
-  <div id="splits"></div>
+  <div class="section-title">Weekly &amp; Monthly Paper Performance</div>
+  <div class="card">
+    <div class="warn-box" style="margin-top:0">
+      <strong>Unvalidated research simulation.</strong>
+      These figures are not evidence of a trading edge. The strategy failed its
+      holdout test; any profit shown here is one unvalidated sample path.
+    </div>
+    <div id="perf-summary" style="font-size:.85rem;margin-bottom:12px"></div>
+    <div class="table-wrap">
+      <table id="weekly-table">
+        <thead><tr><th>ISO week (Mon–Sun, UTC)</th><th>Closed</th><th>W / L</th><th>Net P/L</th><th>Purified</th><th>Skipped</th><th>Cumulative</th></tr></thead>
+        <tbody><tr><td colspan="7" class="empty">Loading…</td></tr></tbody>
+      </table>
+    </div>
+    <div style="height:14px"></div>
+    <div class="table-wrap">
+      <table id="monthly-table">
+        <thead><tr><th>Calendar month (UTC)</th><th>Closed</th><th>W / L</th><th>Net P/L</th><th>Purified</th><th>Skipped</th><th>Cumulative</th></tr></thead>
+        <tbody><tr><td colspan="7" class="empty">Loading…</td></tr></tbody>
+      </table>
+    </div>
+    <p class="note">ISO-8601 weeks, Monday–Sunday, keyed in UTC from each closing trade.
+      Calendar months, UTC. Realized only — open positions are marked separately and never
+      folded in. Reproduce with <code>python paper/run_paper.py --audit</code>.</p>
+  </div>
 
-  <h2>Holdout status</h2>
-  <div id="holdout" class="card"></div>
+  <div class="section-title">Paper Trade History</div>
+  <div class="card table-wrap">
+    <table id="trades-table">
+      <thead><tr><th>Time (UTC)</th><th>Bar</th><th>Action</th><th>Ticker</th><th>Price (SAR)</th><th>Cost</th><th>Net P/L</th></tr></thead>
+      <tbody><tr><td colspan="7" class="empty">Loading…</td></tr></tbody>
+    </table>
+  </div>
 
-  <footer>
-    Generated from <code>results/study.json</code>. Design frozen in
-    <code>PREREGISTRATION.md</code> before any result existed.
-  </footer>
-</div>
+  <div class="section-title">Skipped Signals</div>
+  <div class="card table-wrap">
+    <table id="skipped-table">
+      <thead><tr><th>Time (UTC)</th><th>Bar</th><th>Ticker</th><th>RSI(2)</th><th>Reason</th></tr></thead>
+      <tbody><tr><td colspan="5" class="empty">Loading…</td></tr></tbody>
+    </table>
+    <p class="note">Every valid entry signal that could not be taken is recorded here with
+      its reason, so the gap between signals and fills is visible rather than silent.</p>
+  </div>
+
+  <div class="footer">
+    Paper simulation only. No broker, no order, no real money, and no notification of any
+    kind exists in this project. The 100 SAR starting figure is hypothetical and is not
+    real, allocated, invested, validated or investable capital.
+  </div>
 
 <script>
-const pct = v => v === null || v === undefined ? "—" : (v * 100).toFixed(4) + "%";
-const cls = v => v === null || v === undefined ? "" : (v > 0 ? "good" : "bad");
-const num = v => v === null || v === undefined ? "—" : v.toLocaleString();
+const SAR = v => (v === null || v === undefined || isNaN(v))
+  ? "—" : Number(v).toFixed(2) + " SAR";
+const signed = v => (v === null || v === undefined || isNaN(v))
+  ? "—" : (v >= 0 ? "+" : "−") + Math.abs(Number(v)).toFixed(4) + " SAR";
+const plClass = v => Number(v) >= 0 ? "pl-pos" : "pl-neg";
+let snap = null;
 
-fetch("study.json?cb=" + Date.now()).then(r => r.json()).then(render)
-  .catch(e => document.getElementById("sub").textContent = "Could not load study.json: " + e);
+async function load() {
+  const res = await fetch("paper.json?cb=" + Date.now());
+  if (!res.ok) throw new Error("paper.json " + res.status);
+  return res.json();
+}
 
-function renderCapital() {
-  // Display only. The amount is rendered verbatim in its stored currency; there is
-  // deliberately no conversion, allocation or P/L arithmetic anywhere in this function.
-  return fetch("capital.json?cb=" + Date.now()).then(r => r.json()).then(c => {
-    const b = c.hypothetical_balance;
-    document.getElementById("capital").innerHTML = `
-      <div class="cap">
-        <span class="amt">${b.amount}</span><span class="cur">${b.currency}</span>
-        <span class="inert">inert — not allocated</span>
-      </div>
-      <p class="note" style="margin-top:8px"><strong>${c.label}</strong></p>
-      <ul class="note" style="margin:8px 0 0;padding-left:18px">
-        ${c.rules.map(r => `<li>${r}</li>`).join("")}
-      </ul>`;
-  }).catch(() => {
-    document.getElementById("capital").style.display = "none";
+function renderStats(d) {
+  const a = d.account;
+  document.getElementById("s-equity").textContent = SAR(a.equity_sar);
+  document.getElementById("s-equity-sub").textContent =
+    "cash " + SAR(a.cash_sar) + " · started at " + a.initial_capital_sar + " SAR";
+  document.getElementById("s-open").textContent = a.open_positions + " / " + a.max_positions;
+  document.getElementById("s-open-sub").textContent =
+    d.pending_orders.length ? d.pending_orders.length + " order(s) queued for the next bar"
+                            : "no orders queued";
+  document.getElementById("s-realized").textContent = signed(a.realized_pl_sar);
+  document.getElementById("s-realized").className = "stat-value " + plClass(a.realized_pl_sar);
+  document.getElementById("s-unrealized").textContent =
+    a.open_positions ? "unrealized " + signed(a.unrealized_pl_sar) + " (not realized)"
+                     : "no open position, so no unrealized P/L";
+  document.getElementById("s-purified").textContent = SAR(a.purified_sar);
+  document.getElementById("s-purified-sub").textContent =
+    (d.purification_rate * 100).toFixed(0) + "% of realized net profit only";
+
+  const cm = d.capital_model, fx = d.fx_locked, c = d.costs;
+  document.getElementById("model-note").innerHTML =
+    "<strong>Model:</strong> single shared account, max " + cm.max_concurrent_positions +
+    " concurrent positions, target " + (cm.target_position_pct * 100).toFixed(0) +
+    "% of equity each. No leverage, margin or shorting. Fractional paper shares allowed " +
+    "because 100 SAR cannot buy one share of most US names. " +
+    "<strong>FX locked</strong> at " + fx.sar_per_usd + " SAR/USD on " +
+    (fx.locked_utc || "initialization") + " and never re-read. " +
+    "<strong>Costs</strong> " + (c.round_trip_pct * 100).toFixed(3) + "% round trip (" +
+    (c.per_side_pct * 100).toFixed(3) + "% per side), charged on every fill.";
+}
+
+function renderStatus(d) {
+  const dot = document.getElementById("status-dot");
+  const txt = document.getElementById("status-text");
+  if (d.trading_enabled) {
+    dot.classList.add("on");
+    txt.textContent = "Paper trading active · last decided bar " +
+      (d.last_decided_bar || "none") + " · last run " + (d.last_run_utc || "never");
+  } else {
+    txt.textContent = "Paper trading NOT enabled — snapshot only. " +
+      "Proposed schedule " + (d.schedule ? d.schedule.proposed_cron_utc : "") +
+      " (UTC), awaiting approval.";
+  }
+  document.getElementById("updated").textContent =
+    "Last updated: " + new Date(d.generated_utc).toLocaleString() +
+    " · universe " + d.universe_size + " tickers · bar " + (d.bar_id || "—");
+}
+
+function renderWatch(d) {
+  const tb = document.querySelector("#watch-table tbody");
+  tb.innerHTML = "";
+  const rows = d.watchlist.slice().sort((a, b) => {
+    const ah = a.status === "HOLDING" ? 0 : 1, bh = b.status === "HOLDING" ? 0 : 1;
+    if (ah !== bh) return ah - bh;
+    return (a.rsi ?? 999) - (b.rsi ?? 999);
+  }).slice(0, 40);
+  if (!rows.length) {
+    tb.innerHTML = '<tr><td colspan="6" class="empty">No data.</td></tr>';
+    return;
+  }
+  for (const r of rows) {
+    const tr = document.createElement("tr");
+    const sig = r.pending ? '<span class="badge warn">' + r.pending + " queued</span>"
+      : r.signal === "BUY" ? '<span class="badge bull">BUY</span>'
+      : r.signal === "SELL" ? '<span class="badge bear">SELL</span>' : "—";
+    const pos = r.status === "HOLDING"
+      ? '<span class="badge bull">● Holding</span>' : '<span class="badge flat">○ Flat</span>';
+    const un = r.unrealized_pl_sar === undefined ? "—"
+      : '<span class="' + plClass(r.unrealized_pl_sar) + '">' + signed(r.unrealized_pl_sar) + "</span>";
+    tr.innerHTML = "<td>" + r.ticker + "</td><td>" + (r.price_sar ?? "—") + "</td>" +
+      "<td>" + (r.rsi ?? "—") + "</td><td>" + sig + "</td><td>" + pos + "</td><td>" + un + "</td>";
+    tb.appendChild(tr);
+  }
+  document.getElementById("watch-note").textContent =
+    "Showing held names first, then the lowest RSI(2). " + d.watchlist.length +
+    " tickers evaluated on the last completed daily bar; a forming bar is never used.";
+}
+
+function fillPerf(id, rows) {
+  const tb = document.querySelector("#" + id + " tbody");
+  tb.innerHTML = "";
+  if (!rows || !rows.length) {
+    tb.innerHTML = '<tr><td colspan="7" class="empty">No trades yet.</td></tr>';
+    return;
+  }
+  for (const r of rows.slice().reverse()) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = "<td>" + r.label + "</td><td>" + r.closed + "</td>" +
+      "<td>" + r.wins + " / " + r.losses + "</td>" +
+      '<td class="' + plClass(r.net_pl_sar) + '">' + signed(r.net_pl_sar) + "</td>" +
+      "<td>" + Number(r.purification_sar).toFixed(4) + "</td>" +
+      "<td>" + r.skipped + "</td>" +
+      "<td>" + signed(r.cumulative_sar) + "</td>";
+    tb.appendChild(tr);
+  }
+}
+
+function renderPerf(d) {
+  fillPerf("weekly-table", d.weekly);
+  fillPerf("monthly-table", d.monthly);
+  const a = d.account;
+  document.getElementById("perf-summary").innerHTML = a.closed_trades
+    ? "<strong>Cumulative realized paper P/L:</strong> " +
+      '<span class="' + plClass(a.realized_pl_sar) + '">' + signed(a.realized_pl_sar) + "</span>" +
+      " across " + a.closed_trades + " closed paper trade" + (a.closed_trades === 1 ? "" : "s") +
+      " · Purified " + SAR(a.purified_sar) + " · Currency <strong>SAR</strong>" +
+      (a.open_positions ? " · Unrealized " + signed(a.unrealized_pl_sar) +
+        " on " + a.open_positions + " open position(s), excluded above" : "")
+    : "<strong>No paper trades yet.</strong> Nothing has been simulated, so there is " +
+      "no performance to report. Currency <strong>SAR</strong>.";
+}
+
+function renderTrades(d) {
+  const tb = document.querySelector("#trades-table tbody");
+  tb.innerHTML = "";
+  if (!d.trades.length) {
+    tb.innerHTML = '<tr><td colspan="7" class="empty">No paper trades yet.</td></tr>';
+    return;
+  }
+  for (const t of d.trades.slice().reverse()) {
+    const tr = document.createElement("tr");
+    const pl = t.net_pl_sar === "" ? "—"
+      : '<span class="' + plClass(t.net_pl_sar) + '">' + signed(t.net_pl_sar) + "</span>";
+    tr.innerHTML = "<td>" + t.timestamp_utc + "</td><td>" + t.bar_id + "</td>" +
+      '<td><span class="badge ' + (t.action === "BUY" ? "bull" : "bear") + '">' + t.action + "</span></td>" +
+      "<td>" + t.ticker + "</td><td>" + Number(t.price_sar).toFixed(4) + "</td>" +
+      "<td>" + Number(t.cost_sar).toFixed(4) + "</td><td>" + pl + "</td>";
+    tb.appendChild(tr);
+  }
+}
+
+function renderSkipped(d) {
+  const tb = document.querySelector("#skipped-table tbody");
+  tb.innerHTML = "";
+  if (!d.skipped_recent.length) {
+    tb.innerHTML = '<tr><td colspan="5" class="empty">No skipped signals yet.</td></tr>';
+    return;
+  }
+  for (const s of d.skipped_recent.slice().reverse()) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = "<td>" + s.timestamp_utc + "</td><td>" + s.bar_id + "</td>" +
+      "<td>" + s.ticker + "</td><td>" + (s.rsi || "—") + "</td><td>" + s.reason + "</td>";
+    tb.appendChild(tr);
+  }
+}
+
+// ---- purification calculator + local notes log (browser-only) ------------
+const CALC_LOG_KEY = "breadth_purification_log";
+const loadLog = () => { try { return JSON.parse(localStorage.getItem(CALC_LOG_KEY)) || []; }
+                        catch (e) { return []; } };
+const saveLog = l => { try { localStorage.setItem(CALC_LOG_KEY, JSON.stringify(l)); }
+                       catch (e) { /* private mode: keep working without persistence */ } };
+
+function calcNow() {
+  const p = parseFloat(document.getElementById("calc-profit").value);
+  const pct = parseFloat(document.getElementById("calc-pct").value);
+  const el = document.getElementById("calc-result");
+  if (isNaN(p) || isNaN(pct)) { el.textContent = "Amount to purify: —"; return null; }
+  const amt = p * pct / 100;
+  el.textContent = "Amount to purify: " + amt.toFixed(2) + " SAR";
+  return { profit: p, pct: pct, amount: amt };
+}
+
+function renderLog() {
+  const tb = document.querySelector("#calc-log-table tbody");
+  const log = loadLog();
+  tb.innerHTML = "";
+  if (!log.length) {
+    tb.innerHTML = '<tr><td colspan="6" class="empty">No entries yet — saved only in this browser.</td></tr>';
+    return;
+  }
+  log.forEach((e, i) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = "<td>" + e.date + "</td><td>" + e.profit.toFixed(2) + "</td>" +
+      "<td>" + e.pct + "%</td><td>" + e.amount.toFixed(2) + "</td>" +
+      "<td>" + (e.notes || "") + "</td>" +
+      '<td><button class="calc-del" data-i="' + i + '">✕</button></td>';
+    tb.appendChild(tr);
   });
+  tb.querySelectorAll(".calc-del").forEach(b => b.addEventListener("click", () => {
+    const l = loadLog(); l.splice(Number(b.dataset.i), 1); saveLog(l); renderLog();
+  }));
 }
 
-function render(d) {
-  renderCapital();
-  document.getElementById("sub").textContent =
-    `Generated ${d.generated_utc} · ${d.universe_size} tickers · Holm correction across ${d.holm_tests} pre-declared tests`;
+document.getElementById("calc-profit").addEventListener("input", calcNow);
+document.getElementById("calc-pct").addEventListener("input", calcNow);
+document.getElementById("calc-add-btn").addEventListener("click", () => {
+  const r = calcNow();
+  if (!r) return;
+  const log = loadLog();
+  log.push({ date: new Date().toISOString().slice(0, 10), profit: r.profit,
+             pct: r.pct, amount: r.amount,
+             notes: document.getElementById("calc-notes").value.trim() });
+  saveLog(log);
+  document.getElementById("calc-notes").value = "";
+  renderLog();
+});
 
-  document.getElementById("prereg").innerHTML = `
-    <dl class="kv">
-      <dt>Rule</dt><dd>${d.rule.indicator} — enter ${d.rule.entry}, exit ${d.rule.exit}</dd>
-      <dt>Execution</dt><dd>${d.rule.execution}</dd>
-      <dt>Optimization</dt><dd>${d.rule.optimization}</dd>
-    </dl>`;
-
-  const c = d.universe_criteria;
-  document.getElementById("universe").innerHTML = `
-    <dl class="kv">
-      <dt>Listing</dt><dd>${c.listing}</dd>
-      <dt>History</dt><dd>${c.history}</dd>
-      <dt>Min median close</dt><dd>$${c.min_median_close_usd}</dd>
-      <dt>Min median dollar volume</dt><dd>$${(c.min_median_dollar_volume_usd/1e6).toFixed(0)}M/day</dd>
-      <dt>Ranking</dt><dd>${c.ranking}, top ${c.top_n}</dd>
-      <dt>Measured on</dt><dd>${c.measured_on}</dd>
-      <dt>Selected</dt><dd>${d.universe_size} tickers</dd>
-    </dl>
-    <p class="note"><strong>Survivorship bias:</strong> the candidate pool is drawn from
-    issuers listed today, so companies that delisted or were acquired are absent. This
-    biases every result on this page optimistically and cannot be corrected with free
-    data.</p>`;
-
-  const sp = d.splits;
-  let rows = "";
-  let totalTrades = 0, totalYears = 0;
-  for (const k of ["train","validation","holdout"]) {
-    if (!sp[k]) continue;
-    const s = sp[k];
-    totalTrades += s.trades; totalYears = Math.max(totalYears, s.years);
-    rows += `<tr><td>${k}</td><td>${s.range[0]} → ${s.range[1] === "2099-12-31" ? "present" : s.range[1]}</td>
-      <td>${num(s.trades)}</td><td>${s.trades_per_year.toLocaleString()}</td>
-      <td>${num(s.distinct_entry_dates)}</td><td>${s.tickers_traded}</td>
-      <td>${s.median_hold_sessions}</td></tr>`;
+async function init() {
+  renderLog();
+  try {
+    snap = await load();
+    renderStatus(snap); renderStats(snap); renderWatch(snap);
+    renderPerf(snap); renderTrades(snap); renderSkipped(snap);
+  } catch (e) {
+    document.getElementById("updated").textContent = "Could not load paper.json: " + e.message;
+    document.getElementById("status-text").textContent = "No snapshot available yet.";
   }
-  const anySplit = sp.train || sp.validation || sp.holdout;
-  const perYear = anySplit ? anySplit.trades_per_year : 0;
-  const mult = (perYear / d.live_tracker_trips_per_year);
-  document.getElementById("breadth").innerHTML = `
-    <table><thead><tr><th>Split</th><th>Range</th><th>Trades</th><th>Per year</th>
-      <th>Entry dates</th><th>Tickers</th><th>Median hold</th></tr></thead>
-      <tbody>${rows}</tbody></table>
-    <p class="note">Live 8-name tracker: <strong>${d.live_tracker_trips_per_year}</strong>
-    round trips/year, capital-constrained to one open position. This universe generates
-    roughly <strong>${mult.toFixed(1)}×</strong> that many opportunities.
-    These are <em>opportunities</em>, not executable trades — acting on them all needs a
-    capital model that does not exist yet.</p>`;
-
-  let out = "";
-  for (const k of ["train","validation","holdout"]) {
-    if (!sp[k]) continue;
-    const s = sp[k];
-    let body = "";
-    for (const [lab, m] of Object.entries(s.costs)) {
-      const ctl = m.control, bs = m.bootstrap;
-      const sig = ctl.p_holm !== null && ctl.p_holm < 0.05;
-      body += `<tr>
-        <td>${lab}</td>
-        <td class="${cls(m.mean_net_per_trade)}">${pct(m.mean_net_per_trade)}</td>
-        <td>${m.win_rate === null ? "—" : (m.win_rate*100).toFixed(1) + "%"}</td>
-        <td>${pct(bs.ci_lo)} … ${pct(bs.ci_hi)}</td>
-        <td>${ctl.pct === null ? "—" : ctl.pct.toFixed(1)}</td>
-        <td>${ctl.p === null ? "—" : ctl.p.toFixed(4)}</td>
-        <td>${ctl.p_holm === null ? "—" : ctl.p_holm.toFixed(4)}
-            <span class="pill ${sig ? "pass":"fail"}">${sig ? "sig" : "n.s."}</span></td>
-      </tr>`;
-    }
-    out += `<div class="card">
-      <div class="split-h"><h3>${k}</h3>
-        <span class="pill">${num(s.trades)} trades</span>
-        <span class="pill">${s.years}y</span></div>
-      <table><thead><tr><th>Round-trip cost</th><th>Mean net / trade</th><th>Win rate</th>
-        <th>95% CI (date-clustered)</th><th>vs random (pctile)</th><th>p</th>
-        <th>p (Holm)</th></tr></thead><tbody>${body}</tbody></table>
-    </div>`;
-  }
-  document.getElementById("splits").innerHTML = out ||
-    "<div class='card'>No splits computed yet.</div>";
-
-  const h = sp.holdout;
-  document.getElementById("holdout").innerHTML = h
-    ? (() => {
-        const base = h.costs["0.05%"];
-        const checks = [
-          ["Mean net per trade positive at 0.05%", base.mean_net_per_trade > 0],
-          ["Holm-corrected p < 0.05 vs random entry", base.control.p_holm !== null && base.control.p_holm < 0.05],
-          ["At least 100 holdout trades", h.trades >= 100],
-          ["Sign consistent across all splits",
-            ["train","validation","holdout"].every(k => !sp[k] || sp[k].costs["0.05%"].mean_net_per_trade > 0)],
-        ];
-        const passed = checks.every(c => c[1]);
-        return `<p><span class="pill ${passed ? "pass":"fail"}">${passed ? "GENERALIZED" : "NOT GENERALIZED"}</span>
-          &nbsp;against the decision rule fixed in PREREGISTRATION.md §10.</p>
-          <table><thead><tr><th>Pre-declared criterion</th><th>Result</th></tr></thead><tbody>
-          ${checks.map(c => `<tr><td>${c[0]}</td><td><span class="pill ${c[1]?"pass":"fail"}">${c[1]?"pass":"fail"}</span></td></tr>`).join("")}
-          </tbody></table>
-          <p class="note">A positive mean with a non-significant p-value is a failure,
-          not a promising trend. That was fixed in advance.</p>`;
-      })()
-    : `<p><span class="pill hold">UNTOUCHED</span> The holdout has not been examined.
-       Train and validation results are committed first; the git history is the proof.</p>`;
 }
+init();
+setInterval(init, 300000);
 </script>
 </body>
 </html>

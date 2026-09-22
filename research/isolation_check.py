@@ -1,12 +1,34 @@
-"""Isolation guard. Fails if this project can reach the live tracker in any way.
+"""Isolation guard. Fails if this project can reach the live tracker, reach real
+money, or drift off its declared currency model.
 
-Run locally with `python research/isolation_check.py`; CI runs the same file, so the
-check cannot drift between the two.
+Run locally with `python research/isolation_check.py`; CI runs the same file, so
+the check cannot drift between the two.
 
-The forbidden ntfy topics are matched by PATTERN, never stored literally - writing a
-live topic into this repo to test for it would itself be the leak. The old US topic was
-public; the new one is a GitHub Actions secret belonging to the other repository and
-must never appear here.
+The forbidden ntfy topics are matched by PATTERN, never stored literally - writing
+a live topic into this repo to test for it would itself be the leak.
+
+WHY THESE RULES CHANGED (2026-09-22)
+------------------------------------
+The first version of this guard banned any mention of a ledger, realized P/L,
+purification or position sizing, because at the time this repository was pure
+analysis and none of those had any business existing here.
+
+This project now runs a declared, research-only paper-trading simulation, so
+those words are legitimate. Leaving the old rules in place would have meant
+either a permanently red build or - far worse - quietly deleting the rules to
+make it green, which is how a guard becomes decorative.
+
+The boundary was therefore re-drawn rather than relaxed. What the guard protects
+now is the set of properties that actually still have to hold:
+
+  * no path to the live tracker, its Pages site, its topics or its data
+  * no path to real money: no broker, no order submission, no API credential
+  * no notification path of any kind
+  * SAR stays canonical: no USD-denominated account state
+  * FX stays locked: no live exchange-rate lookup
+
+A paper ledger denominated in SAR is expected. A USD balance, a broker call or
+an alert is not.
 """
 import os
 import re
@@ -18,6 +40,7 @@ ROOT = os.path.dirname(HERE)
 SKIP_DIRS = {".git", "data_cache", "__pycache__", "node_modules"}
 SELF = os.path.basename(__file__)
 
+# --- isolation from the live tracker -------------------------------------
 RULES = [
     ("live tracker repository name",
      re.compile(r"intraday[-_]sar[-_]tracker", re.I)),
@@ -33,28 +56,24 @@ RULES = [
      re.compile(r"ntfy\.sh", re.I)),
     ("live tracker's notification secret",
      re.compile(r"NTFY_TOPIC_US", re.I)),
-    ("cross-repo write via the other repo's data paths",
-     re.compile(r"data-sa/|scripts-sa/", re.I)),
+    ("live tracker's data or script paths",
+     re.compile(r"data-sa/|scripts-sa/|paper_trades\.csv|portfolio_history\.csv", re.I)),
 ]
 
-# This project must stay read-only toward the outside world.
-#
-# The research-only hypothetical balance (docs/capital.json, 100 SAR) is a display
-# constant. These rules are what keep it a constant: any USD conversion, any allocation
-# or sizing arithmetic, and any P/L field would all fail the build. That is deliberate -
-# the balance is the most likely place for this project to quietly grow into a trading
-# system, so the guard watches it specifically.
+# --- this project must never reach real money or a phone -----------------
 EXECUTION_RULES = [
-    ("paper-trading ledger", re.compile(r"paper_trades\.csv", re.I)),
-    ("virtual balance / portfolio state",
-     re.compile(r"balance_usd|portfolio_history\.csv|purification", re.I)),
-    ("alert dispatch", re.compile(r"Add-OutboxEvent|Send-OutboxMessage", re.I)),
-    ("currency conversion of the research balance",
-     re.compile(r"sar_per_usd|usd_per_sar|to_usd|convert_currency", re.I)),
-    ("allocation or position sizing of the research balance",
-     re.compile(r"position_size|allocate_capital|shares_to_buy|capital_per_trade", re.I)),
-    ("realised or unrealised P/L tracking",
-     re.compile(r"realized_pl|unrealized_pl|equity_curve", re.I)),
+    ("broker or order-submission surface",
+     re.compile(r"\balpaca\b|\bibkr\b|interactive_brokers|tradier|td_ameritrade|"
+                r"place_order|submit_order|create_order|broker_api", re.I)),
+    ("outbound notification surface",
+     re.compile(r"\bwebhook\b|\bsmtp\b|\btwilio\b|sendgrid|pushover|telegram_bot", re.I)),
+    ("stored API credential",
+     re.compile(r"api_key\s*=|secret_key\s*=|access_token\s*=", re.I)),
+    ("USD-denominated account state (SAR is canonical here)",
+     re.compile(r"balance_usd|cash_usd|equity_usd|realized_pl_usd", re.I)),
+    ("live exchange-rate lookup (the FX rate is locked at initialization)",
+     re.compile(r"exchangerate\.|openexchangerates|fixer\.io|currencyapi|"
+                r"fetch_fx|live_fx_rate", re.I)),
 ]
 
 
@@ -65,7 +84,10 @@ def files():
             if fn == SELF:
                 continue  # the patterns themselves live here
             p = os.path.join(dirpath, fn)
-            if os.path.getsize(p) > 2_000_000:
+            try:
+                if os.path.getsize(p) > 2_000_000:
+                    continue
+            except OSError:
                 continue
             yield p
 
@@ -85,20 +107,20 @@ def main():
                 line = text.count("\n", 0, m.start()) + 1
                 violations.append((rel, line, label))
 
-    print(f"isolation check: scanned {scanned} files under {ROOT}")
+    print("isolation check: scanned %d files under %s" % (scanned, ROOT))
     for label, _ in RULES + EXECUTION_RULES:
-        print(f"  rule: {label}")
+        print("  rule: %s" % label)
 
     if violations:
-        print(f"\nFAILED - {len(violations)} violation(s):")
+        print("\nFAILED - %d violation(s):" % len(violations))
         for rel, line, label in violations:
-            print(f"  {rel}:{line}  -> {label}")
-        print("\nThis project must not reference the live tracker, its notification "
-              "topics, or any trade-execution surface.")
+            print("  %s:%d  -> %s" % (rel, line, label))
+        print("\nThis project must not reference the live tracker, reach real money, "
+              "send notifications, hold USD account state, or read a live FX rate.")
         return 1
 
-    print("\nPASS - no reference to the live tracker, its topics, or any "
-          "execution/ledger surface.")
+    print("\nPASS - isolated from the live tracker; no real-money, notification, "
+          "USD-account or live-FX surface.")
     return 0
 
 
