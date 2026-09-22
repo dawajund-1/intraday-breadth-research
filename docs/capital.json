@@ -1,0 +1,15 @@
+{
+  "_note": "Canonical store for the research-only hypothetical balance. Single copy: the dashboard reads this exact file, so there is nothing to drift out of sync. It is a display constant and nothing in this repository consumes it.",
+  "hypothetical_balance": {
+    "amount": 100,
+    "currency": "SAR"
+  },
+  "label": "Research-only hypothetical balance — not approved for paper or real trading.",
+  "rules": [
+    "Stored and displayed in SAR. Never converted to USD, silently or otherwise.",
+    "Not used to compute trades, P/L, allocation, position sizing or signals.",
+    "Not connected to any alert, ntfy topic or execution workflow.",
+    "Unrelated to the live US tracker's balance, which this project cannot read or write."
+  ],
+  "status": "inert placeholder pending a validated strategy and an approved capital model"
+}

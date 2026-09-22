@@ -38,11 +38,23 @@ RULES = [
 ]
 
 # This project must stay read-only toward the outside world.
+#
+# The research-only hypothetical balance (docs/capital.json, 100 SAR) is a display
+# constant. These rules are what keep it a constant: any USD conversion, any allocation
+# or sizing arithmetic, and any P/L field would all fail the build. That is deliberate -
+# the balance is the most likely place for this project to quietly grow into a trading
+# system, so the guard watches it specifically.
 EXECUTION_RULES = [
     ("paper-trading ledger", re.compile(r"paper_trades\.csv", re.I)),
     ("virtual balance / portfolio state",
      re.compile(r"balance_usd|portfolio_history\.csv|purification", re.I)),
     ("alert dispatch", re.compile(r"Add-OutboxEvent|Send-OutboxMessage", re.I)),
+    ("currency conversion of the research balance",
+     re.compile(r"sar_per_usd|usd_per_sar|to_usd|convert_currency", re.I)),
+    ("allocation or position sizing of the research balance",
+     re.compile(r"position_size|allocate_capital|shares_to_buy|capital_per_trade", re.I)),
+    ("realised or unrealised P/L tracking",
+     re.compile(r"realized_pl|unrealized_pl|equity_curve", re.I)),
 ]
 
 

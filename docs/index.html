@@ -56,6 +56,12 @@
   .split-h{display:flex;align-items:center;gap:10px;margin-bottom:8px}
   .split-h h3{margin:0;font-size:1rem}
   footer{color:var(--muted);font-size:.8rem;margin-top:36px;text-align:center}
+  .cap{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .cap .amt{font-size:1.9rem;font-weight:650;font-variant-numeric:tabular-nums;
+    color:var(--muted)}
+  .cap .cur{font-size:1rem;color:var(--muted);font-weight:600}
+  .inert{border:1px dashed var(--line);border-radius:6px;padding:2px 8px;font-size:.7rem;
+    text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
   @media(max-width:640px){ body{padding:16px} th,td{padding:7px 4px;font-size:.8rem} }
 </style>
 </head>
@@ -71,6 +77,8 @@
     traded, on paper or otherwise, without an explicit decision and a separate capital
     model.
   </div>
+
+  <div id="capital" class="card"></div>
 
   <div id="prereg" class="card"></div>
 
@@ -100,7 +108,27 @@ const num = v => v === null || v === undefined ? "—" : v.toLocaleString();
 fetch("study.json?cb=" + Date.now()).then(r => r.json()).then(render)
   .catch(e => document.getElementById("sub").textContent = "Could not load study.json: " + e);
 
+function renderCapital() {
+  // Display only. The amount is rendered verbatim in its stored currency; there is
+  // deliberately no conversion, allocation or P/L arithmetic anywhere in this function.
+  return fetch("capital.json?cb=" + Date.now()).then(r => r.json()).then(c => {
+    const b = c.hypothetical_balance;
+    document.getElementById("capital").innerHTML = `
+      <div class="cap">
+        <span class="amt">${b.amount}</span><span class="cur">${b.currency}</span>
+        <span class="inert">inert — not allocated</span>
+      </div>
+      <p class="note" style="margin-top:8px"><strong>${c.label}</strong></p>
+      <ul class="note" style="margin:8px 0 0;padding-left:18px">
+        ${c.rules.map(r => `<li>${r}</li>`).join("")}
+      </ul>`;
+  }).catch(() => {
+    document.getElementById("capital").style.display = "none";
+  });
+}
+
 function render(d) {
+  renderCapital();
   document.getElementById("sub").textContent =
     `Generated ${d.generated_utc} · ${d.universe_size} tickers · Holm correction across ${d.holm_tests} pre-declared tests`;
 
