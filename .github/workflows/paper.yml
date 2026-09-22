@@ -1,0 +1,58 @@
+name: Paper trading (research only)
+
+# RESEARCH-ONLY SIMULATION. This strategy failed its holdout validation.
+# No broker, no order, no real money, no notification of any kind.
+#
+# 22:00 UTC Mon-Fri is after the US close in both halves of the year:
+#   EDT 18:00 ET, EST 17:00 ET. No DST table needed.
+# Weekends and US market holidays need no calendar: with no new session there
+# is no new completed bar, so the bar guard finds it already decided and the
+# run is a no-op.
+
+on:
+  schedule:
+    - cron: "0 22 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paper-trading
+  cancel-in-progress: false
+
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Isolation guard
+        run: python research/isolation_check.py
+
+      - name: Paper-engine tests
+        run: python paper/tests_paper.py
+
+      - name: Run one decision cycle on the completed daily bar
+        run: python paper/run_paper.py --trade
+
+      - name: Commit paper state
+        run: |
+          git config user.name "breadth-research-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add paper/ docs/paper.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Paper cycle $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          for attempt in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "Push rejected (attempt $attempt); rebasing."
+            git pull --rebase origin main
+          done
+          echo "::error::Push failed after 3 attempts."
+          exit 1
