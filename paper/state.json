@@ -2,15 +2,216 @@
  "schema": 1,
  "initialized_utc": "2026-09-22T12:03:29Z",
  "bar_guard": {
-  "bar_id": null,
-  "decided": false
+  "bar_id": "2026-09-21",
+  "decided": true
  },
  "cash_sar": 100.0,
  "positions": [],
- "pending_orders": [],
+ "pending_orders": [
+  {
+   "id": "BUY:PEP:2026-09-21",
+   "action": "BUY",
+   "ticker": "PEP",
+   "signal_bar": "2026-09-21",
+   "rsi": 0.098,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:CSX:2026-09-21",
+   "action": "BUY",
+   "ticker": "CSX",
+   "signal_bar": "2026-09-21",
+   "rsi": 0.3561,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:CVS:2026-09-21",
+   "action": "BUY",
+   "ticker": "CVS",
+   "signal_bar": "2026-09-21",
+   "rsi": 1.0215,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:CHTR:2026-09-21",
+   "action": "BUY",
+   "ticker": "CHTR",
+   "signal_bar": "2026-09-21",
+   "rsi": 1.5246,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:ALL:2026-09-21",
+   "action": "BUY",
+   "ticker": "ALL",
+   "signal_bar": "2026-09-21",
+   "rsi": 1.9336,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:HD:2026-09-21",
+   "action": "BUY",
+   "ticker": "HD",
+   "signal_bar": "2026-09-21",
+   "rsi": 2.587,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:MDLZ:2026-09-21",
+   "action": "BUY",
+   "ticker": "MDLZ",
+   "signal_bar": "2026-09-21",
+   "rsi": 2.6095,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:LOW:2026-09-21",
+   "action": "BUY",
+   "ticker": "LOW",
+   "signal_bar": "2026-09-21",
+   "rsi": 2.6112,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:UNP:2026-09-21",
+   "action": "BUY",
+   "ticker": "UNP",
+   "signal_bar": "2026-09-21",
+   "rsi": 3.4394,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:VZ:2026-09-21",
+   "action": "BUY",
+   "ticker": "VZ",
+   "signal_bar": "2026-09-21",
+   "rsi": 3.8242,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:CMG:2026-09-21",
+   "action": "BUY",
+   "ticker": "CMG",
+   "signal_bar": "2026-09-21",
+   "rsi": 4.0909,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:GIS:2026-09-21",
+   "action": "BUY",
+   "ticker": "GIS",
+   "signal_bar": "2026-09-21",
+   "rsi": 4.6319,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:CVX:2026-09-21",
+   "action": "BUY",
+   "ticker": "CVX",
+   "signal_bar": "2026-09-21",
+   "rsi": 4.8908,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:TPR:2026-09-21",
+   "action": "BUY",
+   "ticker": "TPR",
+   "signal_bar": "2026-09-21",
+   "rsi": 5.0911,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:OXY:2026-09-21",
+   "action": "BUY",
+   "ticker": "OXY",
+   "signal_bar": "2026-09-21",
+   "rsi": 5.1746,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:CB:2026-09-21",
+   "action": "BUY",
+   "ticker": "CB",
+   "signal_bar": "2026-09-21",
+   "rsi": 5.3858,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:HAL:2026-09-21",
+   "action": "BUY",
+   "ticker": "HAL",
+   "signal_bar": "2026-09-21",
+   "rsi": 5.4151,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:SBUX:2026-09-21",
+   "action": "BUY",
+   "ticker": "SBUX",
+   "signal_bar": "2026-09-21",
+   "rsi": 5.8383,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:NSC:2026-09-21",
+   "action": "BUY",
+   "ticker": "NSC",
+   "signal_bar": "2026-09-21",
+   "rsi": 5.9517,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:PM:2026-09-21",
+   "action": "BUY",
+   "ticker": "PM",
+   "signal_bar": "2026-09-21",
+   "rsi": 6.1553,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:CRM:2026-09-21",
+   "action": "BUY",
+   "ticker": "CRM",
+   "signal_bar": "2026-09-21",
+   "rsi": 6.2055,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:AFL:2026-09-21",
+   "action": "BUY",
+   "ticker": "AFL",
+   "signal_bar": "2026-09-21",
+   "rsi": 6.5798,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:XOM:2026-09-21",
+   "action": "BUY",
+   "ticker": "XOM",
+   "signal_bar": "2026-09-21",
+   "rsi": 6.7476,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:COP:2026-09-21",
+   "action": "BUY",
+   "ticker": "COP",
+   "signal_bar": "2026-09-21",
+   "rsi": 7.08,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:TRV:2026-09-21",
+   "action": "BUY",
+   "ticker": "TRV",
+   "signal_bar": "2026-09-21",
+   "rsi": 7.6777,
+   "created_utc": "2026-09-23T00:08:31Z"
+  }
+ ],
  "realized_pl_sar": 0.0,
  "purified_sar": 0.0,
  "closed_trades": 0,
- "last_run_utc": null,
- "last_decided_bar": null
+ "last_run_utc": "2026-09-23T00:08:31Z",
+ "last_decided_bar": "2026-09-21"
 }

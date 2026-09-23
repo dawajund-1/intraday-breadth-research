@@ -1,8 +1,8 @@
 {
- "generated_utc": "2026-09-22T20:36:48Z",
+ "generated_utc": "2026-09-23T00:08:31Z",
  "status_banner": "Research-only paper-trading experiment. This breadth strategy failed its holdout validation and is not approved for real trading.",
- "trading_enabled": false,
- "note": "Snapshot only - no decision cycle was run and no state was changed.",
+ "trading_enabled": true,
+ "note": "",
  "currency": "SAR",
  "fx_locked": {
   "sar_per_usd": 3.75,
@@ -16,20 +16,22 @@
  },
  "purification_rate": 0.1,
  "capital_model": {
-  "max_concurrent_positions": 10,
-  "target_position_pct": 0.1,
+  "max_concurrent_positions": 25,
+  "target_position_pct": 0.04,
   "leverage": false,
   "margin": false,
   "shorting": false,
   "fractional_shares": true,
-  "fractional_note": "Allowed solely because 100 SAR (~27 USD) cannot buy one share of most US names. Not a claim that fractional execution is available anywhere."
+  "fractional_note": "Allowed solely because 100 SAR (~27 USD) cannot buy one share of most US names. Not a claim that fractional execution is available anywhere.",
+  "sizing_note": "25 slots at 4% of equity each fully deploys the account. Raised from 10 slots / 10% on 2026-09-22 to reach ~10x the live tracker's trade count. MEASURED over the 2022-2026 holdout, replaying the unchanged rule with only the slot count varied: 10 slots = 442 round trips/yr (4.0x), 25 slots = 1097 (10.0x), 50 slots = 2063 (18.8x). The live tracker does 110/yr. This is a capital-model parameter, not a strategy parameter - the rule, thresholds, universe and execution are untouched.",
+  "not_an_edge_note": "More trades is more SAMPLE, not more edge. The holdout found this rule indistinguishable from random entry, so a higher trade count accumulates out-of-sample evidence faster; it does not create a profit source. Cost drag is ~2.2% of equity per year at either slot count, because capital turnover is what sets it."
  },
  "schedule": {
   "proposed_cron_utc": "0 22 * * 1-5",
   "note": "PROPOSED, NOT ENABLED. 22:00 UTC is after the US close in both EDT (18:00 ET) and EST (17:00 ET), and 30 minutes after the unrelated live tracker's own window, so the two never contend."
  },
- "last_decided_bar": null,
- "last_run_utc": null,
+ "last_decided_bar": "2026-09-21",
+ "last_run_utc": "2026-09-23T00:08:31Z",
  "account": {
   "initial_capital_sar": 100,
   "cash_sar": 100.0,
@@ -38,11 +40,212 @@
   "unrealized_pl_sar": 0.0,
   "purified_sar": 0.0,
   "open_positions": 0,
-  "max_positions": 10,
+  "max_positions": 25,
   "closed_trades": 0
  },
  "positions": [],
- "pending_orders": [],
+ "pending_orders": [
+  {
+   "id": "BUY:PEP:2026-09-21",
+   "action": "BUY",
+   "ticker": "PEP",
+   "signal_bar": "2026-09-21",
+   "rsi": 0.098,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:CSX:2026-09-21",
+   "action": "BUY",
+   "ticker": "CSX",
+   "signal_bar": "2026-09-21",
+   "rsi": 0.3561,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:CVS:2026-09-21",
+   "action": "BUY",
+   "ticker": "CVS",
+   "signal_bar": "2026-09-21",
+   "rsi": 1.0215,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:CHTR:2026-09-21",
+   "action": "BUY",
+   "ticker": "CHTR",
+   "signal_bar": "2026-09-21",
+   "rsi": 1.5246,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:ALL:2026-09-21",
+   "action": "BUY",
+   "ticker": "ALL",
+   "signal_bar": "2026-09-21",
+   "rsi": 1.9336,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:HD:2026-09-21",
+   "action": "BUY",
+   "ticker": "HD",
+   "signal_bar": "2026-09-21",
+   "rsi": 2.587,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:MDLZ:2026-09-21",
+   "action": "BUY",
+   "ticker": "MDLZ",
+   "signal_bar": "2026-09-21",
+   "rsi": 2.6095,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:LOW:2026-09-21",
+   "action": "BUY",
+   "ticker": "LOW",
+   "signal_bar": "2026-09-21",
+   "rsi": 2.6112,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:UNP:2026-09-21",
+   "action": "BUY",
+   "ticker": "UNP",
+   "signal_bar": "2026-09-21",
+   "rsi": 3.4394,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:VZ:2026-09-21",
+   "action": "BUY",
+   "ticker": "VZ",
+   "signal_bar": "2026-09-21",
+   "rsi": 3.8242,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:CMG:2026-09-21",
+   "action": "BUY",
+   "ticker": "CMG",
+   "signal_bar": "2026-09-21",
+   "rsi": 4.0909,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:GIS:2026-09-21",
+   "action": "BUY",
+   "ticker": "GIS",
+   "signal_bar": "2026-09-21",
+   "rsi": 4.6319,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:CVX:2026-09-21",
+   "action": "BUY",
+   "ticker": "CVX",
+   "signal_bar": "2026-09-21",
+   "rsi": 4.8908,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:TPR:2026-09-21",
+   "action": "BUY",
+   "ticker": "TPR",
+   "signal_bar": "2026-09-21",
+   "rsi": 5.0911,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:OXY:2026-09-21",
+   "action": "BUY",
+   "ticker": "OXY",
+   "signal_bar": "2026-09-21",
+   "rsi": 5.1746,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:CB:2026-09-21",
+   "action": "BUY",
+   "ticker": "CB",
+   "signal_bar": "2026-09-21",
+   "rsi": 5.3858,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:HAL:2026-09-21",
+   "action": "BUY",
+   "ticker": "HAL",
+   "signal_bar": "2026-09-21",
+   "rsi": 5.4151,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:SBUX:2026-09-21",
+   "action": "BUY",
+   "ticker": "SBUX",
+   "signal_bar": "2026-09-21",
+   "rsi": 5.8383,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:NSC:2026-09-21",
+   "action": "BUY",
+   "ticker": "NSC",
+   "signal_bar": "2026-09-21",
+   "rsi": 5.9517,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:PM:2026-09-21",
+   "action": "BUY",
+   "ticker": "PM",
+   "signal_bar": "2026-09-21",
+   "rsi": 6.1553,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:CRM:2026-09-21",
+   "action": "BUY",
+   "ticker": "CRM",
+   "signal_bar": "2026-09-21",
+   "rsi": 6.2055,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:AFL:2026-09-21",
+   "action": "BUY",
+   "ticker": "AFL",
+   "signal_bar": "2026-09-21",
+   "rsi": 6.5798,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:XOM:2026-09-21",
+   "action": "BUY",
+   "ticker": "XOM",
+   "signal_bar": "2026-09-21",
+   "rsi": 6.7476,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:COP:2026-09-21",
+   "action": "BUY",
+   "ticker": "COP",
+   "signal_bar": "2026-09-21",
+   "rsi": 7.08,
+   "created_utc": "2026-09-23T00:08:31Z"
+  },
+  {
+   "id": "BUY:TRV:2026-09-21",
+   "action": "BUY",
+   "ticker": "TRV",
+   "signal_bar": "2026-09-21",
+   "rsi": 7.6777,
+   "created_utc": "2026-09-23T00:08:31Z"
+  }
+ ],
  "watchlist": [
   {
    "ticker": "AA",
@@ -104,7 +307,7 @@
    "price_sar": 431.925,
    "rsi": 6.58,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -131,7 +334,7 @@
    "price_sar": 910.725,
    "rsi": 1.93,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -293,7 +496,7 @@
    "price_sar": 1264.725,
    "rsi": 5.39,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -311,7 +514,7 @@
    "price_sar": 462.5625,
    "rsi": 1.52,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -356,7 +559,7 @@
    "price_sar": 124.275,
    "rsi": 4.09,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -374,7 +577,7 @@
    "price_sar": 478.2375,
    "rsi": 7.08,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -392,7 +595,7 @@
    "price_sar": 886.575,
    "rsi": 6.21,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -410,7 +613,7 @@
    "price_sar": 172.4625,
    "rsi": 0.36,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -419,7 +622,7 @@
    "price_sar": 328.5,
    "rsi": 1.02,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -428,7 +631,7 @@
    "price_sar": 763.7625,
    "rsi": 4.89,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -626,7 +829,7 @@
    "price_sar": 132.7875,
    "rsi": 4.63,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -662,7 +865,7 @@
    "price_sar": 125.2125,
    "rsi": 5.42,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -671,7 +874,7 @@
    "price_sar": 1114.5,
    "rsi": 2.59,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -815,7 +1018,7 @@
    "price_sar": 716.175,
    "rsi": 2.61,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -887,7 +1090,7 @@
    "price_sar": 225.6375,
    "rsi": 2.61,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -995,7 +1198,7 @@
    "price_sar": 1159.0125,
    "rsi": 5.95,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1031,7 +1234,7 @@
    "price_sar": 214.6875,
    "rsi": 5.17,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1040,7 +1243,7 @@
    "price_sar": 485.9625,
    "rsi": 0.1,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1067,7 +1270,7 @@
    "price_sar": 703.05,
    "rsi": 6.16,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1139,7 +1342,7 @@
    "price_sar": 355.875,
    "rsi": 5.84,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1247,7 +1450,7 @@
    "price_sar": 424.0125,
    "rsi": 5.09,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1256,7 +1459,7 @@
    "price_sar": 1391.7375,
    "rsi": 7.68,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1292,7 +1495,7 @@
    "price_sar": 1011.1125,
    "rsi": 3.44,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1337,7 +1540,7 @@
    "price_sar": 178.8,
    "rsi": 3.82,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1382,7 +1585,7 @@
    "price_sar": 593.625,
    "rsi": 6.75,
    "status": "FLAT",
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1396,10 +1599,259 @@
   }
  ],
  "trades": [],
- "skipped_recent": [],
- "skipped_total": 0,
- "weekly": [],
- "monthly": [],
+ "skipped_recent": [
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "BRK-B",
+   "rsi": "8.6159",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #26 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "CI",
+   "rsi": "8.6239",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #27 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "MO",
+   "rsi": "8.9137",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #28 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "AIG",
+   "rsi": "9.2014",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #29 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "EOG",
+   "rsi": "9.991",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #30 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "MCD",
+   "rsi": "10.3409",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #31 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "KMB",
+   "rsi": "11.2609",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #32 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "ADP",
+   "rsi": "11.4091",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #33 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "MET",
+   "rsi": "12.2072",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #34 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "DVN",
+   "rsi": "12.3351",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #35 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "DUK",
+   "rsi": "12.41",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #36 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "KO",
+   "rsi": "12.9694",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #37 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "CL",
+   "rsi": "13.1274",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #38 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "MDT",
+   "rsi": "13.3289",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #39 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "ORLY",
+   "rsi": "13.5864",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #40 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "NEE",
+   "rsi": "14.0721",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #41 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "ELV",
+   "rsi": "15.5397",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #42 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "INTU",
+   "rsi": "16.3147",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #43 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "APA",
+   "rsi": "16.5966",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #44 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "KR",
+   "rsi": "16.8455",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #45 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "SO",
+   "rsi": "18.0839",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #46 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "VLO",
+   "rsi": "18.0933",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #47 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "F",
+   "rsi": "19.5902",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #48 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "LIN",
+   "rsi": "19.9986",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #49 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "AA",
+   "rsi": "21.8988",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #50 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "EBAY",
+   "rsi": "22.0623",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #51 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "DG",
+   "rsi": "22.2238",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #52 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "HPQ",
+   "rsi": "23.3515",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #53 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "PG",
+   "rsi": "23.3881",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #54 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "CLF",
+   "rsi": "26.7397",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #55 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "BKNG",
+   "rsi": "27.0808",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #56 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-09-23T00:08:31Z",
+   "bar_id": "2026-09-21",
+   "ticker": "T",
+   "rsi": "29.1185",
+   "reason": "valid entry signal but no free slot (0/25 used, ranked #57 by RSI)"
+  }
+ ],
+ "skipped_total": 32,
+ "weekly": [
+  {
+   "key": "2026-W39",
+   "label": "2026-W39 (Sep 21 - Sep 27)",
+   "closed": 0,
+   "wins": 0,
+   "losses": 0,
+   "net_pl_sar": 0.0,
+   "purification_sar": 0.0,
+   "skipped": 32,
+   "cumulative_sar": 0.0
+  }
+ ],
+ "monthly": [
+  {
+   "key": "2026-09",
+   "label": "September 2026",
+   "closed": 0,
+   "wins": 0,
+   "losses": 0,
+   "net_pl_sar": 0.0,
+   "purification_sar": 0.0,
+   "skipped": 32,
+   "cumulative_sar": 0.0
+  }
+ ],
  "universe_size": 150,
  "fetch_failures": [],
  "bar_id": "2026-09-21"
