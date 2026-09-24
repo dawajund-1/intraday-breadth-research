@@ -2,216 +2,216 @@
  "schema": 1,
  "initialized_utc": "2026-09-22T12:03:29Z",
  "bar_guard": {
-  "bar_id": "2026-09-21",
+  "bar_id": "2026-09-22",
   "decided": true
  },
- "cash_sar": 100.0,
- "positions": [],
- "pending_orders": [
+ "cash_sar": 0.011999080050602018,
+ "positions": [
   {
-   "id": "BUY:PEP:2026-09-21",
-   "action": "BUY",
-   "ticker": "PEP",
-   "signal_bar": "2026-09-21",
-   "rsi": 0.098,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:CSX:2026-09-21",
-   "action": "BUY",
-   "ticker": "CSX",
-   "signal_bar": "2026-09-21",
-   "rsi": 0.3561,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:CVS:2026-09-21",
-   "action": "BUY",
-   "ticker": "CVS",
-   "signal_bar": "2026-09-21",
-   "rsi": 1.0215,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:CHTR:2026-09-21",
-   "action": "BUY",
-   "ticker": "CHTR",
-   "signal_bar": "2026-09-21",
-   "rsi": 1.5246,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:ALL:2026-09-21",
-   "action": "BUY",
-   "ticker": "ALL",
-   "signal_bar": "2026-09-21",
-   "rsi": 1.9336,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:HD:2026-09-21",
-   "action": "BUY",
-   "ticker": "HD",
-   "signal_bar": "2026-09-21",
-   "rsi": 2.587,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:MDLZ:2026-09-21",
-   "action": "BUY",
-   "ticker": "MDLZ",
-   "signal_bar": "2026-09-21",
-   "rsi": 2.6095,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:LOW:2026-09-21",
-   "action": "BUY",
-   "ticker": "LOW",
-   "signal_bar": "2026-09-21",
-   "rsi": 2.6112,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:UNP:2026-09-21",
-   "action": "BUY",
-   "ticker": "UNP",
-   "signal_bar": "2026-09-21",
-   "rsi": 3.4394,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:VZ:2026-09-21",
-   "action": "BUY",
-   "ticker": "VZ",
-   "signal_bar": "2026-09-21",
-   "rsi": 3.8242,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:CMG:2026-09-21",
-   "action": "BUY",
-   "ticker": "CMG",
-   "signal_bar": "2026-09-21",
-   "rsi": 4.0909,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:GIS:2026-09-21",
-   "action": "BUY",
-   "ticker": "GIS",
-   "signal_bar": "2026-09-21",
-   "rsi": 4.6319,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:CVX:2026-09-21",
-   "action": "BUY",
-   "ticker": "CVX",
-   "signal_bar": "2026-09-21",
-   "rsi": 4.8908,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:TPR:2026-09-21",
-   "action": "BUY",
-   "ticker": "TPR",
-   "signal_bar": "2026-09-21",
-   "rsi": 5.0911,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:OXY:2026-09-21",
-   "action": "BUY",
-   "ticker": "OXY",
-   "signal_bar": "2026-09-21",
-   "rsi": 5.1746,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:CB:2026-09-21",
-   "action": "BUY",
-   "ticker": "CB",
-   "signal_bar": "2026-09-21",
-   "rsi": 5.3858,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:HAL:2026-09-21",
-   "action": "BUY",
-   "ticker": "HAL",
-   "signal_bar": "2026-09-21",
-   "rsi": 5.4151,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:SBUX:2026-09-21",
-   "action": "BUY",
-   "ticker": "SBUX",
-   "signal_bar": "2026-09-21",
-   "rsi": 5.8383,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:NSC:2026-09-21",
-   "action": "BUY",
-   "ticker": "NSC",
-   "signal_bar": "2026-09-21",
-   "rsi": 5.9517,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:PM:2026-09-21",
-   "action": "BUY",
-   "ticker": "PM",
-   "signal_bar": "2026-09-21",
-   "rsi": 6.1553,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:CRM:2026-09-21",
-   "action": "BUY",
-   "ticker": "CRM",
-   "signal_bar": "2026-09-21",
-   "rsi": 6.2055,
-   "created_utc": "2026-09-23T00:08:31Z"
-  },
-  {
-   "id": "BUY:AFL:2026-09-21",
-   "action": "BUY",
    "ticker": "AFL",
-   "signal_bar": "2026-09-21",
-   "rsi": 6.5798,
-   "created_utc": "2026-09-23T00:08:31Z"
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 115.18000030517578,
+   "shares": 0.009258551807384219,
+   "basis_sar": 3.999,
+   "opened_utc": "2026-09-24T00:18:46Z"
   },
   {
-   "id": "BUY:XOM:2026-09-21",
-   "action": "BUY",
-   "ticker": "XOM",
-   "signal_bar": "2026-09-21",
-   "rsi": 6.7476,
-   "created_utc": "2026-09-23T00:08:31Z"
+   "ticker": "ALL",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 242.86000061035156,
+   "shares": 0.004390963243514653,
+   "basis_sar": 3.99896001,
+   "opened_utc": "2026-09-24T00:18:46Z"
   },
   {
-   "id": "BUY:COP:2026-09-21",
-   "action": "BUY",
+   "ticker": "CB",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 337.260009765625,
+   "shares": 0.0031618888727652818,
+   "basis_sar": 3.9989200203999,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "CHTR",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 123.3499984741211,
+   "shares": 0.008645058950232931,
+   "basis_sar": 3.998880031199696,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "CMG",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 32.630001068115234,
+   "shares": 0.032680273053433594,
+   "basis_sar": 3.9988400423993835,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
    "ticker": "COP",
-   "signal_bar": "2026-09-21",
-   "rsi": 7.08,
-   "created_utc": "2026-09-23T00:08:31Z"
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 127.52999877929688,
+   "shares": 0.008361536040722515,
+   "basis_sar": 3.9988000539989597,
+   "opened_utc": "2026-09-24T00:18:46Z"
   },
   {
-   "id": "BUY:TRV:2026-09-21",
-   "action": "BUY",
+   "ticker": "CRM",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 236.4199981689453,
+   "shares": 0.004510346103791003,
+   "basis_sar": 3.9987600659984195,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "CSX",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 45.9900016784668,
+   "shares": 0.023186025556043238,
+   "basis_sar": 3.99872007839776,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "CVS",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 87.5999984741211,
+   "shares": 0.012172542346571755,
+   "basis_sar": 3.9986800911969755,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "CVX",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 203.6699981689453,
+   "shares": 0.005235449685399642,
+   "basis_sar": 3.9986401043960638,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "GIS",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 35.45000076293945,
+   "shares": 0.030078796667147283,
+   "basis_sar": 3.9986001179950197,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "HAL",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 33.38999938964844,
+   "shares": 0.03193419351171335,
+   "basis_sar": 3.9985601319938398,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "HD",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 297.20001220703125,
+   "shares": 0.0035877254214082407,
+   "basis_sar": 3.9985201463925204,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "LOW",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 190.97999572753906,
+   "shares": 0.005583105038073167,
+   "basis_sar": 3.9984801611910568,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "MDLZ",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 60.16999816894531,
+   "shares": 0.017720637296847398,
+   "basis_sar": 3.998440176389445,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "NSC",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 309.07000732421875,
+   "shares": 0.003449833454975831,
+   "basis_sar": 3.9984001919876815,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "OXY",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 57.25,
+   "shares": 0.018624094127444594,
+   "basis_sar": 3.9983602079857614,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "PEP",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 129.58999633789062,
+   "shares": 0.00822763142706074,
+   "basis_sar": 3.9983202243836815,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "PM",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 187.47999572753906,
+   "shares": 0.0056870497579088325,
+   "basis_sar": 3.9982802411814373,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "SBUX",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 94.9000015258789,
+   "shares": 0.011234956639528173,
+   "basis_sar": 3.9982402583790257,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "TPR",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 113.06999969482422,
+   "shares": 0.009429439666914487,
+   "basis_sar": 3.9982002759764415,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
    "ticker": "TRV",
-   "signal_bar": "2026-09-21",
-   "rsi": 7.6777,
-   "created_utc": "2026-09-23T00:08:31Z"
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 371.1300048828125,
+   "shares": 0.0028727832952488877,
+   "basis_sar": 3.9981602939736822,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "UNP",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 269.6300048828125,
+   "shares": 0.003954179421150026,
+   "basis_sar": 3.9981203123707427,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "VZ",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 46.45000076293945,
+   "shares": 0.02295273923501574,
+   "basis_sar": 3.998080331167618,
+   "opened_utc": "2026-09-24T00:18:46Z"
+  },
+  {
+   "ticker": "XOM",
+   "entry_bar": "2026-09-22",
+   "entry_px_usd": 158.3000030517578,
+   "shares": 0.006734959399096758,
+   "basis_sar": 3.9980403503643065,
+   "opened_utc": "2026-09-24T00:18:46Z"
   }
  ],
+ "pending_orders": [],
  "realized_pl_sar": 0.0,
  "purified_sar": 0.0,
  "closed_trades": 0,
- "last_run_utc": "2026-09-23T00:08:31Z",
- "last_decided_bar": "2026-09-21"
+ "last_run_utc": "2026-09-24T00:18:46Z",
+ "last_decided_bar": "2026-09-22"
 }
