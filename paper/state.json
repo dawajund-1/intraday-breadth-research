@@ -2,7 +2,7 @@
  "schema": 1,
  "initialized_utc": "2026-09-22T12:03:29Z",
  "bar_guard": {
-  "bar_id": "2026-09-22",
+  "bar_id": "2026-09-23",
   "decided": true
  },
  "cash_sar": 0.011999080050602018,
@@ -208,10 +208,19 @@
    "opened_utc": "2026-09-24T00:18:46Z"
   }
  ],
- "pending_orders": [],
+ "pending_orders": [
+  {
+   "id": "SELL:PM:2026-09-23",
+   "action": "SELL",
+   "ticker": "PM",
+   "signal_bar": "2026-09-23",
+   "rsi": 71.6545,
+   "created_utc": "2026-09-25T00:21:12Z"
+  }
+ ],
  "realized_pl_sar": 0.0,
  "purified_sar": 0.0,
  "closed_trades": 0,
- "last_run_utc": "2026-09-24T00:18:46Z",
- "last_decided_bar": "2026-09-22"
+ "last_run_utc": "2026-09-25T00:21:12Z",
+ "last_decided_bar": "2026-09-23"
 }
