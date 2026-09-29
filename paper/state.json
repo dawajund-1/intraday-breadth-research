@@ -2,10 +2,10 @@
  "schema": 1,
  "initialized_utc": "2026-09-22T12:03:29Z",
  "bar_guard": {
-  "bar_id": "2026-09-24",
+  "bar_id": "2026-09-28",
   "decided": true
  },
- "cash_sar": 4.086519547990534,
+ "cash_sar": 4.231936473435955,
  "positions": [
   {
    "ticker": "AFL",
@@ -192,35 +192,43 @@
    "opened_utc": "2026-09-24T00:18:46Z"
   },
   {
-   "ticker": "XOM",
-   "entry_bar": "2026-09-22",
-   "entry_px_usd": 158.3000030517578,
-   "shares": 0.006734959399096758,
-   "basis_sar": 3.9980403503643065,
-   "opened_utc": "2026-09-24T00:18:46Z"
+   "ticker": "CI",
+   "entry_bar": "2026-09-28",
+   "entry_px_usd": 271.8299865722656,
+   "shares": 0.0038716706387258684,
+   "basis_sar": 3.9466356665140796,
+   "opened_utc": "2026-09-29T01:36:05Z"
   }
  ],
  "pending_orders": [
   {
-   "id": "SELL:XOM:2026-09-24",
+   "id": "SELL:CVX:2026-09-28",
    "action": "SELL",
-   "ticker": "XOM",
-   "signal_bar": "2026-09-24",
-   "rsi": 75.5198,
-   "created_utc": "2026-09-26T00:26:20Z"
+   "ticker": "CVX",
+   "signal_bar": "2026-09-28",
+   "rsi": 71.9083,
+   "created_utc": "2026-09-29T01:36:05Z"
   },
   {
-   "id": "BUY:CI:2026-09-24",
+   "id": "SELL:SBUX:2026-09-28",
+   "action": "SELL",
+   "ticker": "SBUX",
+   "signal_bar": "2026-09-28",
+   "rsi": 77.6473,
+   "created_utc": "2026-09-29T01:36:05Z"
+  },
+  {
+   "id": "BUY:INTU:2026-09-28",
    "action": "BUY",
-   "ticker": "CI",
-   "signal_bar": "2026-09-24",
-   "rsi": 0.6567,
-   "created_utc": "2026-09-26T00:26:20Z"
+   "ticker": "INTU",
+   "signal_bar": "2026-09-28",
+   "rsi": 0.4508,
+   "created_utc": "2026-09-29T01:36:05Z"
   }
  ],
- "realized_pl_sar": 0.08471136306499405,
- "purified_sar": 0.008471136306499405,
- "closed_trades": 1,
- "last_run_utc": "2026-09-26T00:26:20Z",
- "last_decided_bar": "2026-09-24"
+ "realized_pl_sar": 0.19026597110747634,
+ "purified_sar": 0.019026597110747633,
+ "closed_trades": 2,
+ "last_run_utc": "2026-09-29T01:36:05Z",
+ "last_decided_bar": "2026-09-28"
 }
