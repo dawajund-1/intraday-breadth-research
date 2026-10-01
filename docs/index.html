@@ -257,9 +257,18 @@ function renderStatus(d) {
       " (UTC), awaiting approval.";
   }
   document.getElementById("updated").textContent =
-    "Last updated: " + new Date(d.generated_utc).toLocaleString() +
+    "Last updated: " + saDateTime(new Date(d.generated_utc)) +
     " · universe " + d.universe_size + " tickers · bar " + (d.bar_id || "—");
 }
+
+// --- Saudi time display ---------------------------------------------------
+// Wall-clock timestamps render in Saudi Arabia Standard Time (Asia/Riyadh,
+// UTC+3, no DST) and are labelled "AST" regardless of the viewer's device
+// timezone. Display only: the workflow still schedules on UTC and the bar
+// guard keys on bar_id, not on the clock.
+const SA_TZ = "Asia/Riyadh";
+const saDateTime = d => d.toLocaleString("en-GB",
+  { dateStyle: "medium", timeStyle: "short", timeZone: SA_TZ }) + " AST";
 
 function renderWatch(d) {
   const tb = document.querySelector("#watch-table tbody");
