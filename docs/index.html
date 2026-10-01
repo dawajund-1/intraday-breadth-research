@@ -267,8 +267,14 @@ function renderStatus(d) {
 // timezone. Display only: the workflow still schedules on UTC and the bar
 // guard keys on bar_id, not on the clock.
 const SA_TZ = "Asia/Riyadh";
-const saDateTime = d => d.toLocaleString("en-GB",
-  { dateStyle: "medium", timeStyle: "short", timeZone: SA_TZ }) + " AST";
+const US_TZ = "America/New_York";
+// Saudi time runs 7-8h ahead of New York, so a US session that closes on the
+// 30th is timestamped the 1st in Riyadh. Show both to disambiguate the session.
+const saDateTime = d =>
+  d.toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: SA_TZ })
+  + " AST · " +
+  d.toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short", timeZone: US_TZ })
+  + " New York";
 
 function renderWatch(d) {
   const tb = document.querySelector("#watch-table tbody");
