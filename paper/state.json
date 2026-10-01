@@ -2,10 +2,10 @@
  "schema": 1,
  "initialized_utc": "2026-09-22T12:03:29Z",
  "bar_guard": {
-  "bar_id": "2026-09-28",
+  "bar_id": "2026-09-29",
   "decided": true
  },
- "cash_sar": 4.231936473435955,
+ "cash_sar": 8.327486895638366,
  "positions": [
   {
    "ticker": "AFL",
@@ -80,14 +80,6 @@
    "opened_utc": "2026-09-24T00:18:46Z"
   },
   {
-   "ticker": "CVX",
-   "entry_bar": "2026-09-22",
-   "entry_px_usd": 203.6699981689453,
-   "shares": 0.005235449685399642,
-   "basis_sar": 3.9986401043960638,
-   "opened_utc": "2026-09-24T00:18:46Z"
-  },
-  {
    "ticker": "GIS",
    "entry_bar": "2026-09-22",
    "entry_px_usd": 35.45000076293945,
@@ -152,14 +144,6 @@
    "opened_utc": "2026-09-24T00:18:46Z"
   },
   {
-   "ticker": "SBUX",
-   "entry_bar": "2026-09-22",
-   "entry_px_usd": 94.9000015258789,
-   "shares": 0.011234956639528173,
-   "basis_sar": 3.9982402583790257,
-   "opened_utc": "2026-09-24T00:18:46Z"
-  },
-  {
    "ticker": "TPR",
    "entry_bar": "2026-09-22",
    "entry_px_usd": 113.06999969482422,
@@ -198,37 +182,53 @@
    "shares": 0.0038716706387258684,
    "basis_sar": 3.9466356665140796,
    "opened_utc": "2026-09-29T01:36:05Z"
+  },
+  {
+   "ticker": "INTU",
+   "entry_bar": "2026-09-29",
+   "entry_px_usd": 268.0299987792969,
+   "shares": 0.003911185569867561,
+   "basis_sar": 3.931181488189522,
+   "opened_utc": "2026-10-01T01:09:16Z"
   }
  ],
  "pending_orders": [
   {
-   "id": "SELL:CVX:2026-09-28",
+   "id": "SELL:CI:2026-09-29",
    "action": "SELL",
-   "ticker": "CVX",
-   "signal_bar": "2026-09-28",
-   "rsi": 71.9083,
-   "created_utc": "2026-09-29T01:36:05Z"
+   "ticker": "CI",
+   "signal_bar": "2026-09-29",
+   "rsi": 85.5588,
+   "created_utc": "2026-10-01T01:09:16Z"
   },
   {
-   "id": "SELL:SBUX:2026-09-28",
+   "id": "SELL:TPR:2026-09-29",
    "action": "SELL",
-   "ticker": "SBUX",
-   "signal_bar": "2026-09-28",
-   "rsi": 77.6473,
-   "created_utc": "2026-09-29T01:36:05Z"
+   "ticker": "TPR",
+   "signal_bar": "2026-09-29",
+   "rsi": 76.3412,
+   "created_utc": "2026-10-01T01:09:16Z"
   },
   {
-   "id": "BUY:INTU:2026-09-28",
+   "id": "BUY:ELV:2026-09-29",
    "action": "BUY",
-   "ticker": "INTU",
-   "signal_bar": "2026-09-28",
-   "rsi": 0.4508,
-   "created_utc": "2026-09-29T01:36:05Z"
+   "ticker": "ELV",
+   "signal_bar": "2026-09-29",
+   "rsi": 0.3374,
+   "created_utc": "2026-10-01T01:09:16Z"
+  },
+  {
+   "id": "BUY:MGM:2026-09-29",
+   "action": "BUY",
+   "ticker": "MGM",
+   "signal_bar": "2026-09-29",
+   "rsi": 1.2394,
+   "created_utc": "2026-10-01T01:09:16Z"
   }
  ],
- "realized_pl_sar": 0.19026597110747634,
- "purified_sar": 0.019026597110747633,
- "closed_trades": 2,
- "last_run_utc": "2026-09-29T01:36:05Z",
- "last_decided_bar": "2026-09-28"
+ "realized_pl_sar": 0.22452662527322564,
+ "purified_sar": 0.022452662527322566,
+ "closed_trades": 4,
+ "last_run_utc": "2026-10-01T01:09:16Z",
+ "last_decided_bar": "2026-09-29"
 }
