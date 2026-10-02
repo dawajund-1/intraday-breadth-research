@@ -2,10 +2,10 @@
  "schema": 1,
  "initialized_utc": "2026-09-22T12:03:29Z",
  "bar_guard": {
-  "bar_id": "2026-09-29",
+  "bar_id": "2026-09-30",
   "decided": true
  },
- "cash_sar": 8.327486895638366,
+ "cash_sar": 8.525189287892022,
  "positions": [
   {
    "ticker": "AFL",
@@ -144,14 +144,6 @@
    "opened_utc": "2026-09-24T00:18:46Z"
   },
   {
-   "ticker": "TPR",
-   "entry_bar": "2026-09-22",
-   "entry_px_usd": 113.06999969482422,
-   "shares": 0.009429439666914487,
-   "basis_sar": 3.9982002759764415,
-   "opened_utc": "2026-09-24T00:18:46Z"
-  },
-  {
    "ticker": "TRV",
    "entry_bar": "2026-09-22",
    "entry_px_usd": 371.1300048828125,
@@ -176,59 +168,51 @@
    "opened_utc": "2026-09-24T00:18:46Z"
   },
   {
-   "ticker": "CI",
-   "entry_bar": "2026-09-28",
-   "entry_px_usd": 271.8299865722656,
-   "shares": 0.0038716706387258684,
-   "basis_sar": 3.9466356665140796,
-   "opened_utc": "2026-09-29T01:36:05Z"
-  },
-  {
    "ticker": "INTU",
    "entry_bar": "2026-09-29",
    "entry_px_usd": 268.0299987792969,
    "shares": 0.003911185569867561,
    "basis_sar": 3.931181488189522,
    "opened_utc": "2026-10-01T01:09:16Z"
+  },
+  {
+   "ticker": "ELV",
+   "entry_bar": "2026-09-30",
+   "entry_px_usd": 388.82000732421875,
+   "shares": 0.002676821339846828,
+   "basis_sar": 3.903006348618258,
+   "opened_utc": "2026-10-02T01:24:46Z"
+  },
+  {
+   "ticker": "MGM",
+   "entry_bar": "2026-09-30",
+   "entry_px_usd": 31.049999237060547,
+   "shares": 0.03351984897009837,
+   "basis_sar": 3.9029673185547717,
+   "opened_utc": "2026-10-02T01:24:46Z"
   }
  ],
  "pending_orders": [
   {
-   "id": "SELL:CI:2026-09-29",
-   "action": "SELL",
-   "ticker": "CI",
-   "signal_bar": "2026-09-29",
-   "rsi": 85.5588,
-   "created_utc": "2026-10-01T01:09:16Z"
-  },
-  {
-   "id": "SELL:TPR:2026-09-29",
-   "action": "SELL",
-   "ticker": "TPR",
-   "signal_bar": "2026-09-29",
-   "rsi": 76.3412,
-   "created_utc": "2026-10-01T01:09:16Z"
-  },
-  {
-   "id": "BUY:ELV:2026-09-29",
+   "id": "BUY:SLB:2026-09-30",
    "action": "BUY",
-   "ticker": "ELV",
-   "signal_bar": "2026-09-29",
-   "rsi": 0.3374,
-   "created_utc": "2026-10-01T01:09:16Z"
+   "ticker": "SLB",
+   "signal_bar": "2026-09-30",
+   "rsi": 1.2168,
+   "created_utc": "2026-10-02T01:24:46Z"
   },
   {
-   "id": "BUY:MGM:2026-09-29",
+   "id": "BUY:LMT:2026-09-30",
    "action": "BUY",
-   "ticker": "MGM",
-   "signal_bar": "2026-09-29",
-   "rsi": 1.2394,
-   "created_utc": "2026-10-01T01:09:16Z"
+   "ticker": "LMT",
+   "signal_bar": "2026-09-30",
+   "rsi": 1.3671,
+   "created_utc": "2026-10-02T01:24:46Z"
   }
  ],
- "realized_pl_sar": 0.22452662527322564,
- "purified_sar": 0.022452662527322566,
- "closed_trades": 4,
- "last_run_utc": "2026-10-01T01:09:16Z",
- "last_decided_bar": "2026-09-29"
+ "realized_pl_sar": 0.2921830299843071,
+ "purified_sar": 0.029316968890093567,
+ "closed_trades": 6,
+ "last_run_utc": "2026-10-02T01:24:46Z",
+ "last_decided_bar": "2026-09-30"
 }
