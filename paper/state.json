@@ -2,10 +2,10 @@
  "schema": 1,
  "initialized_utc": "2026-09-22T12:03:29Z",
  "bar_guard": {
-  "bar_id": "2026-09-30",
+  "bar_id": "2026-10-01",
   "decided": true
  },
- "cash_sar": 8.525189287892022,
+ "cash_sar": 0.686792269762071,
  "positions": [
   {
    "ticker": "AFL",
@@ -190,29 +190,69 @@
    "shares": 0.03351984897009837,
    "basis_sar": 3.9029673185547717,
    "opened_utc": "2026-10-02T01:24:46Z"
+  },
+  {
+   "ticker": "LMT",
+   "entry_bar": "2026-10-01",
+   "entry_px_usd": 505.5,
+   "shares": 0.002066990201452931,
+   "basis_sar": 3.9182383006292127,
+   "opened_utc": "2026-10-03T01:00:03Z"
+  },
+  {
+   "ticker": "SLB",
+   "entry_bar": "2026-10-01",
+   "entry_px_usd": 48.65999984741211,
+   "shares": 0.021472525718771802,
+   "basis_sar": 3.9181991182462066,
+   "opened_utc": "2026-10-03T01:00:03Z"
   }
  ],
  "pending_orders": [
   {
-   "id": "BUY:SLB:2026-09-30",
-   "action": "BUY",
-   "ticker": "SLB",
-   "signal_bar": "2026-09-30",
-   "rsi": 1.2168,
-   "created_utc": "2026-10-02T01:24:46Z"
+   "id": "SELL:CMG:2026-10-01",
+   "action": "SELL",
+   "ticker": "CMG",
+   "signal_bar": "2026-10-01",
+   "rsi": 87.0984,
+   "created_utc": "2026-10-03T01:00:03Z"
   },
   {
-   "id": "BUY:LMT:2026-09-30",
-   "action": "BUY",
-   "ticker": "LMT",
-   "signal_bar": "2026-09-30",
-   "rsi": 1.3671,
-   "created_utc": "2026-10-02T01:24:46Z"
+   "id": "SELL:COP:2026-10-01",
+   "action": "SELL",
+   "ticker": "COP",
+   "signal_bar": "2026-10-01",
+   "rsi": 76.2481,
+   "created_utc": "2026-10-03T01:00:03Z"
+  },
+  {
+   "id": "SELL:CRM:2026-10-01",
+   "action": "SELL",
+   "ticker": "CRM",
+   "signal_bar": "2026-10-01",
+   "rsi": 85.0083,
+   "created_utc": "2026-10-03T01:00:03Z"
+  },
+  {
+   "id": "SELL:INTU:2026-10-01",
+   "action": "SELL",
+   "ticker": "INTU",
+   "signal_bar": "2026-10-01",
+   "rsi": 86.2637,
+   "created_utc": "2026-10-03T01:00:03Z"
+  },
+  {
+   "id": "SELL:OXY:2026-10-01",
+   "action": "SELL",
+   "ticker": "OXY",
+   "signal_bar": "2026-10-01",
+   "rsi": 85.2402,
+   "created_utc": "2026-10-03T01:00:03Z"
   }
  ],
  "realized_pl_sar": 0.2921830299843071,
  "purified_sar": 0.029316968890093567,
  "closed_trades": 6,
- "last_run_utc": "2026-10-02T01:24:46Z",
- "last_decided_bar": "2026-09-30"
+ "last_run_utc": "2026-10-03T01:00:03Z",
+ "last_decided_bar": "2026-10-01"
 }
