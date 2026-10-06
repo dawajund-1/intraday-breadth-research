@@ -2,10 +2,10 @@
  "schema": 1,
  "initialized_utc": "2026-09-22T12:03:29Z",
  "bar_guard": {
-  "bar_id": "2026-10-01",
+  "bar_id": "2026-10-05",
   "decided": true
  },
- "cash_sar": 0.686792269762071,
+ "cash_sar": 20.588739520095586,
  "positions": [
   {
    "ticker": "AFL",
@@ -37,30 +37,6 @@
    "entry_px_usd": 123.3499984741211,
    "shares": 0.008645058950232931,
    "basis_sar": 3.998880031199696,
-   "opened_utc": "2026-09-24T00:18:46Z"
-  },
-  {
-   "ticker": "CMG",
-   "entry_bar": "2026-09-22",
-   "entry_px_usd": 32.630001068115234,
-   "shares": 0.032680273053433594,
-   "basis_sar": 3.9988400423993835,
-   "opened_utc": "2026-09-24T00:18:46Z"
-  },
-  {
-   "ticker": "COP",
-   "entry_bar": "2026-09-22",
-   "entry_px_usd": 127.52999877929688,
-   "shares": 0.008361536040722515,
-   "basis_sar": 3.9988000539989597,
-   "opened_utc": "2026-09-24T00:18:46Z"
-  },
-  {
-   "ticker": "CRM",
-   "entry_bar": "2026-09-22",
-   "entry_px_usd": 236.4199981689453,
-   "shares": 0.004510346103791003,
-   "basis_sar": 3.9987600659984195,
    "opened_utc": "2026-09-24T00:18:46Z"
   },
   {
@@ -128,14 +104,6 @@
    "opened_utc": "2026-09-24T00:18:46Z"
   },
   {
-   "ticker": "OXY",
-   "entry_bar": "2026-09-22",
-   "entry_px_usd": 57.25,
-   "shares": 0.018624094127444594,
-   "basis_sar": 3.9983602079857614,
-   "opened_utc": "2026-09-24T00:18:46Z"
-  },
-  {
    "ticker": "PEP",
    "entry_bar": "2026-09-22",
    "entry_px_usd": 129.58999633789062,
@@ -166,14 +134,6 @@
    "shares": 0.02295273923501574,
    "basis_sar": 3.998080331167618,
    "opened_utc": "2026-09-24T00:18:46Z"
-  },
-  {
-   "ticker": "INTU",
-   "entry_bar": "2026-09-29",
-   "entry_px_usd": 268.0299987792969,
-   "shares": 0.003911185569867561,
-   "basis_sar": 3.931181488189522,
-   "opened_utc": "2026-10-01T01:09:16Z"
   },
   {
    "ticker": "ELV",
@@ -210,49 +170,105 @@
  ],
  "pending_orders": [
   {
-   "id": "SELL:CMG:2026-10-01",
+   "id": "SELL:AFL:2026-10-05",
    "action": "SELL",
-   "ticker": "CMG",
-   "signal_bar": "2026-10-01",
-   "rsi": 87.0984,
-   "created_utc": "2026-10-03T01:00:03Z"
+   "ticker": "AFL",
+   "signal_bar": "2026-10-05",
+   "rsi": 71.6702,
+   "created_utc": "2026-10-06T02:07:58Z"
   },
   {
-   "id": "SELL:COP:2026-10-01",
+   "id": "SELL:CSX:2026-10-05",
    "action": "SELL",
-   "ticker": "COP",
-   "signal_bar": "2026-10-01",
-   "rsi": 76.2481,
-   "created_utc": "2026-10-03T01:00:03Z"
+   "ticker": "CSX",
+   "signal_bar": "2026-10-05",
+   "rsi": 88.7343,
+   "created_utc": "2026-10-06T02:07:58Z"
   },
   {
-   "id": "SELL:CRM:2026-10-01",
+   "id": "SELL:CVS:2026-10-05",
    "action": "SELL",
-   "ticker": "CRM",
-   "signal_bar": "2026-10-01",
-   "rsi": 85.0083,
-   "created_utc": "2026-10-03T01:00:03Z"
+   "ticker": "CVS",
+   "signal_bar": "2026-10-05",
+   "rsi": 75.6449,
+   "created_utc": "2026-10-06T02:07:58Z"
   },
   {
-   "id": "SELL:INTU:2026-10-01",
+   "id": "SELL:ELV:2026-10-05",
    "action": "SELL",
-   "ticker": "INTU",
-   "signal_bar": "2026-10-01",
-   "rsi": 86.2637,
-   "created_utc": "2026-10-03T01:00:03Z"
+   "ticker": "ELV",
+   "signal_bar": "2026-10-05",
+   "rsi": 80.659,
+   "created_utc": "2026-10-06T02:07:58Z"
   },
   {
-   "id": "SELL:OXY:2026-10-01",
+   "id": "SELL:HAL:2026-10-05",
    "action": "SELL",
-   "ticker": "OXY",
-   "signal_bar": "2026-10-01",
-   "rsi": 85.2402,
-   "created_utc": "2026-10-03T01:00:03Z"
+   "ticker": "HAL",
+   "signal_bar": "2026-10-05",
+   "rsi": 92.0704,
+   "created_utc": "2026-10-06T02:07:58Z"
+  },
+  {
+   "id": "SELL:MDLZ:2026-10-05",
+   "action": "SELL",
+   "ticker": "MDLZ",
+   "signal_bar": "2026-10-05",
+   "rsi": 71.3361,
+   "created_utc": "2026-10-06T02:07:58Z"
+  },
+  {
+   "id": "SELL:SLB:2026-10-05",
+   "action": "SELL",
+   "ticker": "SLB",
+   "signal_bar": "2026-10-05",
+   "rsi": 85.5765,
+   "created_utc": "2026-10-06T02:07:58Z"
+  },
+  {
+   "id": "BUY:LULU:2026-10-05",
+   "action": "BUY",
+   "ticker": "LULU",
+   "signal_bar": "2026-10-05",
+   "rsi": 0.3575,
+   "created_utc": "2026-10-06T02:07:58Z"
+  },
+  {
+   "id": "BUY:NOC:2026-10-05",
+   "action": "BUY",
+   "ticker": "NOC",
+   "signal_bar": "2026-10-05",
+   "rsi": 0.6081,
+   "created_utc": "2026-10-06T02:07:58Z"
+  },
+  {
+   "id": "BUY:JNJ:2026-10-05",
+   "action": "BUY",
+   "ticker": "JNJ",
+   "signal_bar": "2026-10-05",
+   "rsi": 0.6637,
+   "created_utc": "2026-10-06T02:07:58Z"
+  },
+  {
+   "id": "BUY:PFE:2026-10-05",
+   "action": "BUY",
+   "ticker": "PFE",
+   "signal_bar": "2026-10-05",
+   "rsi": 1.3017,
+   "created_utc": "2026-10-06T02:07:58Z"
+  },
+  {
+   "id": "BUY:BSX:2026-10-05",
+   "action": "BUY",
+   "ticker": "BSX",
+   "signal_bar": "2026-10-05",
+   "rsi": 1.3404,
+   "created_utc": "2026-10-06T02:07:58Z"
   }
  ],
- "realized_pl_sar": 0.2921830299843071,
- "purified_sar": 0.029316968890093567,
- "closed_trades": 6,
- "last_run_utc": "2026-10-03T01:00:03Z",
- "last_decided_bar": "2026-10-01"
+ "realized_pl_sar": 0.3024330541118254,
+ "purified_sar": 0.06356160125613966,
+ "closed_trades": 11,
+ "last_run_utc": "2026-10-06T02:07:58Z",
+ "last_decided_bar": "2026-10-05"
 }
