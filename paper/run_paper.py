@@ -149,42 +149,72 @@ def write_snapshot(state, cfg, bars, failed, trading_enabled, note=""):
     bar_ids.discard(None)
     bar_id = max(bar_ids) if bar_ids else None
 
-    watch = []
-    held = {p["ticker"]: p for p in state["positions"]}
+    held = {}
+    for sl in state["slots"]:
+        if sl.get("position"):
+            held[sl["position"]["ticker"]] = (sl, sl["position"])
     pending = {o["ticker"]: o for o in state["pending_orders"]}
+
+    watch = []
     for t in sorted(bars):
         b = bars[t]
         if not b:
             continue
         r = pe.wilder_rsi_last([x[1] for x in b])
         px = b[-1][1]
-        pos = held.get(t)
+        entry = held.get(t)
         row = {
             "ticker": t,
             "price_usd": round(px, 4),
             "price_sar": round(pe.to_sar(px, cfg), 4),
             "rsi": round(r, 2) if r is not None else None,
-            "status": "HOLDING" if pos else "FLAT",
+            "status": "HOLDING" if entry else "FLAT",
+            "slot": entry[0]["id"] if entry else None,
             "pending": pending[t]["action"] if t in pending else None,
-            "signal": ("BUY" if (r is not None and r < pe.ENTRY_BELOW and not pos)
-                       else "SELL" if (r is not None and r > pe.EXIT_ABOVE and pos)
+            "signal": ("BUY" if (r is not None and r < pe.ENTRY_BELOW and not entry)
+                       else "SELL" if (r is not None and r > pe.EXIT_ABOVE and entry)
                        else None),
         }
-        if pos:
+        if entry:
+            sl, pos = entry
             mv = pos["shares"] * pe.to_sar(px, cfg)
             row["unrealized_pl_sar"] = round(mv - pos["basis_sar"], 4)
             row["shares"] = round(pos["shares"], 6)
             row["entry_bar"] = pos["entry_bar"]
+            row["stake_sar"] = round(pos["stake_sar"], 2)
         watch.append(row)
 
+    tot = pe.totals(state)
     eq = pe.equity_sar(state, prices, cfg)
     unreal = sum(w.get("unrealized_pl_sar", 0.0) for w in watch)
+    cm = cfg["capital_model"]
+    notional = float(cm["slots"]) * float(cm["capital_per_slot_sar"])
+
+    # Per-slot view: the whole point of the model is that these are separate.
+    slots_view = []
+    for sl in state["slots"]:
+        pos = sl.get("position")
+        u = 0.0
+        if pos:
+            px = prices.get(pos["ticker"], pos["entry_px_usd"])
+            u = pos["shares"] * pe.to_sar(px, cfg) - pos["basis_sar"]
+        slots_view.append({
+            "id": sl["id"],
+            "ticker": pos["ticker"] if pos else None,
+            "stake_sar": float(cm["capital_per_slot_sar"]),
+            "realized_pl_sar": round(sl["realized_pl_sar"], 4),
+            "purified_sar": round(sl["purified_sar"], 4),
+            "unrealized_pl_sar": round(u, 4),
+            "closed_trades": sl["closed_trades"],
+            "value_sar": round(pe.slot_value(sl, cfg) + u, 4),
+        })
 
     ledger = pe.read_csv(LEDGER_PATH)
     skipped = pe.read_csv(SKIPPED_PATH)
 
     snap = {
         "generated_utc": pe.utcnow(),
+        "schema": pe.SCHEMA,
         "status_banner": "Research-only paper-trading experiment. This breadth "
                          "strategy failed its holdout validation and is not "
                          "approved for real trading.",
@@ -194,25 +224,27 @@ def write_snapshot(state, cfg, bars, failed, trading_enabled, note=""):
         "fx_locked": cfg["account"]["fx"],
         "costs": cfg["costs"],
         "purification_rate": cfg["purification"]["rate"],
-        "capital_model": cfg["capital_model"],
+        "capital_model": cm,
         "schedule": cfg["schedule"],
         "last_decided_bar": state.get("last_decided_bar"),
         "last_run_utc": state.get("last_run_utc"),
         "account": {
-            "initial_capital_sar": cfg["account"]["initial_capital"],
-            "cash_sar": round(state["cash_sar"], 4),
+            "model": "independent_slots",
+            "slots": int(cm["slots"]),
+            "capital_per_slot_sar": float(cm["capital_per_slot_sar"]),
+            "total_notional_sar": notional,
             "equity_sar": round(eq, 4),
-            "realized_pl_sar": round(state["realized_pl_sar"], 4),
+            "realized_pl_sar": round(tot["realized_pl_sar"], 4),
             "unrealized_pl_sar": round(unreal, 4),
-            "purified_sar": round(state["purified_sar"], 4),
-            "open_positions": len(state["positions"]),
-            "max_positions": cfg["capital_model"]["max_concurrent_positions"],
-            "closed_trades": state["closed_trades"],
+            "purified_sar": round(tot["purified_sar"], 4),
+            "open_positions": tot["open_positions"],
+            "max_positions": int(cm["slots"]),
+            "closed_trades": tot["closed_trades"],
         },
-        "positions": state["positions"],
+        "slots": slots_view,
         "pending_orders": state["pending_orders"],
         "watchlist": watch,
-        "trades": ledger[-60:],
+        "trades": ledger[-80:],
         "skipped_recent": skipped[-40:],
         "skipped_total": len(skipped),
         "weekly": rollup(ledger, skipped, "week"),

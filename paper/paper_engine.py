@@ -1,8 +1,28 @@
 """Research-only paper-trading engine.
 
-This simulates the frozen RSI(2) rule on a single shared 100 SAR paper account.
-It failed its holdout validation. Nothing here is evidence of an edge, and
-nothing here may be traded with real money.
+This simulates the frozen RSI(2) rule. It failed its holdout validation. Nothing
+here is evidence of an edge, and nothing here may be traded with real money.
+
+CAPITAL MODEL (schema 2, 2026-10-10) - INDEPENDENT SLOTS
+--------------------------------------------------------
+Each of the N slots is its own self-contained paper account holding a fixed
+`capital_per_slot_sar`. Slots never share capital and never share profit: a win
+in slot 3 cannot fund a position in slot 7, and a run of losses in one slot
+cannot shrink any other slot's next trade.
+
+This replaced a single shared pool, and it is a fidelity fix rather than a
+preference. PREREGISTRATION.md section 3 measured the edge with "every ticker
+evaluated independently... no shared capital pool", so the shared pool was a
+divergence between what was measured and what is simulated. Independent slots
+remove it.
+
+Sizing is FIXED, not compounding: every trade commits exactly
+`capital_per_slot_sar`, whatever that slot has made or lost so far. Realized P/L
+accrues beside the working capital instead of being added to it. For a study
+whose whole purpose is estimating a per-trade edge this is the right choice -
+compounding makes the result depend on the order trades happened to arrive in,
+which says nothing about whether the rule works. Set
+`capital_model.compound_per_slot` to true to let each slot compound instead.
 
 Hard rules enforced in code, not just documentation:
   * No broker, no order API, no real-money instruction. This module only ever
@@ -12,7 +32,7 @@ Hard rules enforced in code, not just documentation:
   * Decisions come only from COMPLETED daily bars.
   * One decision cycle per completed bar, guarded durably in state.
   * Signals on bar D execute on the NEXT eligible completed bar. No look-ahead.
-  * No leverage, no margin, no shorting. Cash can never go negative.
+  * No leverage, no margin, no shorting.
   * FX is locked at initialization and never re-read from a live rate.
 """
 import csv
@@ -23,7 +43,7 @@ from datetime import datetime, timezone
 RSI_PERIOD = 2
 ENTRY_BELOW = 30.0
 EXIT_ABOVE = 70.0
-DUST_SAR = 1.0  # below this, an entry is skipped rather than creating dust
+SCHEMA = 2
 
 
 def utcnow():
@@ -53,19 +73,15 @@ def wilder_rsi_last(closes, period=RSI_PERIOD):
 
 
 def remove_partial_bar(bars, now_utc, market_close_utc="20:00"):
-    """Drop a bar dated today that has not closed yet.
-
-    A daily rule must never see a forming bar: intraday RSI wanders across the
-    threshold and back, which would invent trades the study never measured.
-    """
+    """Drop a bar dated today that has not closed yet."""
     if not bars:
         return bars
     today = now_utc.strftime("%Y-%m-%d")
     if bars[-1][0] != today:
-        return bars                      # already a settled prior session
+        return bars
     hh, mm = (int(x) for x in market_close_utc.split(":"))
     if (now_utc.hour, now_utc.minute) >= (hh, mm):
-        return bars                      # session is over, bar is final
+        return bars
     return bars[:-1]
 
 
@@ -74,42 +90,79 @@ def bar_id_of(bars):
 
 
 # --------------------------------------------------------------------------
-# account helpers - every figure below is SAR, the canonical account currency
+# account helpers - every figure is SAR, the canonical account currency
 # --------------------------------------------------------------------------
 
 def to_sar(price_usd, cfg):
-    """Convert at the rate LOCKED at initialization.
-
-    The rate is read from config and never from a live feed, so a paper result
-    can never move because the exchange rate moved.
-    """
+    """Convert at the rate LOCKED at initialization, never a live feed."""
     return price_usd * cfg["account"]["fx"]["sar_per_usd"]
 
 
+def slot_stake(slot, cfg):
+    """How much this slot commits to its next trade.
+
+    Fixed by default: the slot's own history does not change its stake, which is
+    what keeps the per-trade estimate free of path dependence.
+    """
+    base = float(cfg["capital_model"]["capital_per_slot_sar"])
+    if cfg["capital_model"].get("compound_per_slot"):
+        return max(0.0, base + slot["realized_pl_sar"] - slot["purified_sar"])
+    return base
+
+
+def slot_value(slot, cfg):
+    """Working capital plus what this slot has kept, excluding open marks."""
+    base = float(cfg["capital_model"]["capital_per_slot_sar"])
+    if cfg["capital_model"].get("compound_per_slot"):
+        return slot_stake(slot, cfg)
+    return base + slot["realized_pl_sar"] - slot["purified_sar"]
+
+
 def equity_sar(state, prices_usd, cfg):
-    """Cash plus positions marked at the given closes."""
-    eq = state["cash_sar"]
-    for p in state["positions"]:
-        px = prices_usd.get(p["ticker"])
-        if px is None:
-            px = p["entry_px_usd"]       # stale mark rather than a fabricated one
-        eq += p["shares"] * to_sar(px, cfg)
-    return eq
+    """Total across all slots, including open positions marked to the close."""
+    total = 0.0
+    for s in state["slots"]:
+        total += slot_value(s, cfg)
+        p = s.get("position")
+        if p:
+            px = prices_usd.get(p["ticker"], p["entry_px_usd"])
+            total += p["shares"] * to_sar(px, cfg) - p["basis_sar"]
+    return total
 
 
 def new_state(cfg):
+    n = int(cfg["capital_model"]["slots"])
     return {
-        "schema": 1,
+        "schema": SCHEMA,
         "initialized_utc": utcnow(),
         "bar_guard": {"bar_id": None, "decided": False},
-        "cash_sar": float(cfg["account"]["initial_capital"]),
-        "positions": [],
+        "slots": [{
+            "id": i + 1,
+            "position": None,
+            "realized_pl_sar": 0.0,
+            "purified_sar": 0.0,
+            "closed_trades": 0,
+        } for i in range(n)],
         "pending_orders": [],
-        "realized_pl_sar": 0.0,
-        "purified_sar": 0.0,
-        "closed_trades": 0,
         "last_run_utc": None,
         "last_decided_bar": None,
+    }
+
+
+def held_tickers(state):
+    return {s["position"]["ticker"] for s in state["slots"] if s.get("position")}
+
+
+def free_slots(state):
+    return [s for s in state["slots"] if not s.get("position")]
+
+
+def totals(state):
+    return {
+        "realized_pl_sar": sum(s["realized_pl_sar"] for s in state["slots"]),
+        "purified_sar": sum(s["purified_sar"] for s in state["slots"]),
+        "closed_trades": sum(s["closed_trades"] for s in state["slots"]),
+        "open_positions": sum(1 for s in state["slots"] if s.get("position")),
     }
 
 
@@ -123,12 +176,10 @@ def _order_id(action, ticker, signal_bar):
 # --------------------------------------------------------------------------
 
 def run_cycle(state, cfg, bars_by_ticker, now_utc, ledger_rows, skipped_rows):
-    """Process exactly one completed bar. Returns a dict describing what happened.
+    """Process exactly one completed bar.
 
-    Order matters and is deliberate:
-      1. exits from orders queued on the previous bar
-      2. entries from orders queued on the previous bar
-      3. new signals observed on THIS bar, queued for the next one
+    Order: exits queued earlier, then entries queued earlier, then new signals
+    observed on THIS bar queued for the next one.
     """
     prices = {t: b[-1][1] for t, b in bars_by_ticker.items() if b}
     bar_ids = {bar_id_of(b) for b in bars_by_ticker.values() if b}
@@ -146,88 +197,92 @@ def run_cycle(state, cfg, bars_by_ticker, now_utc, ledger_rows, skipped_rows):
     cost_rate = cfg["costs"]["per_side_pct"]
     pur_rate = cfg["purification"]["rate"]
 
-    # ---- 1 & 2: execute orders queued on an earlier bar --------------------
+    # ---- execute orders queued on an earlier bar ---------------------------
     still_pending = []
-    for o in sorted(state["pending_orders"], key=lambda x: (x["action"] != "SELL", x["ticker"])):
+    for o in sorted(state["pending_orders"],
+                    key=lambda x: (x["action"] != "SELL", x["ticker"])):
         if o["signal_bar"] >= bar_id:
-            still_pending.append(o)          # queued on this very bar; not yet eligible
+            still_pending.append(o)          # queued on this very bar
             continue
         px = prices.get(o["ticker"])
         if px is None:
-            still_pending.append(o)          # no price this session; try next eligible bar
+            still_pending.append(o)          # no price; try the next bar
             continue
         px_sar = to_sar(px, cfg)
 
         if o["action"] == "SELL":
-            pos = next((p for p in state["positions"] if p["ticker"] == o["ticker"]), None)
-            if pos is None:
+            slot = next((s for s in state["slots"]
+                         if s.get("position") and s["position"]["ticker"] == o["ticker"]), None)
+            if slot is None:
                 continue                     # already closed; drop silently
+            pos = slot["position"]
             proceeds = pos["shares"] * px_sar
             cost = proceeds * cost_rate
             net_proceeds = proceeds - cost
             gross_pl = proceeds - pos["basis_sar"]
             net_pl = net_proceeds - pos["basis_sar"]
             pur = net_pl * pur_rate if net_pl > 0 else 0.0
-            state["cash_sar"] += net_proceeds - pur
-            state["realized_pl_sar"] += net_pl
-            state["purified_sar"] += pur
-            state["closed_trades"] += 1
-            state["positions"] = [p for p in state["positions"] if p["ticker"] != o["ticker"]]
+
+            # Credited to THIS slot only. No other slot is touched.
+            slot["realized_pl_sar"] += net_pl
+            slot["purified_sar"] += pur
+            slot["closed_trades"] += 1
+            slot["position"] = None
+
             ledger_rows.append({
                 "timestamp_utc": utcnow(), "bar_id": bar_id, "action": "SELL",
-                "ticker": o["ticker"], "signal_bar": o["signal_bar"],
+                "slot": slot["id"], "ticker": o["ticker"], "signal_bar": o["signal_bar"],
                 "price_usd": round(px, 6), "price_sar": round(px_sar, 6),
-                "shares": round(pos["shares"], 8),
+                "shares": round(pos["shares"], 8), "stake_sar": round(pos["stake_sar"], 6),
                 "cost_sar": round(cost, 6),
                 "gross_pl_sar": round(gross_pl, 6), "net_pl_sar": round(net_pl, 6),
                 "purification_sar": round(pur, 6),
-                "cash_after_sar": round(state["cash_sar"], 6),
+                "slot_realized_after_sar": round(slot["realized_pl_sar"], 6),
                 "order_id": o["id"],
             })
             filled += 1
 
         elif o["action"] == "BUY":
-            if any(p["ticker"] == o["ticker"] for p in state["positions"]):
-                continue                     # already held
-            if len(state["positions"]) >= cfg["capital_model"]["max_concurrent_positions"]:
+            if o["ticker"] in held_tickers(state):
+                continue                     # already held in some slot
+            free = free_slots(state)
+            if not free:
                 skipped_rows.append({"timestamp_utc": utcnow(), "bar_id": bar_id,
                                      "ticker": o["ticker"], "rsi": "",
                                      "reason": "no free slot at execution time"})
                 continue
-            eq = equity_sar(state, prices, cfg)
-            target = eq * cfg["capital_model"]["target_position_pct"]
-            spend = min(target, state["cash_sar"])
-            if spend < DUST_SAR:
+            slot = free[0]
+            stake = slot_stake(slot, cfg)
+            if stake <= 0:
                 skipped_rows.append({"timestamp_utc": utcnow(), "bar_id": bar_id,
                                      "ticker": o["ticker"], "rsi": "",
-                                     "reason": "insufficient cash at execution time "
-                                               "(%.4f SAR available)" % state["cash_sar"]})
+                                     "reason": "slot %d has no capital left" % slot["id"]})
                 continue
-            cost = spend * cost_rate
-            invested = spend - cost
+            cost = stake * cost_rate
+            invested = stake - cost
             shares = invested / px_sar
-            state["cash_sar"] -= spend
-            state["positions"].append({
+            slot["position"] = {
                 "ticker": o["ticker"], "entry_bar": bar_id,
                 "entry_px_usd": px, "shares": shares,
-                "basis_sar": invested, "opened_utc": utcnow(),
-            })
+                "basis_sar": invested, "stake_sar": stake,
+                "opened_utc": utcnow(),
+            }
             ledger_rows.append({
                 "timestamp_utc": utcnow(), "bar_id": bar_id, "action": "BUY",
-                "ticker": o["ticker"], "signal_bar": o["signal_bar"],
+                "slot": slot["id"], "ticker": o["ticker"], "signal_bar": o["signal_bar"],
                 "price_usd": round(px, 6), "price_sar": round(px_sar, 6),
-                "shares": round(shares, 8),
+                "shares": round(shares, 8), "stake_sar": round(stake, 6),
                 "cost_sar": round(cost, 6),
                 "gross_pl_sar": "", "net_pl_sar": "", "purification_sar": "",
-                "cash_after_sar": round(state["cash_sar"], 6),
+                "slot_realized_after_sar": round(slot["realized_pl_sar"], 6),
                 "order_id": o["id"],
             })
             filled += 1
 
     state["pending_orders"] = still_pending
 
-    # ---- 3: observe THIS bar, queue for the next eligible one --------------
-    held = {p["ticker"] for p in state["positions"]}
+    # ---- observe THIS bar, queue for the next eligible one -----------------
+    held = held_tickers(state)
     pending_ids = {o["id"] for o in state["pending_orders"]}
     pending_buys = {o["ticker"] for o in state["pending_orders"] if o["action"] == "BUY"}
     pending_sells = {o["ticker"] for o in state["pending_orders"] if o["action"] == "SELL"}
@@ -240,7 +295,6 @@ def run_cycle(state, cfg, bars_by_ticker, now_utc, ledger_rows, skipped_rows):
         if r is not None:
             rsis[t] = r
 
-    # exits first: they are unconditional, and they free slots for the next bar
     for t in sorted(held):
         r = rsis.get(t)
         if r is not None and r > EXIT_ABOVE and t not in pending_sells:
@@ -252,18 +306,15 @@ def run_cycle(state, cfg, bars_by_ticker, now_utc, ledger_rows, skipped_rows):
                 pending_ids.add(oid)
                 queued += 1
 
-    # entries: lowest RSI first, ties alphabetical - fixed in advance so the
-    # selection cannot be nudged after seeing results
+    # entries: lowest RSI first, ties alphabetical - fixed in advance
     candidates = sorted(
         [(r, t) for t, r in rsis.items()
          if r < ENTRY_BELOW and t not in held and t not in pending_buys],
         key=lambda rt: (rt[0], rt[1]))
 
-    max_pos = cfg["capital_model"]["max_concurrent_positions"]
-    # A queued SELL still occupies its slot until it actually fills.
-    committed = len(state["positions"]) + len([o for o in state["pending_orders"]
-                                               if o["action"] == "BUY"])
-    free = max(0, max_pos - committed)
+    n_slots = int(cfg["capital_model"]["slots"])
+    committed = len(held) + len(pending_buys)
+    free = max(0, n_slots - committed)
 
     for rank, (r, t) in enumerate(candidates):
         if rank < free:
@@ -280,24 +331,27 @@ def run_cycle(state, cfg, bars_by_ticker, now_utc, ledger_rows, skipped_rows):
                 "timestamp_utc": utcnow(), "bar_id": bar_id, "ticker": t,
                 "rsi": round(r, 4),
                 "reason": "valid entry signal but no free slot (%d/%d used, "
-                          "ranked #%d by RSI)" % (committed, max_pos, rank + 1)})
+                          "ranked #%d by RSI)" % (committed, n_slots, rank + 1)})
 
     state["bar_guard"] = {"bar_id": bar_id, "decided": True}
     state["last_decided_bar"] = bar_id
     state["last_run_utc"] = utcnow()
 
+    t = totals(state)
     return {"status": "decided", "bar_id": bar_id, "filled": filled,
             "queued": queued, "skipped": len(skipped_rows),
-            "equity_sar": equity_sar(state, prices, cfg)}
+            "equity_sar": equity_sar(state, prices, cfg),
+            "open_positions": t["open_positions"]}
 
 
 # --------------------------------------------------------------------------
 # persistence
 # --------------------------------------------------------------------------
 
-LEDGER_FIELDS = ["timestamp_utc", "bar_id", "action", "ticker", "signal_bar",
-                 "price_usd", "price_sar", "shares", "cost_sar", "gross_pl_sar",
-                 "net_pl_sar", "purification_sar", "cash_after_sar", "order_id"]
+LEDGER_FIELDS = ["timestamp_utc", "bar_id", "action", "slot", "ticker", "signal_bar",
+                 "price_usd", "price_sar", "shares", "stake_sar", "cost_sar",
+                 "gross_pl_sar", "net_pl_sar", "purification_sar",
+                 "slot_realized_after_sar", "order_id"]
 SKIPPED_FIELDS = ["timestamp_utc", "bar_id", "ticker", "rsi", "reason"]
 
 

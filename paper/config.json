@@ -10,15 +10,22 @@
   }
  },
  "capital_model": {
-  "max_concurrent_positions": 25,
-  "target_position_pct": 0.04,
+  "mode": "independent_slots",
+  "slots": 25,
+  "capital_per_slot_sar": 100,
+  "compound_per_slot": false,
+  "total_notional_sar": 2500,
+  "shared_capital": false,
+  "shared_profit": false,
   "leverage": false,
   "margin": false,
   "shorting": false,
   "fractional_shares": true,
-  "fractional_note": "Allowed solely because 100 SAR (~27 USD) cannot buy one share of most US names. Not a claim that fractional execution is available anywhere.",
-  "sizing_note": "25 slots at 4% of equity each fully deploys the account. Raised from 10 slots / 10% on 2026-09-22 to reach ~10x the live tracker's trade count. MEASURED over the 2022-2026 holdout, replaying the unchanged rule with only the slot count varied: 10 slots = 442 round trips/yr (4.0x), 25 slots = 1097 (10.0x), 50 slots = 2063 (18.8x). The live tracker does 110/yr. This is a capital-model parameter, not a strategy parameter - the rule, thresholds, universe and execution are untouched.",
-  "not_an_edge_note": "More trades is more SAMPLE, not more edge. The holdout found this rule indistinguishable from random entry, so a higher trade count accumulates out-of-sample evidence faster; it does not create a profit source. Cost drag is ~2.2% of equity per year at either slot count, because capital turnover is what sets it."
+  "model_note": "Each of the 25 slots is its own self-contained paper account holding a fixed 100 SAR. Slots never share capital and never share profit: a win in one slot cannot fund a position in another, and a losing streak in one cannot shrink any other slot's next trade. Total notional is 25 x 100 = 2500 SAR.",
+  "why_note": "Replaced a single shared 100 SAR pool on 2026-10-10. This is a fidelity fix, not a preference: PREREGISTRATION.md section 3 measured the edge with every ticker evaluated independently and no shared capital pool, so the shared pool was a divergence between what was measured and what is simulated.",
+  "sizing_note": "FIXED sizing, not compounding: every trade commits exactly 100 SAR whatever that slot has made or lost. Realized P/L accrues beside the working capital instead of being added to it. For a study estimating a per-trade edge this is the right choice - compounding makes the result depend on the order trades happened to arrive in, which says nothing about whether the rule works. Set compound_per_slot true to let each slot compound instead.",
+  "fractional_note": "Allowed because 100 SAR (~27 USD) cannot buy one share of many US names. Not a claim that fractional execution is available anywhere.",
+  "not_real_capital": "2500 SAR is notional and hypothetical. It is not real, allocated, invested, validated or investable capital, and the strategy failed its holdout test."
  },
  "costs": {
   "round_trip_pct": 0.0005,

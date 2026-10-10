@@ -141,6 +141,18 @@
     <p class="note">Saved only in this browser. Nothing here is sent anywhere or used by the simulation.</p>
   </div>
 
+  <div class="section-title">The 25 Independent Accounts</div>
+  <div class="card table-wrap">
+    <table id="slots-table">
+      <thead><tr><th>Slot</th><th>Holding</th><th>Stake</th><th>Realized</th>
+        <th>Unrealized</th><th>Closed</th></tr></thead>
+      <tbody><tr><td colspan="6" class="empty">Loading\u2026</td></tr></tbody>
+    </table>
+    <p class="note">Each row is a separate paper account. Nothing moves between them:
+      a profit here cannot fund a trade there, and a loss here cannot shrink a stake
+      there. Held slots first, then by realized P/L.</p>
+  </div>
+
   <div class="section-title">Watchlist &amp; Signal Status</div>
   <div class="card table-wrap">
     <table id="watch-table">
@@ -218,8 +230,9 @@ function renderStats(d) {
   const a = d.account;
   document.getElementById("s-equity").textContent = SAR(a.equity_sar);
   document.getElementById("s-equity-sub").textContent =
-    "cash " + SAR(a.cash_sar) + " · started at " + a.initial_capital_sar + " SAR";
-  document.getElementById("s-open").textContent = a.open_positions + " / " + a.max_positions;
+    a.slots + " independent accounts x " + a.capital_per_slot_sar +
+    " SAR = " + a.total_notional_sar + " SAR notional";
+  document.getElementById("s-open").textContent = a.open_positions + " / " + a.slots;
   document.getElementById("s-open-sub").textContent =
     d.pending_orders.length ? d.pending_orders.length + " order(s) queued for the next bar"
                             : "no orders queued";
@@ -230,18 +243,48 @@ function renderStats(d) {
                      : "no open position, so no unrealized P/L";
   document.getElementById("s-purified").textContent = SAR(a.purified_sar);
   document.getElementById("s-purified-sub").textContent =
-    (d.purification_rate * 100).toFixed(0) + "% of realized net profit only";
+    (d.purification_rate * 100).toFixed(0) + "% of each slot's realized net profit";
 
   const cm = d.capital_model, fx = d.fx_locked, c = d.costs;
   document.getElementById("model-note").innerHTML =
-    "<strong>Model:</strong> single shared account, max " + cm.max_concurrent_positions +
-    " concurrent positions, target " + (cm.target_position_pct * 100).toFixed(0) +
-    "% of equity each. No leverage, margin or shorting. Fractional paper shares allowed " +
-    "because 100 SAR cannot buy one share of most US names. " +
+    "<strong>Model:</strong> " + a.slots + " <strong>independent</strong> paper accounts, " +
+    a.capital_per_slot_sar + " SAR each, one position at a time. Slots never share " +
+    "capital and never share profit \u2014 a win in one cannot fund a position in " +
+    "another, and a losing streak in one cannot shrink any other's next trade. " +
+    "Stake is <strong>fixed</strong> at " + a.capital_per_slot_sar +
+    " SAR per trade, not compounded, so the per-trade estimate does not depend on the " +
+    "order trades arrived in. No leverage, margin or shorting. " +
     "<strong>FX locked</strong> at " + fx.sar_per_usd + " SAR/USD on " +
     (fx.locked_utc || "initialization") + " and never re-read. " +
     "<strong>Costs</strong> " + (c.round_trip_pct * 100).toFixed(3) + "% round trip (" +
     (c.per_side_pct * 100).toFixed(3) + "% per side), charged on every fill.";
+}
+
+function renderSlots(d) {
+  const tb = document.querySelector("#slots-table tbody");
+  if (!tb) return;
+  tb.innerHTML = "";
+  const rows = (d.slots || []).slice().sort((x, y) => {
+    const xa = x.ticker ? 0 : 1, ya = y.ticker ? 0 : 1;
+    if (xa !== ya) return xa - ya;
+    return y.realized_pl_sar - x.realized_pl_sar;
+  });
+  if (!rows.length) {
+    tb.innerHTML = '<tr><td colspan="6" class="empty">No slots.</td></tr>';
+    return;
+  }
+  for (const r of rows) {
+    const tr = document.createElement("tr");
+    tr.innerHTML =
+      "<td>#" + r.id + "</td>" +
+      "<td>" + (r.ticker ? r.ticker : '<span class="badge flat">idle</span>') + "</td>" +
+      "<td>" + r.stake_sar.toFixed(0) + "</td>" +
+      '<td class="' + plClass(r.realized_pl_sar) + '">' + signed(r.realized_pl_sar) + "</td>" +
+      "<td>" + (r.ticker ? '<span class="' + plClass(r.unrealized_pl_sar) + '">' +
+                signed(r.unrealized_pl_sar) + "</span>" : "\u2014") + "</td>" +
+      "<td>" + r.closed_trades + "</td>";
+    tb.appendChild(tr);
+  }
 }
 
 function renderStatus(d) {
@@ -430,7 +473,7 @@ async function init() {
   renderLog();
   try {
     snap = await load();
-    renderStatus(snap); renderStats(snap); renderWatch(snap);
+    renderStatus(snap); renderStats(snap); renderSlots(snap); renderWatch(snap);
     renderPerf(snap); renderTrades(snap); renderSkipped(snap);
   } catch (e) {
     document.getElementById("updated").textContent = "Could not load paper.json: " + e.message;
