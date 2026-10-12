@@ -1,9 +1,9 @@
 {
- "generated_utc": "2026-10-10T18:21:27Z",
+ "generated_utc": "2026-10-12T14:06:16Z",
  "schema": 2,
  "status_banner": "Research-only paper-trading experiment. This breadth strategy failed its holdout validation and is not approved for real trading.",
- "trading_enabled": false,
- "note": "Snapshot only - no decision cycle was run and no state was changed.",
+ "trading_enabled": true,
+ "note": "",
  "currency": "SAR",
  "fx_locked": {
   "sar_per_usd": 3.75,
@@ -38,8 +38,8 @@
   "proposed_cron_utc": "0 22 * * 1-5",
   "note": "PROPOSED, NOT ENABLED. 22:00 UTC is after the US close in both EDT (18:00 ET) and EST (17:00 ET), and 30 minutes after the unrelated live tracker's own window, so the two never contend."
  },
- "last_decided_bar": null,
- "last_run_utc": null,
+ "last_decided_bar": "2026-10-09",
+ "last_run_utc": "2026-10-12T14:06:16Z",
  "account": {
   "model": "independent_slots",
   "slots": 25,
@@ -305,7 +305,192 @@
    "value_sar": 100.0
   }
  ],
- "pending_orders": [],
+ "pending_orders": [
+  {
+   "id": "BUY:DE:2026-10-09",
+   "action": "BUY",
+   "ticker": "DE",
+   "signal_bar": "2026-10-09",
+   "rsi": 1.6763,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:SWKS:2026-10-09",
+   "action": "BUY",
+   "ticker": "SWKS",
+   "signal_bar": "2026-10-09",
+   "rsi": 3.5666,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:QCOM:2026-10-09",
+   "action": "BUY",
+   "ticker": "QCOM",
+   "signal_bar": "2026-10-09",
+   "rsi": 5.044,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:MGM:2026-10-09",
+   "action": "BUY",
+   "ticker": "MGM",
+   "signal_bar": "2026-10-09",
+   "rsi": 5.3519,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:SBUX:2026-10-09",
+   "action": "BUY",
+   "ticker": "SBUX",
+   "signal_bar": "2026-10-09",
+   "rsi": 6.4139,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:AMAT:2026-10-09",
+   "action": "BUY",
+   "ticker": "AMAT",
+   "signal_bar": "2026-10-09",
+   "rsi": 6.777,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:VZ:2026-10-09",
+   "action": "BUY",
+   "ticker": "VZ",
+   "signal_bar": "2026-10-09",
+   "rsi": 6.9676,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:T:2026-10-09",
+   "action": "BUY",
+   "ticker": "T",
+   "signal_bar": "2026-10-09",
+   "rsi": 8.721,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:ROST:2026-10-09",
+   "action": "BUY",
+   "ticker": "ROST",
+   "signal_bar": "2026-10-09",
+   "rsi": 8.8535,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:TXN:2026-10-09",
+   "action": "BUY",
+   "ticker": "TXN",
+   "signal_bar": "2026-10-09",
+   "rsi": 10.2522,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:HPQ:2026-10-09",
+   "action": "BUY",
+   "ticker": "HPQ",
+   "signal_bar": "2026-10-09",
+   "rsi": 10.8536,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:UAL:2026-10-09",
+   "action": "BUY",
+   "ticker": "UAL",
+   "signal_bar": "2026-10-09",
+   "rsi": 13.1407,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:DAL:2026-10-09",
+   "action": "BUY",
+   "ticker": "DAL",
+   "signal_bar": "2026-10-09",
+   "rsi": 15.2017,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:PPG:2026-10-09",
+   "action": "BUY",
+   "ticker": "PPG",
+   "signal_bar": "2026-10-09",
+   "rsi": 16.6622,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:CHTR:2026-10-09",
+   "action": "BUY",
+   "ticker": "CHTR",
+   "signal_bar": "2026-10-09",
+   "rsi": 17.6342,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:CMCSA:2026-10-09",
+   "action": "BUY",
+   "ticker": "CMCSA",
+   "signal_bar": "2026-10-09",
+   "rsi": 17.7812,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:CVS:2026-10-09",
+   "action": "BUY",
+   "ticker": "CVS",
+   "signal_bar": "2026-10-09",
+   "rsi": 20.1622,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:MU:2026-10-09",
+   "action": "BUY",
+   "ticker": "MU",
+   "signal_bar": "2026-10-09",
+   "rsi": 23.3562,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:AA:2026-10-09",
+   "action": "BUY",
+   "ticker": "AA",
+   "signal_bar": "2026-10-09",
+   "rsi": 24.3036,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:CAT:2026-10-09",
+   "action": "BUY",
+   "ticker": "CAT",
+   "signal_bar": "2026-10-09",
+   "rsi": 25.3564,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:WYNN:2026-10-09",
+   "action": "BUY",
+   "ticker": "WYNN",
+   "signal_bar": "2026-10-09",
+   "rsi": 26.1171,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:DD:2026-10-09",
+   "action": "BUY",
+   "ticker": "DD",
+   "signal_bar": "2026-10-09",
+   "rsi": 26.418,
+   "created_utc": "2026-10-12T14:06:16Z"
+  },
+  {
+   "id": "BUY:STX:2026-10-09",
+   "action": "BUY",
+   "ticker": "STX",
+   "signal_bar": "2026-10-09",
+   "rsi": 27.9695,
+   "created_utc": "2026-10-12T14:06:16Z"
+  }
+ ],
  "watchlist": [
   {
    "ticker": "AA",
@@ -314,7 +499,7 @@
    "rsi": 24.3,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -414,7 +599,7 @@
    "rsi": 6.78,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -574,7 +759,7 @@
    "rsi": 25.36,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -604,7 +789,7 @@
    "rsi": 17.63,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -644,7 +829,7 @@
    "rsi": 17.78,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -724,7 +909,7 @@
    "rsi": 20.16,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -744,7 +929,7 @@
    "rsi": 15.2,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -754,7 +939,7 @@
    "rsi": 26.42,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -764,7 +949,7 @@
    "rsi": 1.68,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1024,7 +1209,7 @@
    "rsi": 10.85,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1274,7 +1459,7 @@
    "rsi": 5.35,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1314,7 +1499,7 @@
    "rsi": 23.36,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1464,7 +1649,7 @@
    "rsi": 16.66,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1484,7 +1669,7 @@
    "rsi": 5.04,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1504,7 +1689,7 @@
    "rsi": 8.85,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1524,7 +1709,7 @@
    "rsi": 6.41,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1584,7 +1769,7 @@
    "rsi": 27.97,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1594,7 +1779,7 @@
    "rsi": 3.57,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1604,7 +1789,7 @@
    "rsi": 8.72,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1664,7 +1849,7 @@
    "rsi": 10.25,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1674,7 +1859,7 @@
    "rsi": 13.14,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1744,7 +1929,7 @@
    "rsi": 6.97,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
@@ -1784,7 +1969,7 @@
    "rsi": 26.12,
    "status": "FLAT",
    "slot": null,
-   "pending": null,
+   "pending": "BUY",
    "signal": "BUY"
   },
   {
