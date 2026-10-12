@@ -6,7 +6,12 @@ they ever disagree, one of them is wrong and the tests will say so.
 
 Rules (identical on both sides):
   * Only SELL rows are realized. BUY rows carry no P/L.
-  * A trade belongs to the period containing its SELL timestamp_utc (UTC).
+  * A trade belongs to the period containing its SESSION BAR, not the moment the
+    job happened to run. These differ routinely: GitHub delays the cron 3-4
+    hours, so a Friday session is usually written on Saturday. Bucketing by run
+    time would therefore push a month-end session into the following month.
+    bar_id is the market session the decision was priced on, which is the thing
+    a weekly or monthly total is actually about.
   * Weeks are ISO-8601: Monday-Sunday, ISO year taken from the Thursday.
   * Months are calendar months.
   * Realized P/L   = sum of net_pl_sar
@@ -20,6 +25,19 @@ from datetime import datetime, timedelta
 
 def _parse(ts):
     return datetime.strptime(ts.replace("Z", ""), "%Y-%m-%dT%H:%M:%S")
+
+
+def _period_date(row):
+    """The date a row belongs to: its session bar, falling back to run time.
+
+    bar_id is a plain YYYY-MM-DD session date. Rows written before bar_id
+    existed fall back to the run timestamp so old data still buckets somewhere
+    rather than vanishing.
+    """
+    bar = (row.get("bar_id") or "").strip()
+    if bar:
+        return datetime.strptime(bar[:10], "%Y-%m-%d")
+    return _parse(row["timestamp_utc"])
 
 
 def iso_week(d):
@@ -50,8 +68,7 @@ def rollup(ledger_rows, skipped_rows, period):
     """period is 'week' or 'month'. Returns rows oldest-first with a cumulative."""
     buckets = OrderedDict()
 
-    def key_label(ts):
-        d = _parse(ts)
+    def key_label(d):
         if period == "week":
             y, w, mon = iso_week(d)
             return ("%04d-W%02d" % (y, w),
@@ -62,7 +79,7 @@ def rollup(ledger_rows, skipped_rows, period):
     for r in ledger_rows:
         if r.get("action") != "SELL":
             continue
-        k, lab = key_label(r["timestamp_utc"])
+        k, lab = key_label(_period_date(r))
         b = buckets.setdefault(k, _blank(k, lab))
         b["closed"] += 1
         pl = _fnum(r.get("net_pl_sar"))
@@ -77,10 +94,9 @@ def rollup(ledger_rows, skipped_rows, period):
             b["purification_sar"] += pur
 
     for r in skipped_rows:
-        ts = r.get("timestamp_utc")
-        if not ts:
+        if not (r.get("bar_id") or r.get("timestamp_utc")):
             continue
-        k, lab = key_label(ts)
+        k, lab = key_label(_period_date(r))
         buckets.setdefault(k, _blank(k, lab))["skipped"] += 1
 
     rows = sorted(buckets.values(), key=lambda b: b["key"])

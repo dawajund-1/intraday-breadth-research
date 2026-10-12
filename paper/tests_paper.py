@@ -248,25 +248,40 @@ eq(mon.isoformat(), "2026-10-05", "the ISO week starts on Monday")
 y2, _, _ = iso_week(datetime(2027, 1, 1))
 eq(y2, 2026, "1 Jan 2027 belongs to ISO year 2026")
 ledger = [
-    {"action": "BUY", "timestamp_utc": "2026-10-05T22:00:00Z", "net_pl_sar": "",
-     "purification_sar": ""},
-    {"action": "SELL", "timestamp_utc": "2026-10-06T22:00:00Z", "net_pl_sar": "2.0",
-     "purification_sar": "0.2"},
-    {"action": "SELL", "timestamp_utc": "2026-10-08T22:00:00Z", "net_pl_sar": "-1.0",
-     "purification_sar": "0"},
-    {"action": "SELL", "timestamp_utc": "2026-11-02T22:00:00Z", "net_pl_sar": "3.0",
-     "purification_sar": "0.3"},
+    {"action": "BUY", "timestamp_utc": "2026-10-06T01:30:00Z", "bar_id": "2026-10-05",
+     "net_pl_sar": "", "purification_sar": ""},
+    {"action": "SELL", "timestamp_utc": "2026-10-07T01:30:00Z", "bar_id": "2026-10-06",
+     "net_pl_sar": "2.0", "purification_sar": "0.2"},
+    {"action": "SELL", "timestamp_utc": "2026-10-09T01:30:00Z", "bar_id": "2026-10-08",
+     "net_pl_sar": "-1.0", "purification_sar": "0"},
+    {"action": "SELL", "timestamp_utc": "2026-11-03T01:30:00Z", "bar_id": "2026-11-02",
+     "net_pl_sar": "3.0", "purification_sar": "0.3"},
 ]
-wk = rollup(ledger, [{"timestamp_utc": "2026-10-06T22:00:00Z"}], "week")
+wk = rollup(ledger, [{"timestamp_utc": "2026-10-07T01:30:00Z", "bar_id": "2026-10-06"}], "week")
 mo = rollup(ledger, [], "month")
 eq(len(wk), 2, "two ISO weeks appear")
 eq(wk[0]["closed"], 2, "BUY rows are excluded from closed-trade counts")
 eq(wk[0]["wins"], 1, "one win in the first week")
 eq(wk[0]["losses"], 1, "one loss in the first week")
 eq(wk[0]["net_pl_sar"], 1.0, "weekly net P/L sums correctly")
-eq(wk[0]["skipped"], 1, "skipped signals are bucketed by their own timestamp")
+eq(wk[0]["skipped"], 1, "skipped signals are bucketed by their own session")
 eq(wk[-1]["cumulative_sar"], 4.0, "cumulative runs across periods")
 eq(len(mo), 2, "two calendar months appear")
+
+print("\n=== Rollups bucket by SESSION, not by when the job ran ===")
+# GitHub's 3-4h delay writes a Friday session on Saturday, and a month-end
+# session in the following month. The session is what the period is about.
+cross = [{"action": "SELL", "timestamp_utc": "2026-11-01T01:30:00Z",
+          "bar_id": "2026-10-30", "net_pl_sar": "5.0", "purification_sar": "0.5"}]
+eq(rollup(cross, [], "month")[0]["label"], "October 2026",
+   "a 30 Oct session written on 1 Nov counts in OCTOBER")
+eq(rollup(cross, [], "week")[0]["key"], "2026-W44",
+   "and in the ISO week of the session, not of the run")
+legacy = [{"action": "SELL", "timestamp_utc": "2026-11-01T01:30:00Z",
+           "net_pl_sar": "5.0", "purification_sar": "0.5"}]
+eq(rollup(legacy, [], "month")[0]["label"], "November 2026",
+   "a row with no bar_id still buckets, by run time, rather than vanishing")
+
 eq(rollup([], [], "week"), [], "an empty ledger yields no rows, not invented ones")
 
 print("\n=== Shipped config is internally consistent ===")

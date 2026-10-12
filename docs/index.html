@@ -172,19 +172,20 @@
     <div id="perf-summary" style="font-size:.85rem;margin-bottom:12px"></div>
     <div class="table-wrap">
       <table id="weekly-table">
-        <thead><tr><th>ISO week (Mon–Sun, UTC)</th><th>Closed</th><th>W / L</th><th>Net P/L</th><th>Purified</th><th>Skipped</th><th>Cumulative</th></tr></thead>
+        <thead><tr><th>ISO week (Mon–Sun, by session)</th><th>Closed</th><th>W / L</th><th>Net P/L</th><th>Purified</th><th>Skipped</th><th>Cumulative</th></tr></thead>
         <tbody><tr><td colspan="7" class="empty">Loading…</td></tr></tbody>
       </table>
     </div>
     <div style="height:14px"></div>
     <div class="table-wrap">
       <table id="monthly-table">
-        <thead><tr><th>Calendar month (UTC)</th><th>Closed</th><th>W / L</th><th>Net P/L</th><th>Purified</th><th>Skipped</th><th>Cumulative</th></tr></thead>
+        <thead><tr><th>Calendar month (by session)</th><th>Closed</th><th>W / L</th><th>Net P/L</th><th>Purified</th><th>Skipped</th><th>Cumulative</th></tr></thead>
         <tbody><tr><td colspan="7" class="empty">Loading…</td></tr></tbody>
       </table>
     </div>
-    <p class="note">ISO-8601 weeks, Monday–Sunday, keyed in UTC from each closing trade.
-      Calendar months, UTC. Realized only — open positions are marked separately and never
+    <p class="note">ISO-8601 weeks, Monday–Sunday, keyed on the market SESSION each trade was
+      priced on, not on when the job happened to run — GitHub delays the cron 3–4
+      hours, so a Friday session is usually written on Saturday. Calendar months, same basis. Realized only — open positions are marked separately and never
       folded in. Reproduce with <code>python paper/run_paper.py --audit</code>.</p>
   </div>
 
