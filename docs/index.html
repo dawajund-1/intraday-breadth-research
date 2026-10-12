@@ -191,7 +191,7 @@
   <div class="section-title">Paper Trade History</div>
   <div class="card table-wrap">
     <table id="trades-table">
-      <thead><tr><th>Time (UTC)</th><th>Bar</th><th>Action</th><th>Ticker</th><th>Price (SAR)</th><th>Cost</th><th>Net P/L</th></tr></thead>
+      <thead><tr><th>Time (AST)</th><th>Session bar</th><th>Action</th><th>Ticker</th><th>Price (SAR)</th><th>Cost</th><th>Net P/L</th></tr></thead>
       <tbody><tr><td colspan="7" class="empty">Loading…</td></tr></tbody>
     </table>
   </div>
@@ -199,7 +199,7 @@
   <div class="section-title">Skipped Signals</div>
   <div class="card table-wrap">
     <table id="skipped-table">
-      <thead><tr><th>Time (UTC)</th><th>Bar</th><th>Ticker</th><th>RSI(2)</th><th>Reason</th></tr></thead>
+      <thead><tr><th>Time (AST)</th><th>Session bar</th><th>Ticker</th><th>RSI(2)</th><th>Reason</th></tr></thead>
       <tbody><tr><td colspan="5" class="empty">Loading…</td></tr></tbody>
     </table>
     <p class="note">Every valid entry signal that could not be taken is recorded here with
@@ -311,6 +311,15 @@ function renderStatus(d) {
 // guard keys on bar_id, not on the clock.
 const SA_TZ = "Asia/Riyadh";
 const US_TZ = "America/New_York";
+// Ledger timestamps are UTC. Project A writes them WITHOUT a trailing "Z", which
+// new Date() would otherwise read as local time and silently shift by the UTC
+// offset - so force the Z on before parsing, then render in Riyadh time.
+const asUtc = s => new Date(/[Zz]$/.test(s) ? s : s + "Z");
+const saStamp = s => s
+  ? asUtc(s).toLocaleString("en-GB",
+      { dateStyle: "medium", timeStyle: "medium", timeZone: SA_TZ })
+  : "";
+
 // Saudi time runs 7-8h ahead of New York, so a US session that closes on the
 // 30th is timestamped the 1st in Riyadh. Show both to disambiguate the session.
 const saDateTime = d =>
@@ -394,7 +403,7 @@ function renderTrades(d) {
     const tr = document.createElement("tr");
     const pl = t.net_pl_sar === "" ? "—"
       : '<span class="' + plClass(t.net_pl_sar) + '">' + signed(t.net_pl_sar) + "</span>";
-    tr.innerHTML = "<td>" + t.timestamp_utc + "</td><td>" + t.bar_id + "</td>" +
+    tr.innerHTML = "<td>" + saStamp(t.timestamp_utc) + "</td><td>" + t.bar_id + "</td>" +
       '<td><span class="badge ' + (t.action === "BUY" ? "bull" : "bear") + '">' + t.action + "</span></td>" +
       "<td>" + t.ticker + "</td><td>" + Number(t.price_sar).toFixed(4) + "</td>" +
       "<td>" + Number(t.cost_sar).toFixed(4) + "</td><td>" + pl + "</td>";
@@ -411,7 +420,7 @@ function renderSkipped(d) {
   }
   for (const s of d.skipped_recent.slice().reverse()) {
     const tr = document.createElement("tr");
-    tr.innerHTML = "<td>" + s.timestamp_utc + "</td><td>" + s.bar_id + "</td>" +
+    tr.innerHTML = "<td>" + saStamp(s.timestamp_utc) + "</td><td>" + s.bar_id + "</td>" +
       "<td>" + s.ticker + "</td><td>" + (s.rsi || "—") + "</td><td>" + s.reason + "</td>";
     tb.appendChild(tr);
   }
