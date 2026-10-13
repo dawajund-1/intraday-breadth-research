@@ -1,0 +1,4 @@
+timestamp_utc,bar_id,ticker,rsi,reason
+2026-10-13T02:54:56Z,2026-10-12,F,15.7815,"valid entry signal but no free slot (23/25 used, ranked #3 by RSI)"
+2026-10-13T02:54:56Z,2026-10-12,GLW,17.0544,"valid entry signal but no free slot (23/25 used, ranked #4 by RSI)"
+2026-10-13T02:54:56Z,2026-10-12,CMG,21.2344,"valid entry signal but no free slot (23/25 used, ranked #5 by RSI)"
