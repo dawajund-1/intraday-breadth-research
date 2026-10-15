@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-10-12",
+  "bar_id": "2026-10-13",
   "decided": true
  },
  "slots": [
@@ -353,14 +353,30 @@
   },
   {
    "id": 24,
-   "position": null,
+   "position": {
+    "ticker": "LUV",
+    "entry_bar": "2026-10-13",
+    "entry_px_usd": 40.650001525878906,
+    "shares": 0.6558425338072253,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-10-15T00:20:50Z"
+   },
    "realized_pl_sar": 0.0,
    "purified_sar": 0.0,
    "closed_trades": 0
   },
   {
    "id": 25,
-   "position": null,
+   "position": {
+    "ticker": "WDC",
+    "entry_bar": "2026-10-13",
+    "entry_px_usd": 380.7099914550781,
+    "shares": 0.07002705628529779,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-10-15T00:20:50Z"
+   },
    "realized_pl_sar": 0.0,
    "purified_sar": 0.0,
    "closed_trades": 0
@@ -368,22 +384,14 @@
  ],
  "pending_orders": [
   {
-   "id": "BUY:WDC:2026-10-12",
-   "action": "BUY",
-   "ticker": "WDC",
-   "signal_bar": "2026-10-12",
-   "rsi": 14.6943,
-   "created_utc": "2026-10-13T02:54:56Z"
-  },
-  {
-   "id": "BUY:LUV:2026-10-12",
-   "action": "BUY",
-   "ticker": "LUV",
-   "signal_bar": "2026-10-12",
-   "rsi": 15.3231,
-   "created_utc": "2026-10-13T02:54:56Z"
+   "id": "SELL:WYNN:2026-10-13",
+   "action": "SELL",
+   "ticker": "WYNN",
+   "signal_bar": "2026-10-13",
+   "rsi": 74.6556,
+   "created_utc": "2026-10-15T00:20:50Z"
   }
  ],
- "last_run_utc": "2026-10-13T02:54:56Z",
- "last_decided_bar": "2026-10-12"
+ "last_run_utc": "2026-10-15T00:20:50Z",
+ "last_decided_bar": "2026-10-13"
 }
