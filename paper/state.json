@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-10-14",
+  "bar_id": "2026-10-15",
   "decided": true
  },
  "slots": [
@@ -69,32 +69,24 @@
   {
    "id": 5,
    "position": {
-    "ticker": "CMCSA",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 20.68000030517578,
-    "shares": 1.2891682595056608,
+    "ticker": "STT",
+    "entry_bar": "2026-10-15",
+    "entry_px_usd": 167.60000610351562,
+    "shares": 0.1590692066176528,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
+    "opened_utc": "2026-10-17T00:13:06Z"
    },
-   "realized_pl_sar": 0.0,
-   "purified_sar": 0.0,
-   "closed_trades": 0
+   "realized_pl_sar": 5.243164879397781,
+   "purified_sar": 0.5243164879397781,
+   "closed_trades": 1
   },
   {
    "id": 6,
-   "position": {
-    "ticker": "CVS",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 87.73999786376953,
-    "shares": 0.30385229825733456,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
-   },
-   "realized_pl_sar": 0.0,
-   "purified_sar": 0.0,
-   "closed_trades": 0
+   "position": null,
+   "realized_pl_sar": 5.488551252944816,
+   "purified_sar": 0.5488551252944817,
+   "closed_trades": 1
   },
   {
    "id": 7,
@@ -128,18 +120,10 @@
   },
   {
    "id": 9,
-   "position": {
-    "ticker": "DE",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 632.6099853515625,
-    "shares": 0.042142869409789896,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
-   },
-   "realized_pl_sar": 0.0,
-   "purified_sar": 0.0,
-   "closed_trades": 0
+   "position": null,
+   "realized_pl_sar": 2.828418163587287,
+   "purified_sar": 0.2828418163587287,
+   "closed_trades": 1
   },
   {
    "id": 10,
@@ -188,18 +172,10 @@
   },
   {
    "id": 13,
-   "position": {
-    "ticker": "PPG",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 103.70999908447266,
-    "shares": 0.2570629663036175,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
-   },
-   "realized_pl_sar": 0.0,
-   "purified_sar": 0.0,
-   "closed_trades": 0
+   "position": null,
+   "realized_pl_sar": 3.926359800583029,
+   "purified_sar": 0.3926359800583029,
+   "closed_trades": 1
   },
   {
    "id": 14,
@@ -218,33 +194,17 @@
   },
   {
    "id": 15,
-   "position": {
-    "ticker": "ROST",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 225.83999633789062,
-    "shares": 0.11804817761382101,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
-   },
-   "realized_pl_sar": 0.0,
-   "purified_sar": 0.0,
-   "closed_trades": 0
+   "position": null,
+   "realized_pl_sar": 3.9537129441185925,
+   "purified_sar": 0.39537129441185925,
+   "closed_trades": 1
   },
   {
    "id": 16,
-   "position": {
-    "ticker": "SBUX",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 92.29000091552734,
-    "shares": 0.288872030940836,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
-   },
-   "realized_pl_sar": 0.0,
-   "purified_sar": 0.0,
-   "closed_trades": 0
+   "position": null,
+   "realized_pl_sar": 4.945969064049109,
+   "purified_sar": 0.49459690640491094,
+   "closed_trades": 1
   },
   {
    "id": 17,
@@ -323,18 +283,10 @@
   },
   {
    "id": 22,
-   "position": {
-    "ticker": "VZ",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 42.779998779296875,
-    "shares": 0.6231884235794309,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
-   },
-   "realized_pl_sar": 0.0,
-   "purified_sar": 0.0,
-   "closed_trades": 0
+   "position": null,
+   "realized_pl_sar": 3.759935872865043,
+   "purified_sar": 0.37599358728650434,
+   "closed_trades": 1
   },
   {
    "id": 23,
@@ -376,70 +328,102 @@
  ],
  "pending_orders": [
   {
-   "id": "SELL:CMCSA:2026-10-14",
+   "id": "SELL:CHTR:2026-10-15",
    "action": "SELL",
-   "ticker": "CMCSA",
-   "signal_bar": "2026-10-14",
-   "rsi": 78.7581,
-   "created_utc": "2026-10-16T00:09:16Z"
+   "ticker": "CHTR",
+   "signal_bar": "2026-10-15",
+   "rsi": 80.717,
+   "created_utc": "2026-10-17T00:13:06Z"
   },
   {
-   "id": "SELL:CVS:2026-10-14",
+   "id": "SELL:DD:2026-10-15",
    "action": "SELL",
-   "ticker": "CVS",
-   "signal_bar": "2026-10-14",
-   "rsi": 91.1017,
-   "created_utc": "2026-10-16T00:09:16Z"
+   "ticker": "DD",
+   "signal_bar": "2026-10-15",
+   "rsi": 80.0813,
+   "created_utc": "2026-10-17T00:13:06Z"
   },
   {
-   "id": "SELL:DE:2026-10-14",
+   "id": "SELL:QCOM:2026-10-15",
    "action": "SELL",
-   "ticker": "DE",
-   "signal_bar": "2026-10-14",
-   "rsi": 70.3441,
-   "created_utc": "2026-10-16T00:09:16Z"
+   "ticker": "QCOM",
+   "signal_bar": "2026-10-15",
+   "rsi": 72.6964,
+   "created_utc": "2026-10-17T00:13:06Z"
   },
   {
-   "id": "SELL:PPG:2026-10-14",
+   "id": "SELL:SWKS:2026-10-15",
    "action": "SELL",
-   "ticker": "PPG",
-   "signal_bar": "2026-10-14",
-   "rsi": 72.578,
-   "created_utc": "2026-10-16T00:09:16Z"
+   "ticker": "SWKS",
+   "signal_bar": "2026-10-15",
+   "rsi": 83.0618,
+   "created_utc": "2026-10-17T00:13:06Z"
   },
   {
-   "id": "SELL:ROST:2026-10-14",
+   "id": "SELL:T:2026-10-15",
    "action": "SELL",
-   "ticker": "ROST",
-   "signal_bar": "2026-10-14",
-   "rsi": 91.7004,
-   "created_utc": "2026-10-16T00:09:16Z"
+   "ticker": "T",
+   "signal_bar": "2026-10-15",
+   "rsi": 82.0857,
+   "created_utc": "2026-10-17T00:13:06Z"
   },
   {
-   "id": "SELL:SBUX:2026-10-14",
-   "action": "SELL",
-   "ticker": "SBUX",
-   "signal_bar": "2026-10-14",
-   "rsi": 74.8452,
-   "created_utc": "2026-10-16T00:09:16Z"
-  },
-  {
-   "id": "SELL:VZ:2026-10-14",
-   "action": "SELL",
-   "ticker": "VZ",
-   "signal_bar": "2026-10-14",
-   "rsi": 75.7764,
-   "created_utc": "2026-10-16T00:09:16Z"
-  },
-  {
-   "id": "BUY:STT:2026-10-14",
+   "id": "BUY:ETN:2026-10-15",
    "action": "BUY",
-   "ticker": "STT",
-   "signal_bar": "2026-10-14",
-   "rsi": 0.8569,
-   "created_utc": "2026-10-16T00:09:16Z"
+   "ticker": "ETN",
+   "signal_bar": "2026-10-15",
+   "rsi": 4.6868,
+   "created_utc": "2026-10-17T00:13:06Z"
+  },
+  {
+   "id": "BUY:NTAP:2026-10-15",
+   "action": "BUY",
+   "ticker": "NTAP",
+   "signal_bar": "2026-10-15",
+   "rsi": 4.9974,
+   "created_utc": "2026-10-17T00:13:06Z"
+  },
+  {
+   "id": "BUY:CSCO:2026-10-15",
+   "action": "BUY",
+   "ticker": "CSCO",
+   "signal_bar": "2026-10-15",
+   "rsi": 5.0883,
+   "created_utc": "2026-10-17T00:13:06Z"
+  },
+  {
+   "id": "BUY:BKR:2026-10-15",
+   "action": "BUY",
+   "ticker": "BKR",
+   "signal_bar": "2026-10-15",
+   "rsi": 7.3442,
+   "created_utc": "2026-10-17T00:13:06Z"
+  },
+  {
+   "id": "BUY:GLW:2026-10-15",
+   "action": "BUY",
+   "ticker": "GLW",
+   "signal_bar": "2026-10-15",
+   "rsi": 7.5665,
+   "created_utc": "2026-10-17T00:13:06Z"
+  },
+  {
+   "id": "BUY:CLF:2026-10-15",
+   "action": "BUY",
+   "ticker": "CLF",
+   "signal_bar": "2026-10-15",
+   "rsi": 8.8815,
+   "created_utc": "2026-10-17T00:13:06Z"
+  },
+  {
+   "id": "BUY:SLB:2026-10-15",
+   "action": "BUY",
+   "ticker": "SLB",
+   "signal_bar": "2026-10-15",
+   "rsi": 10.3551,
+   "created_utc": "2026-10-17T00:13:06Z"
   }
  ],
- "last_run_utc": "2026-10-16T00:09:16Z",
- "last_decided_bar": "2026-10-14"
+ "last_run_utc": "2026-10-17T00:13:06Z",
+ "last_decided_bar": "2026-10-15"
 }
