@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-10-15",
+  "bar_id": "2026-10-16",
   "decided": true
  },
  "slots": [
@@ -54,17 +54,17 @@
   {
    "id": 4,
    "position": {
-    "ticker": "CHTR",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 102.4800033569336,
-    "shares": 0.2601483131020627,
+    "ticker": "BKR",
+    "entry_bar": "2026-10-16",
+    "entry_px_usd": 55.70000076293945,
+    "shares": 0.4786355410202883,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
+    "opened_utc": "2026-10-20T00:58:25Z"
    },
-   "realized_pl_sar": 0.0,
-   "purified_sar": 0.0,
-   "closed_trades": 0
+   "realized_pl_sar": 7.416636306455402,
+   "purified_sar": 0.7416636306455402,
+   "closed_trades": 1
   },
   {
    "id": 5,
@@ -83,7 +83,15 @@
   },
   {
    "id": 6,
-   "position": null,
+   "position": {
+    "ticker": "CLF",
+    "entry_bar": "2026-10-16",
+    "entry_px_usd": 12.119999885559082,
+    "shares": 2.199669987766687,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-10-20T00:58:25Z"
+   },
    "realized_pl_sar": 5.488551252944816,
    "purified_sar": 0.5488551252944817,
    "closed_trades": 1
@@ -106,21 +114,29 @@
   {
    "id": 8,
    "position": {
-    "ticker": "DD",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 129.3699951171875,
-    "shares": 0.20607560490243904,
+    "ticker": "CSCO",
+    "entry_bar": "2026-10-16",
+    "entry_px_usd": 107.38999938964844,
+    "shares": 0.24825402878780364,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
+    "opened_utc": "2026-10-20T00:58:25Z"
    },
-   "realized_pl_sar": 0.0,
-   "purified_sar": 0.0,
-   "closed_trades": 0
+   "realized_pl_sar": 0.8094052129600442,
+   "purified_sar": 0.08094052129600443,
+   "closed_trades": 1
   },
   {
    "id": 9,
-   "position": null,
+   "position": {
+    "ticker": "ETN",
+    "entry_bar": "2026-10-16",
+    "entry_px_usd": 391.25,
+    "shares": 0.0681405750798722,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-10-20T00:58:25Z"
+   },
    "realized_pl_sar": 2.828418163587287,
    "purified_sar": 0.2828418163587287,
    "closed_trades": 1
@@ -172,7 +188,15 @@
   },
   {
    "id": 13,
-   "position": null,
+   "position": {
+    "ticker": "GLW",
+    "entry_bar": "2026-10-16",
+    "entry_px_usd": 132.0,
+    "shares": 0.20196969696969697,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-10-20T00:58:25Z"
+   },
    "realized_pl_sar": 3.926359800583029,
    "purified_sar": 0.3926359800583029,
    "closed_trades": 1
@@ -180,21 +204,29 @@
   {
    "id": 14,
    "position": {
-    "ticker": "QCOM",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 174.42999267578125,
-    "shares": 0.15284068749319857,
+    "ticker": "NTAP",
+    "entry_bar": "2026-10-16",
+    "entry_px_usd": 203.8000030517578,
+    "shares": 0.1308145220843266,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
+    "opened_utc": "2026-10-20T00:58:25Z"
    },
-   "realized_pl_sar": 0.0,
+   "realized_pl_sar": -1.3543707561130418,
    "purified_sar": 0.0,
-   "closed_trades": 0
+   "closed_trades": 1
   },
   {
    "id": 15,
-   "position": null,
+   "position": {
+    "ticker": "SLB",
+    "entry_bar": "2026-10-16",
+    "entry_px_usd": 49.5,
+    "shares": 0.5385858585858585,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-10-20T00:58:25Z"
+   },
    "realized_pl_sar": 3.9537129441185925,
    "purified_sar": 0.39537129441185925,
    "closed_trades": 1
@@ -223,33 +255,17 @@
   },
   {
    "id": 18,
-   "position": {
-    "ticker": "SWKS",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 74.69999694824219,
-    "shares": 0.35689425822161763,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
-   },
-   "realized_pl_sar": 0.0,
-   "purified_sar": 0.0,
-   "closed_trades": 0
+   "position": null,
+   "realized_pl_sar": 6.665100649819905,
+   "purified_sar": 0.6665100649819906,
+   "closed_trades": 1
   },
   {
    "id": 19,
-   "position": {
-    "ticker": "T",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 22.489999771118164,
-    "shares": 1.1854157523930695,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
-   },
-   "realized_pl_sar": 0.0,
-   "purified_sar": 0.0,
-   "closed_trades": 0
+   "position": null,
+   "realized_pl_sar": 4.196997497649633,
+   "purified_sar": 0.4196997497649633,
+   "closed_trades": 1
   },
   {
    "id": 20,
@@ -328,102 +344,62 @@
  ],
  "pending_orders": [
   {
-   "id": "SELL:CHTR:2026-10-15",
+   "id": "SELL:AA:2026-10-16",
    "action": "SELL",
-   "ticker": "CHTR",
-   "signal_bar": "2026-10-15",
-   "rsi": 80.717,
-   "created_utc": "2026-10-17T00:13:06Z"
+   "ticker": "AA",
+   "signal_bar": "2026-10-16",
+   "rsi": 73.5477,
+   "created_utc": "2026-10-20T00:58:25Z"
   },
   {
-   "id": "SELL:DD:2026-10-15",
+   "id": "SELL:SLB:2026-10-16",
    "action": "SELL",
-   "ticker": "DD",
-   "signal_bar": "2026-10-15",
-   "rsi": 80.0813,
-   "created_utc": "2026-10-17T00:13:06Z"
-  },
-  {
-   "id": "SELL:QCOM:2026-10-15",
-   "action": "SELL",
-   "ticker": "QCOM",
-   "signal_bar": "2026-10-15",
-   "rsi": 72.6964,
-   "created_utc": "2026-10-17T00:13:06Z"
-  },
-  {
-   "id": "SELL:SWKS:2026-10-15",
-   "action": "SELL",
-   "ticker": "SWKS",
-   "signal_bar": "2026-10-15",
-   "rsi": 83.0618,
-   "created_utc": "2026-10-17T00:13:06Z"
-  },
-  {
-   "id": "SELL:T:2026-10-15",
-   "action": "SELL",
-   "ticker": "T",
-   "signal_bar": "2026-10-15",
-   "rsi": 82.0857,
-   "created_utc": "2026-10-17T00:13:06Z"
-  },
-  {
-   "id": "BUY:ETN:2026-10-15",
-   "action": "BUY",
-   "ticker": "ETN",
-   "signal_bar": "2026-10-15",
-   "rsi": 4.6868,
-   "created_utc": "2026-10-17T00:13:06Z"
-  },
-  {
-   "id": "BUY:NTAP:2026-10-15",
-   "action": "BUY",
-   "ticker": "NTAP",
-   "signal_bar": "2026-10-15",
-   "rsi": 4.9974,
-   "created_utc": "2026-10-17T00:13:06Z"
-  },
-  {
-   "id": "BUY:CSCO:2026-10-15",
-   "action": "BUY",
-   "ticker": "CSCO",
-   "signal_bar": "2026-10-15",
-   "rsi": 5.0883,
-   "created_utc": "2026-10-17T00:13:06Z"
-  },
-  {
-   "id": "BUY:BKR:2026-10-15",
-   "action": "BUY",
-   "ticker": "BKR",
-   "signal_bar": "2026-10-15",
-   "rsi": 7.3442,
-   "created_utc": "2026-10-17T00:13:06Z"
-  },
-  {
-   "id": "BUY:GLW:2026-10-15",
-   "action": "BUY",
-   "ticker": "GLW",
-   "signal_bar": "2026-10-15",
-   "rsi": 7.5665,
-   "created_utc": "2026-10-17T00:13:06Z"
-  },
-  {
-   "id": "BUY:CLF:2026-10-15",
-   "action": "BUY",
-   "ticker": "CLF",
-   "signal_bar": "2026-10-15",
-   "rsi": 8.8815,
-   "created_utc": "2026-10-17T00:13:06Z"
-  },
-  {
-   "id": "BUY:SLB:2026-10-15",
-   "action": "BUY",
    "ticker": "SLB",
-   "signal_bar": "2026-10-15",
-   "rsi": 10.3551,
-   "created_utc": "2026-10-17T00:13:06Z"
+   "signal_bar": "2026-10-16",
+   "rsi": 87.4605,
+   "created_utc": "2026-10-20T00:58:25Z"
+  },
+  {
+   "id": "BUY:FFIV:2026-10-16",
+   "action": "BUY",
+   "ticker": "FFIV",
+   "signal_bar": "2026-10-16",
+   "rsi": 4.6256,
+   "created_utc": "2026-10-20T00:58:25Z"
+  },
+  {
+   "id": "BUY:AKAM:2026-10-16",
+   "action": "BUY",
+   "ticker": "AKAM",
+   "signal_bar": "2026-10-16",
+   "rsi": 6.4772,
+   "created_utc": "2026-10-20T00:58:25Z"
+  },
+  {
+   "id": "BUY:SCHW:2026-10-16",
+   "action": "BUY",
+   "ticker": "SCHW",
+   "signal_bar": "2026-10-16",
+   "rsi": 6.6091,
+   "created_utc": "2026-10-20T00:58:25Z"
+  },
+  {
+   "id": "BUY:ILMN:2026-10-16",
+   "action": "BUY",
+   "ticker": "ILMN",
+   "signal_bar": "2026-10-16",
+   "rsi": 6.9632,
+   "created_utc": "2026-10-20T00:58:25Z"
+  },
+  {
+   "id": "BUY:AMZN:2026-10-16",
+   "action": "BUY",
+   "ticker": "AMZN",
+   "signal_bar": "2026-10-16",
+   "rsi": 9.4211,
+   "created_utc": "2026-10-20T00:58:25Z"
   }
  ],
- "last_run_utc": "2026-10-17T00:13:06Z",
- "last_decided_bar": "2026-10-15"
+ "last_run_utc": "2026-10-20T00:58:25Z",
+ "last_decided_bar": "2026-10-16"
 }
