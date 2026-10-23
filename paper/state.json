@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-10-20",
+  "bar_id": "2026-10-21",
   "decided": true
  },
  "slots": [
@@ -144,17 +144,17 @@
   {
    "id": 10,
    "position": {
-    "ticker": "HPQ",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 29.8700008392334,
-    "shares": 0.8925342902897694,
+    "ticker": "CMG",
+    "entry_bar": "2026-10-21",
+    "entry_px_usd": 28.1200008392334,
+    "shares": 0.9480796303108076,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
+    "opened_utc": "2026-10-23T00:27:51Z"
    },
-   "realized_pl_sar": 0.0,
-   "purified_sar": 0.0,
-   "closed_trades": 0
+   "realized_pl_sar": 4.826944335265708,
+   "purified_sar": 0.4826944335265708,
+   "closed_trades": 1
   },
   {
    "id": 11,
@@ -264,17 +264,17 @@
   {
    "id": 18,
    "position": {
-    "ticker": "ILMN",
-    "entry_bar": "2026-10-19",
-    "entry_px_usd": 262.6600036621094,
-    "shares": 0.1015000366568787,
+    "ticker": "GE",
+    "entry_bar": "2026-10-21",
+    "entry_px_usd": 295.8800048828125,
+    "shares": 0.0901040947682797,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-21T00:26:41Z"
+    "opened_utc": "2026-10-23T00:27:51Z"
    },
-   "realized_pl_sar": 6.665100649819905,
-   "purified_sar": 0.6665100649819906,
-   "closed_trades": 1
+   "realized_pl_sar": 14.326805551922206,
+   "purified_sar": 1.4326805551922206,
+   "closed_trades": 2
   },
   {
    "id": 19,
@@ -352,62 +352,110 @@
   },
   {
    "id": 25,
-   "position": {
-    "ticker": "WDC",
-    "entry_bar": "2026-10-13",
-    "entry_px_usd": 380.7099914550781,
-    "shares": 0.07002705628529779,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-15T00:20:50Z"
-   },
-   "realized_pl_sar": 0.0,
+   "position": null,
+   "realized_pl_sar": -0.6025677263758524,
    "purified_sar": 0.0,
-   "closed_trades": 0
+   "closed_trades": 1
   }
  ],
  "pending_orders": [
   {
-   "id": "SELL:HPQ:2026-10-20",
+   "id": "SELL:BKR:2026-10-21",
    "action": "SELL",
-   "ticker": "HPQ",
-   "signal_bar": "2026-10-20",
-   "rsi": 82.6388,
-   "created_utc": "2026-10-22T00:30:07Z"
+   "ticker": "BKR",
+   "signal_bar": "2026-10-21",
+   "rsi": 75.2424,
+   "created_utc": "2026-10-23T00:27:51Z"
   },
   {
-   "id": "SELL:ILMN:2026-10-20",
+   "id": "SELL:CAT:2026-10-21",
    "action": "SELL",
-   "ticker": "ILMN",
-   "signal_bar": "2026-10-20",
-   "rsi": 72.641,
-   "created_utc": "2026-10-22T00:30:07Z"
+   "ticker": "CAT",
+   "signal_bar": "2026-10-21",
+   "rsi": 78.0723,
+   "created_utc": "2026-10-23T00:27:51Z"
   },
   {
-   "id": "SELL:WDC:2026-10-20",
+   "id": "SELL:DAL:2026-10-21",
    "action": "SELL",
-   "ticker": "WDC",
-   "signal_bar": "2026-10-20",
-   "rsi": 72.2189,
-   "created_utc": "2026-10-22T00:30:07Z"
+   "ticker": "DAL",
+   "signal_bar": "2026-10-21",
+   "rsi": 76.831,
+   "created_utc": "2026-10-23T00:27:51Z"
   },
   {
-   "id": "BUY:CMG:2026-10-20",
+   "id": "SELL:FFIV:2026-10-21",
+   "action": "SELL",
+   "ticker": "FFIV",
+   "signal_bar": "2026-10-21",
+   "rsi": 73.9626,
+   "created_utc": "2026-10-23T00:27:51Z"
+  },
+  {
+   "id": "SELL:NTAP:2026-10-21",
+   "action": "SELL",
+   "ticker": "NTAP",
+   "signal_bar": "2026-10-21",
+   "rsi": 80.0158,
+   "created_utc": "2026-10-23T00:27:51Z"
+  },
+  {
+   "id": "SELL:STT:2026-10-21",
+   "action": "SELL",
+   "ticker": "STT",
+   "signal_bar": "2026-10-21",
+   "rsi": 84.5056,
+   "created_utc": "2026-10-23T00:27:51Z"
+  },
+  {
+   "id": "SELL:STX:2026-10-21",
+   "action": "SELL",
+   "ticker": "STX",
+   "signal_bar": "2026-10-21",
+   "rsi": 78.5638,
+   "created_utc": "2026-10-23T00:27:51Z"
+  },
+  {
+   "id": "SELL:TXN:2026-10-21",
+   "action": "SELL",
+   "ticker": "TXN",
+   "signal_bar": "2026-10-21",
+   "rsi": 90.9362,
+   "created_utc": "2026-10-23T00:27:51Z"
+  },
+  {
+   "id": "SELL:UAL:2026-10-21",
+   "action": "SELL",
+   "ticker": "UAL",
+   "signal_bar": "2026-10-21",
+   "rsi": 84.2461,
+   "created_utc": "2026-10-23T00:27:51Z"
+  },
+  {
+   "id": "BUY:ABT:2026-10-21",
    "action": "BUY",
-   "ticker": "CMG",
-   "signal_bar": "2026-10-20",
-   "rsi": 5.7389,
-   "created_utc": "2026-10-22T00:30:07Z"
+   "ticker": "ABT",
+   "signal_bar": "2026-10-21",
+   "rsi": 6.8953,
+   "created_utc": "2026-10-23T00:27:51Z"
   },
   {
-   "id": "BUY:GE:2026-10-20",
+   "id": "BUY:T:2026-10-21",
    "action": "BUY",
-   "ticker": "GE",
-   "signal_bar": "2026-10-20",
-   "rsi": 8.0503,
-   "created_utc": "2026-10-22T00:30:07Z"
+   "ticker": "T",
+   "signal_bar": "2026-10-21",
+   "rsi": 8.8104,
+   "created_utc": "2026-10-23T00:27:51Z"
+  },
+  {
+   "id": "BUY:F:2026-10-21",
+   "action": "BUY",
+   "ticker": "F",
+   "signal_bar": "2026-10-21",
+   "rsi": 9.1074,
+   "created_utc": "2026-10-23T00:27:51Z"
   }
  ],
- "last_run_utc": "2026-10-22T00:30:07Z",
- "last_decided_bar": "2026-10-20"
+ "last_run_utc": "2026-10-23T00:27:51Z",
+ "last_decided_bar": "2026-10-21"
 }
