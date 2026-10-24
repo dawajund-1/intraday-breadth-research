@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-10-21",
+  "bar_id": "2026-10-22",
   "decided": true
  },
  "slots": [
@@ -39,47 +39,47 @@
   {
    "id": 3,
    "position": {
-    "ticker": "CAT",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 799.3699951171875,
-    "shares": 0.03335126432421528,
+    "ticker": "ABT",
+    "entry_bar": "2026-10-22",
+    "entry_px_usd": 102.51000213623047,
+    "shares": 0.2600721826595052,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
+    "opened_utc": "2026-10-24T00:22:51Z"
    },
-   "realized_pl_sar": 0.0,
+   "realized_pl_sar": -11.943423746123415,
    "purified_sar": 0.0,
-   "closed_trades": 0
+   "closed_trades": 1
   },
   {
    "id": 4,
    "position": {
-    "ticker": "BKR",
-    "entry_bar": "2026-10-16",
-    "entry_px_usd": 55.70000076293945,
-    "shares": 0.4786355410202883,
+    "ticker": "F",
+    "entry_bar": "2026-10-22",
+    "entry_px_usd": 11.9399995803833,
+    "shares": 2.2328308992406307,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-20T00:58:25Z"
+    "opened_utc": "2026-10-24T00:22:51Z"
    },
-   "realized_pl_sar": 7.416636306455402,
+   "realized_pl_sar": 3.6592153900943316,
    "purified_sar": 0.7416636306455402,
-   "closed_trades": 1
+   "closed_trades": 2
   },
   {
    "id": 5,
    "position": {
-    "ticker": "STT",
-    "entry_bar": "2026-10-15",
-    "entry_px_usd": 167.60000610351562,
-    "shares": 0.1590692066176528,
+    "ticker": "T",
+    "entry_bar": "2026-10-22",
+    "entry_px_usd": 22.739999771118164,
+    "shares": 1.172383477059687,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-17T00:13:06Z"
+    "opened_utc": "2026-10-24T00:22:51Z"
    },
-   "realized_pl_sar": 5.243164879397781,
-   "purified_sar": 0.5243164879397781,
-   "closed_trades": 1
+   "realized_pl_sar": 5.36129180095017,
+   "purified_sar": 0.536129180095017,
+   "closed_trades": 2
   },
   {
    "id": 6,
@@ -98,18 +98,10 @@
   },
   {
    "id": 7,
-   "position": {
-    "ticker": "DAL",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 80.11000061035156,
-    "shares": 0.3327924079001327,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
-   },
-   "realized_pl_sar": 0.0,
+   "position": null,
+   "realized_pl_sar": -1.0855024524542642,
    "purified_sar": 0.0,
-   "closed_trades": 0
+   "closed_trades": 1
   },
   {
    "id": 8,
@@ -203,18 +195,10 @@
   },
   {
    "id": 14,
-   "position": {
-    "ticker": "NTAP",
-    "entry_bar": "2026-10-16",
-    "entry_px_usd": 203.8000030517578,
-    "shares": 0.1308145220843266,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-20T00:58:25Z"
-   },
-   "realized_pl_sar": -1.3543707561130418,
-   "purified_sar": 0.0,
-   "closed_trades": 1
+   "position": null,
+   "realized_pl_sar": 2.892292448432798,
+   "purified_sar": 0.42466632045458397,
+   "closed_trades": 2
   },
   {
    "id": 15,
@@ -233,33 +217,17 @@
   },
   {
    "id": 16,
-   "position": {
-    "ticker": "FFIV",
-    "entry_bar": "2026-10-19",
-    "entry_px_usd": 450.79998779296875,
-    "shares": 0.05913930949848136,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-21T00:26:41Z"
-   },
-   "realized_pl_sar": 4.945969064049109,
+   "position": null,
+   "realized_pl_sar": 4.7613388267865275,
    "purified_sar": 0.49459690640491094,
-   "closed_trades": 1
+   "closed_trades": 2
   },
   {
    "id": 17,
-   "position": {
-    "ticker": "STX",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 753.25,
-    "shares": 0.03539329571855294,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
-   },
-   "realized_pl_sar": 0.0,
+   "position": null,
+   "realized_pl_sar": -14.768364118836473,
    "purified_sar": 0.0,
-   "closed_trades": 0
+   "closed_trades": 1
   },
   {
    "id": 18,
@@ -293,33 +261,17 @@
   },
   {
    "id": 20,
-   "position": {
-    "ticker": "TXN",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 281.739990234375,
-    "shares": 0.0946262544334653,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
-   },
-   "realized_pl_sar": 0.0,
+   "position": null,
+   "realized_pl_sar": -0.8196521076561964,
    "purified_sar": 0.0,
-   "closed_trades": 0
+   "closed_trades": 1
   },
   {
    "id": 21,
-   "position": {
-    "ticker": "UAL",
-    "entry_bar": "2026-10-12",
-    "entry_px_usd": 104.44000244140625,
-    "shares": 0.25526617557249676,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-13T02:54:56Z"
-   },
-   "realized_pl_sar": 0.0,
+   "position": null,
+   "realized_pl_sar": -2.3600976715591173,
    "purified_sar": 0.0,
-   "closed_trades": 0
+   "closed_trades": 1
   },
   {
    "id": 22,
@@ -360,102 +312,118 @@
  ],
  "pending_orders": [
   {
-   "id": "SELL:BKR:2026-10-21",
+   "id": "SELL:AKAM:2026-10-22",
    "action": "SELL",
+   "ticker": "AKAM",
+   "signal_bar": "2026-10-22",
+   "rsi": 77.6387,
+   "created_utc": "2026-10-24T00:22:51Z"
+  },
+  {
+   "id": "SELL:BAC:2026-10-22",
+   "action": "SELL",
+   "ticker": "BAC",
+   "signal_bar": "2026-10-22",
+   "rsi": 71.2229,
+   "created_utc": "2026-10-24T00:22:51Z"
+  },
+  {
+   "id": "SELL:DE:2026-10-22",
+   "action": "SELL",
+   "ticker": "DE",
+   "signal_bar": "2026-10-22",
+   "rsi": 81.2043,
+   "created_utc": "2026-10-24T00:22:51Z"
+  },
+  {
+   "id": "SELL:LUV:2026-10-22",
+   "action": "SELL",
+   "ticker": "LUV",
+   "signal_bar": "2026-10-22",
+   "rsi": 92.7874,
+   "created_utc": "2026-10-24T00:22:51Z"
+  },
+  {
+   "id": "SELL:MGM:2026-10-22",
+   "action": "SELL",
+   "ticker": "MGM",
+   "signal_bar": "2026-10-22",
+   "rsi": 88.8288,
+   "created_utc": "2026-10-24T00:22:51Z"
+  },
+  {
+   "id": "BUY:FCX:2026-10-22",
+   "action": "BUY",
+   "ticker": "FCX",
+   "signal_bar": "2026-10-22",
+   "rsi": 1.3865,
+   "created_utc": "2026-10-24T00:22:51Z"
+  },
+  {
+   "id": "BUY:GOOGL:2026-10-22",
+   "action": "BUY",
+   "ticker": "GOOGL",
+   "signal_bar": "2026-10-22",
+   "rsi": 3.3666,
+   "created_utc": "2026-10-24T00:22:51Z"
+  },
+  {
+   "id": "BUY:AA:2026-10-22",
+   "action": "BUY",
+   "ticker": "AA",
+   "signal_bar": "2026-10-22",
+   "rsi": 4.2748,
+   "created_utc": "2026-10-24T00:22:51Z"
+  },
+  {
+   "id": "BUY:TPR:2026-10-22",
+   "action": "BUY",
+   "ticker": "TPR",
+   "signal_bar": "2026-10-22",
+   "rsi": 6.0794,
+   "created_utc": "2026-10-24T00:22:51Z"
+  },
+  {
+   "id": "BUY:LVS:2026-10-22",
+   "action": "BUY",
+   "ticker": "LVS",
+   "signal_bar": "2026-10-22",
+   "rsi": 6.2082,
+   "created_utc": "2026-10-24T00:22:51Z"
+  },
+  {
+   "id": "BUY:MSFT:2026-10-22",
+   "action": "BUY",
+   "ticker": "MSFT",
+   "signal_bar": "2026-10-22",
+   "rsi": 9.3296,
+   "created_utc": "2026-10-24T00:22:51Z"
+  },
+  {
+   "id": "BUY:BKR:2026-10-22",
+   "action": "BUY",
    "ticker": "BKR",
-   "signal_bar": "2026-10-21",
-   "rsi": 75.2424,
-   "created_utc": "2026-10-23T00:27:51Z"
+   "signal_bar": "2026-10-22",
+   "rsi": 9.984,
+   "created_utc": "2026-10-24T00:22:51Z"
   },
   {
-   "id": "SELL:CAT:2026-10-21",
-   "action": "SELL",
-   "ticker": "CAT",
-   "signal_bar": "2026-10-21",
-   "rsi": 78.0723,
-   "created_utc": "2026-10-23T00:27:51Z"
-  },
-  {
-   "id": "SELL:DAL:2026-10-21",
-   "action": "SELL",
-   "ticker": "DAL",
-   "signal_bar": "2026-10-21",
-   "rsi": 76.831,
-   "created_utc": "2026-10-23T00:27:51Z"
-  },
-  {
-   "id": "SELL:FFIV:2026-10-21",
-   "action": "SELL",
-   "ticker": "FFIV",
-   "signal_bar": "2026-10-21",
-   "rsi": 73.9626,
-   "created_utc": "2026-10-23T00:27:51Z"
-  },
-  {
-   "id": "SELL:NTAP:2026-10-21",
-   "action": "SELL",
-   "ticker": "NTAP",
-   "signal_bar": "2026-10-21",
-   "rsi": 80.0158,
-   "created_utc": "2026-10-23T00:27:51Z"
-  },
-  {
-   "id": "SELL:STT:2026-10-21",
-   "action": "SELL",
-   "ticker": "STT",
-   "signal_bar": "2026-10-21",
-   "rsi": 84.5056,
-   "created_utc": "2026-10-23T00:27:51Z"
-  },
-  {
-   "id": "SELL:STX:2026-10-21",
-   "action": "SELL",
-   "ticker": "STX",
-   "signal_bar": "2026-10-21",
-   "rsi": 78.5638,
-   "created_utc": "2026-10-23T00:27:51Z"
-  },
-  {
-   "id": "SELL:TXN:2026-10-21",
-   "action": "SELL",
-   "ticker": "TXN",
-   "signal_bar": "2026-10-21",
-   "rsi": 90.9362,
-   "created_utc": "2026-10-23T00:27:51Z"
-  },
-  {
-   "id": "SELL:UAL:2026-10-21",
-   "action": "SELL",
-   "ticker": "UAL",
-   "signal_bar": "2026-10-21",
-   "rsi": 84.2461,
-   "created_utc": "2026-10-23T00:27:51Z"
-  },
-  {
-   "id": "BUY:ABT:2026-10-21",
+   "id": "BUY:DVN:2026-10-22",
    "action": "BUY",
-   "ticker": "ABT",
-   "signal_bar": "2026-10-21",
-   "rsi": 6.8953,
-   "created_utc": "2026-10-23T00:27:51Z"
+   "ticker": "DVN",
+   "signal_bar": "2026-10-22",
+   "rsi": 10.5446,
+   "created_utc": "2026-10-24T00:22:51Z"
   },
   {
-   "id": "BUY:T:2026-10-21",
+   "id": "BUY:AMZN:2026-10-22",
    "action": "BUY",
-   "ticker": "T",
-   "signal_bar": "2026-10-21",
-   "rsi": 8.8104,
-   "created_utc": "2026-10-23T00:27:51Z"
-  },
-  {
-   "id": "BUY:F:2026-10-21",
-   "action": "BUY",
-   "ticker": "F",
-   "signal_bar": "2026-10-21",
-   "rsi": 9.1074,
-   "created_utc": "2026-10-23T00:27:51Z"
+   "ticker": "AMZN",
+   "signal_bar": "2026-10-22",
+   "rsi": 11.601,
+   "created_utc": "2026-10-24T00:22:51Z"
   }
  ],
- "last_run_utc": "2026-10-23T00:27:51Z",
- "last_decided_bar": "2026-10-21"
+ "last_run_utc": "2026-10-24T00:22:51Z",
+ "last_decided_bar": "2026-10-22"
 }
