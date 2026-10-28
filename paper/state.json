@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-10-23",
+  "bar_id": "2026-10-26",
   "decided": true
  },
  "slots": [
@@ -39,17 +39,17 @@
   {
    "id": 3,
    "position": {
-    "ticker": "ABT",
-    "entry_bar": "2026-10-22",
-    "entry_px_usd": 102.51000213623047,
-    "shares": 0.2600721826595052,
+    "ticker": "CAT",
+    "entry_bar": "2026-10-26",
+    "entry_px_usd": 692.1300048828125,
+    "shares": 0.038518775102827564,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-24T00:22:51Z"
+    "opened_utc": "2026-10-28T01:02:43Z"
    },
-   "realized_pl_sar": -11.943423746123415,
-   "purified_sar": 0.0,
-   "closed_trades": 1
+   "realized_pl_sar": -9.657608581491274,
+   "purified_sar": 0.22858151646321404,
+   "closed_trades": 2
   },
   {
    "id": 4,
@@ -159,17 +159,17 @@
   {
    "id": 11,
    "position": {
-    "ticker": "DVN",
-    "entry_bar": "2026-10-23",
-    "entry_px_usd": 51.38999938964844,
-    "shares": 0.5187779785296156,
+    "ticker": "CCL",
+    "entry_bar": "2026-10-26",
+    "entry_px_usd": 26.860000610351562,
+    "shares": 0.9925539610645249,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-27T01:17:29Z"
+    "opened_utc": "2026-10-28T01:02:43Z"
    },
-   "realized_pl_sar": -4.320254052269789,
-   "purified_sar": 0.0,
-   "closed_trades": 1
+   "realized_pl_sar": -3.8590150359869995,
+   "purified_sar": 0.04612390162827893,
+   "closed_trades": 2
   },
   {
    "id": 12,
@@ -308,21 +308,45 @@
   },
   {
    "id": 21,
-   "position": null,
+   "position": {
+    "ticker": "NEM",
+    "entry_bar": "2026-10-26",
+    "entry_px_usd": 110.38999938964844,
+    "shares": 0.24150738425042492,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-10-28T01:02:43Z"
+   },
    "realized_pl_sar": -2.3600976715591173,
    "purified_sar": 0.0,
    "closed_trades": 1
   },
   {
    "id": 22,
-   "position": null,
+   "position": {
+    "ticker": "VLO",
+    "entry_bar": "2026-10-26",
+    "entry_px_usd": 426.760009765625,
+    "shares": 0.06247070810276148,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-10-28T01:02:43Z"
+   },
    "realized_pl_sar": 3.759935872865043,
    "purified_sar": 0.37599358728650434,
    "closed_trades": 1
   },
   {
    "id": 23,
-   "position": null,
+   "position": {
+    "ticker": "WYNN",
+    "entry_bar": "2026-10-26",
+    "entry_px_usd": 74.19999694824219,
+    "shares": 0.3592992061522124,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-10-28T01:02:43Z"
+   },
    "realized_pl_sar": -1.665042871618354,
    "purified_sar": 0.0,
    "closed_trades": 1
@@ -344,62 +368,46 @@
  ],
  "pending_orders": [
   {
-   "id": "SELL:ABT:2026-10-23",
+   "id": "SELL:CSCO:2026-10-26",
    "action": "SELL",
-   "ticker": "ABT",
-   "signal_bar": "2026-10-23",
-   "rsi": 75.244,
-   "created_utc": "2026-10-27T01:17:29Z"
+   "ticker": "CSCO",
+   "signal_bar": "2026-10-26",
+   "rsi": 86.8948,
+   "created_utc": "2026-10-28T01:02:43Z"
   },
   {
-   "id": "SELL:DVN:2026-10-23",
+   "id": "SELL:MSFT:2026-10-26",
    "action": "SELL",
-   "ticker": "DVN",
-   "signal_bar": "2026-10-23",
-   "rsi": 80.4309,
-   "created_utc": "2026-10-27T01:17:29Z"
+   "ticker": "MSFT",
+   "signal_bar": "2026-10-26",
+   "rsi": 75.6023,
+   "created_utc": "2026-10-28T01:02:43Z"
   },
   {
-   "id": "BUY:NEM:2026-10-23",
-   "action": "BUY",
-   "ticker": "NEM",
-   "signal_bar": "2026-10-23",
-   "rsi": 3.4441,
-   "created_utc": "2026-10-27T01:17:29Z"
+   "id": "SELL:MU:2026-10-26",
+   "action": "SELL",
+   "ticker": "MU",
+   "signal_bar": "2026-10-26",
+   "rsi": 71.4143,
+   "created_utc": "2026-10-28T01:02:43Z"
   },
   {
-   "id": "BUY:VLO:2026-10-23",
+   "id": "BUY:MRK:2026-10-26",
    "action": "BUY",
-   "ticker": "VLO",
-   "signal_bar": "2026-10-23",
-   "rsi": 6.9671,
-   "created_utc": "2026-10-27T01:17:29Z"
+   "ticker": "MRK",
+   "signal_bar": "2026-10-26",
+   "rsi": 7.5678,
+   "created_utc": "2026-10-28T01:02:43Z"
   },
   {
-   "id": "BUY:WYNN:2026-10-23",
+   "id": "BUY:EBAY:2026-10-26",
    "action": "BUY",
-   "ticker": "WYNN",
-   "signal_bar": "2026-10-23",
-   "rsi": 7.5552,
-   "created_utc": "2026-10-27T01:17:29Z"
-  },
-  {
-   "id": "BUY:CAT:2026-10-23",
-   "action": "BUY",
-   "ticker": "CAT",
-   "signal_bar": "2026-10-23",
-   "rsi": 9.3898,
-   "created_utc": "2026-10-27T01:17:29Z"
-  },
-  {
-   "id": "BUY:CCL:2026-10-23",
-   "action": "BUY",
-   "ticker": "CCL",
-   "signal_bar": "2026-10-23",
-   "rsi": 14.0162,
-   "created_utc": "2026-10-27T01:17:29Z"
+   "ticker": "EBAY",
+   "signal_bar": "2026-10-26",
+   "rsi": 8.7115,
+   "created_utc": "2026-10-28T01:02:43Z"
   }
  ],
- "last_run_utc": "2026-10-27T01:17:29Z",
- "last_decided_bar": "2026-10-23"
+ "last_run_utc": "2026-10-28T01:02:43Z",
+ "last_decided_bar": "2026-10-26"
 }
