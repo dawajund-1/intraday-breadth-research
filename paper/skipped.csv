@@ -211,3 +211,4 @@ timestamp_utc,bar_id,ticker,rsi,reason
 2026-10-29T01:39:04Z,2026-10-28,AIG,28.3477,"valid entry signal but no free slot (22/25 used, ranked #45 by RSI)"
 2026-10-29T01:39:04Z,2026-10-28,ABT,28.524,"valid entry signal but no free slot (22/25 used, ranked #46 by RSI)"
 2026-10-29T01:39:04Z,2026-10-28,VZ,29.7497,"valid entry signal but no free slot (22/25 used, ranked #47 by RSI)"
+2026-10-30T01:42:43Z,2026-10-29,CVS,28.4568,"valid entry signal but no free slot (12/25 used, ranked #14 by RSI)"
