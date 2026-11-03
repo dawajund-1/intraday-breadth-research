@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-10-30",
+  "bar_id": "2026-11-02",
   "decided": true
  },
  "slots": [
@@ -39,17 +39,17 @@
   {
    "id": 3,
    "position": {
-    "ticker": "MCK",
-    "entry_bar": "2026-10-29",
-    "entry_px_usd": 980.8800048828125,
-    "shares": 0.027179675258223984,
+    "ticker": "FCX",
+    "entry_bar": "2026-11-02",
+    "entry_px_usd": 62.970001220703125,
+    "shares": 0.4233762026867293,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-30T01:42:43Z"
+    "opened_utc": "2026-11-03T03:22:14Z"
    },
-   "realized_pl_sar": -16.143472792247934,
-   "purified_sar": 0.22858151646321404,
-   "closed_trades": 3
+   "realized_pl_sar": -14.385246269974175,
+   "purified_sar": 0.4044041686905899,
+   "closed_trades": 4
   },
   {
    "id": 4,
@@ -69,32 +69,32 @@
   {
    "id": 5,
    "position": {
-    "ticker": "T",
-    "entry_bar": "2026-10-22",
-    "entry_px_usd": 22.739999771118164,
-    "shares": 1.172383477059687,
+    "ticker": "ILMN",
+    "entry_bar": "2026-11-02",
+    "entry_px_usd": 226.5800018310547,
+    "shares": 0.11766263476279142,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-24T00:22:51Z"
+    "opened_utc": "2026-11-03T03:22:14Z"
    },
-   "realized_pl_sar": 5.36129180095017,
+   "realized_pl_sar": -0.3776392039756473,
    "purified_sar": 0.536129180095017,
-   "closed_trades": 2
+   "closed_trades": 3
   },
   {
    "id": 6,
    "position": {
-    "ticker": "ADP",
-    "entry_bar": "2026-10-30",
-    "entry_px_usd": 293.8399963378906,
-    "shares": 0.0907296499192142,
+    "ticker": "MSFT",
+    "entry_bar": "2026-11-02",
+    "entry_px_usd": 507.1199951171875,
+    "shares": 0.052571384005158955,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-31T01:27:39Z"
+    "opened_utc": "2026-11-03T03:22:14Z"
    },
-   "realized_pl_sar": 16.17638954647822,
-   "purified_sar": 1.808100670401092,
-   "closed_trades": 4
+   "realized_pl_sar": 17.83174319998757,
+   "purified_sar": 1.973636035752027,
+   "closed_trades": 5
   },
   {
    "id": 7,
@@ -234,17 +234,17 @@
   {
    "id": 16,
    "position": {
-    "ticker": "LIN",
-    "entry_bar": "2026-10-30",
-    "entry_px_usd": 514.239990234375,
-    "shares": 0.051843498184280024,
+    "ticker": "NEM",
+    "entry_bar": "2026-11-02",
+    "entry_px_usd": 109.08999633789062,
+    "shares": 0.24438537808200553,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-31T01:27:39Z"
+    "opened_utc": "2026-11-03T03:22:14Z"
    },
-   "realized_pl_sar": 8.35001095309427,
-   "purified_sar": 0.8534641190356851,
-   "closed_trades": 3
+   "realized_pl_sar": 9.390130948627359,
+   "purified_sar": 0.9574761185889941,
+   "closed_trades": 4
   },
   {
    "id": 17,
@@ -293,7 +293,15 @@
   },
   {
    "id": 20,
-   "position": null,
+   "position": {
+    "ticker": "QCOM",
+    "entry_bar": "2026-11-02",
+    "entry_px_usd": 162.0800018310547,
+    "shares": 0.16448667138953546,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-03T03:22:14Z"
+   },
    "realized_pl_sar": 4.5164471862995015,
    "purified_sar": 0.5336099293955698,
    "closed_trades": 2
@@ -344,78 +352,62 @@
  ],
  "pending_orders": [
   {
-   "id": "SELL:ADP:2026-10-30",
+   "id": "SELL:BA:2026-11-02",
    "action": "SELL",
-   "ticker": "ADP",
-   "signal_bar": "2026-10-30",
-   "rsi": 72.0394,
-   "created_utc": "2026-10-31T01:27:39Z"
+   "ticker": "BA",
+   "signal_bar": "2026-11-02",
+   "rsi": 72.6279,
+   "created_utc": "2026-11-03T03:22:14Z"
   },
   {
-   "id": "SELL:LIN:2026-10-30",
+   "id": "SELL:BSX:2026-11-02",
    "action": "SELL",
-   "ticker": "LIN",
-   "signal_bar": "2026-10-30",
-   "rsi": 80.4388,
-   "created_utc": "2026-10-31T01:27:39Z"
+   "ticker": "BSX",
+   "signal_bar": "2026-11-02",
+   "rsi": 76.8428,
+   "created_utc": "2026-11-03T03:22:14Z"
   },
   {
-   "id": "SELL:MCK:2026-10-30",
+   "id": "SELL:ORLY:2026-11-02",
    "action": "SELL",
-   "ticker": "MCK",
-   "signal_bar": "2026-10-30",
-   "rsi": 80.3417,
-   "created_utc": "2026-10-31T01:27:39Z"
+   "ticker": "ORLY",
+   "signal_bar": "2026-11-02",
+   "rsi": 79.5429,
+   "created_utc": "2026-11-03T03:22:14Z"
   },
   {
-   "id": "SELL:T:2026-10-30",
-   "action": "SELL",
-   "ticker": "T",
-   "signal_bar": "2026-10-30",
-   "rsi": 82.3591,
-   "created_utc": "2026-10-31T01:27:39Z"
-  },
-  {
-   "id": "BUY:MSFT:2026-10-30",
+   "id": "BUY:CVS:2026-11-02",
    "action": "BUY",
-   "ticker": "MSFT",
-   "signal_bar": "2026-10-30",
-   "rsi": 6.5063,
-   "created_utc": "2026-10-31T01:27:39Z"
+   "ticker": "CVS",
+   "signal_bar": "2026-11-02",
+   "rsi": 5.2091,
+   "created_utc": "2026-11-03T03:22:14Z"
   },
   {
-   "id": "BUY:FCX:2026-10-30",
+   "id": "BUY:AKAM:2026-11-02",
    "action": "BUY",
-   "ticker": "FCX",
-   "signal_bar": "2026-10-30",
-   "rsi": 6.5984,
-   "created_utc": "2026-10-31T01:27:39Z"
+   "ticker": "AKAM",
+   "signal_bar": "2026-11-02",
+   "rsi": 5.8652,
+   "created_utc": "2026-11-03T03:22:14Z"
   },
   {
-   "id": "BUY:ILMN:2026-10-30",
+   "id": "BUY:STX:2026-11-02",
    "action": "BUY",
-   "ticker": "ILMN",
-   "signal_bar": "2026-10-30",
-   "rsi": 7.274,
-   "created_utc": "2026-10-31T01:27:39Z"
+   "ticker": "STX",
+   "signal_bar": "2026-11-02",
+   "rsi": 7.4913,
+   "created_utc": "2026-11-03T03:22:14Z"
   },
   {
-   "id": "BUY:QCOM:2026-10-30",
+   "id": "BUY:SLB:2026-11-02",
    "action": "BUY",
-   "ticker": "QCOM",
-   "signal_bar": "2026-10-30",
-   "rsi": 9.2847,
-   "created_utc": "2026-10-31T01:27:39Z"
-  },
-  {
-   "id": "BUY:NEM:2026-10-30",
-   "action": "BUY",
-   "ticker": "NEM",
-   "signal_bar": "2026-10-30",
-   "rsi": 9.8155,
-   "created_utc": "2026-10-31T01:27:39Z"
+   "ticker": "SLB",
+   "signal_bar": "2026-11-02",
+   "rsi": 8.4199,
+   "created_utc": "2026-11-03T03:22:14Z"
   }
  ],
- "last_run_utc": "2026-10-31T01:27:39Z",
- "last_decided_bar": "2026-10-30"
+ "last_run_utc": "2026-11-03T03:22:14Z",
+ "last_decided_bar": "2026-11-02"
 }
