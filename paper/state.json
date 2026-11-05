@@ -2,24 +2,24 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-11-02",
+  "bar_id": "2026-11-03",
   "decided": true
  },
  "slots": [
   {
    "id": 1,
    "position": {
-    "ticker": "BA",
-    "entry_bar": "2026-10-29",
-    "entry_px_usd": 172.64999389648438,
-    "shares": 0.1544164549231581,
+    "ticker": "AKAM",
+    "entry_bar": "2026-11-03",
+    "entry_px_usd": 86.52999877929688,
+    "shares": 0.30810124091182417,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-30T01:42:43Z"
+    "opened_utc": "2026-11-05T02:02:39Z"
    },
-   "realized_pl_sar": 12.339410709790812,
-   "purified_sar": 1.2364404459790805,
-   "closed_trades": 3
+   "realized_pl_sar": 12.696504260601301,
+   "purified_sar": 1.2721498010601295,
+   "closed_trades": 4
   },
   {
    "id": 2,
@@ -144,17 +144,17 @@
   {
    "id": 10,
    "position": {
-    "ticker": "BSX",
-    "entry_bar": "2026-10-30",
-    "entry_px_usd": 41.97999954223633,
-    "shares": 0.6350643232660642,
+    "ticker": "CVS",
+    "entry_bar": "2026-11-03",
+    "entry_px_usd": 91.41000366210938,
+    "shares": 0.29165298032966724,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-31T01:27:39Z"
+    "opened_utc": "2026-11-05T02:02:39Z"
    },
-   "realized_pl_sar": 16.033884976184083,
-   "purified_sar": 1.6033884976184085,
-   "closed_trades": 2
+   "realized_pl_sar": 19.62785399202761,
+   "purified_sar": 1.9627853992027613,
+   "closed_trades": 3
   },
   {
    "id": 11,
@@ -264,17 +264,17 @@
   {
    "id": 18,
    "position": {
-    "ticker": "ORLY",
-    "entry_bar": "2026-10-30",
-    "entry_px_usd": 88.12000274658203,
-    "shares": 0.30254197876808486,
+    "ticker": "SLB",
+    "entry_bar": "2026-11-03",
+    "entry_px_usd": 52.130001068115234,
+    "shares": 0.511413762780571,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-31T01:27:39Z"
+    "opened_utc": "2026-11-05T02:02:39Z"
    },
-   "realized_pl_sar": 20.10193303641458,
-   "purified_sar": 2.010193303641458,
-   "closed_trades": 3
+   "realized_pl_sar": 22.19797898029509,
+   "purified_sar": 2.219797898029509,
+   "closed_trades": 4
   },
   {
    "id": 19,
@@ -308,7 +308,15 @@
   },
   {
    "id": 21,
-   "position": null,
+   "position": {
+    "ticker": "STX",
+    "entry_bar": "2026-11-03",
+    "entry_px_usd": 606.3800048828125,
+    "shares": 0.04396582965355569,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-05T02:02:39Z"
+   },
    "realized_pl_sar": -1.1084370541384914,
    "purified_sar": 0.1251660617420626,
    "closed_trades": 2
@@ -352,62 +360,54 @@
  ],
  "pending_orders": [
   {
-   "id": "SELL:BA:2026-11-02",
+   "id": "SELL:AMZN:2026-11-03",
    "action": "SELL",
-   "ticker": "BA",
-   "signal_bar": "2026-11-02",
-   "rsi": 72.6279,
-   "created_utc": "2026-11-03T03:22:14Z"
+   "ticker": "AMZN",
+   "signal_bar": "2026-11-03",
+   "rsi": 77.706,
+   "created_utc": "2026-11-05T02:02:39Z"
   },
   {
-   "id": "SELL:BSX:2026-11-02",
+   "id": "SELL:BAX:2026-11-03",
    "action": "SELL",
-   "ticker": "BSX",
-   "signal_bar": "2026-11-02",
-   "rsi": 76.8428,
-   "created_utc": "2026-11-03T03:22:14Z"
+   "ticker": "BAX",
+   "signal_bar": "2026-11-03",
+   "rsi": 83.2756,
+   "created_utc": "2026-11-05T02:02:39Z"
   },
   {
-   "id": "SELL:ORLY:2026-11-02",
+   "id": "SELL:CVS:2026-11-03",
    "action": "SELL",
-   "ticker": "ORLY",
-   "signal_bar": "2026-11-02",
-   "rsi": 79.5429,
-   "created_utc": "2026-11-03T03:22:14Z"
-  },
-  {
-   "id": "BUY:CVS:2026-11-02",
-   "action": "BUY",
    "ticker": "CVS",
-   "signal_bar": "2026-11-02",
-   "rsi": 5.2091,
-   "created_utc": "2026-11-03T03:22:14Z"
+   "signal_bar": "2026-11-03",
+   "rsi": 74.1148,
+   "created_utc": "2026-11-05T02:02:39Z"
   },
   {
-   "id": "BUY:AKAM:2026-11-02",
+   "id": "BUY:AAPL:2026-11-03",
    "action": "BUY",
-   "ticker": "AKAM",
-   "signal_bar": "2026-11-02",
-   "rsi": 5.8652,
-   "created_utc": "2026-11-03T03:22:14Z"
+   "ticker": "AAPL",
+   "signal_bar": "2026-11-03",
+   "rsi": 6.513,
+   "created_utc": "2026-11-05T02:02:39Z"
   },
   {
-   "id": "BUY:STX:2026-11-02",
+   "id": "BUY:CSX:2026-11-03",
    "action": "BUY",
-   "ticker": "STX",
-   "signal_bar": "2026-11-02",
-   "rsi": 7.4913,
-   "created_utc": "2026-11-03T03:22:14Z"
+   "ticker": "CSX",
+   "signal_bar": "2026-11-03",
+   "rsi": 6.7062,
+   "created_utc": "2026-11-05T02:02:39Z"
   },
   {
-   "id": "BUY:SLB:2026-11-02",
+   "id": "BUY:KMB:2026-11-03",
    "action": "BUY",
-   "ticker": "SLB",
-   "signal_bar": "2026-11-02",
-   "rsi": 8.4199,
-   "created_utc": "2026-11-03T03:22:14Z"
+   "ticker": "KMB",
+   "signal_bar": "2026-11-03",
+   "rsi": 8.0204,
+   "created_utc": "2026-11-05T02:02:39Z"
   }
  ],
- "last_run_utc": "2026-11-03T03:22:14Z",
- "last_decided_bar": "2026-11-02"
+ "last_run_utc": "2026-11-05T02:02:39Z",
+ "last_decided_bar": "2026-11-03"
 }
