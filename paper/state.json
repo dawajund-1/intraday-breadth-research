@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-11-03",
+  "bar_id": "2026-11-04",
   "decided": true
  },
  "slots": [
@@ -114,47 +114,47 @@
   {
    "id": 8,
    "position": {
-    "ticker": "AMZN",
-    "entry_bar": "2026-10-30",
-    "entry_px_usd": 240.35000610351562,
-    "shares": 0.11092156988969612,
+    "ticker": "AAPL",
+    "entry_bar": "2026-11-04",
+    "entry_px_usd": 349.510009765625,
+    "shares": 0.07627821594545377,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-31T01:27:39Z"
+    "opened_utc": "2026-11-06T02:04:57Z"
    },
-   "realized_pl_sar": 6.52425245490339,
-   "purified_sar": 0.6524252454903391,
-   "closed_trades": 3
+   "realized_pl_sar": 17.17833240269576,
+   "purified_sar": 1.717833240269576,
+   "closed_trades": 4
   },
   {
    "id": 9,
    "position": {
-    "ticker": "BAX",
-    "entry_bar": "2026-10-30",
-    "entry_px_usd": 23.0,
-    "shares": 1.1591304347826086,
+    "ticker": "CSX",
+    "entry_bar": "2026-11-04",
+    "entry_px_usd": 52.04999923706055,
+    "shares": 0.5121998153847732,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-10-31T01:27:39Z"
+    "opened_utc": "2026-11-06T02:04:57Z"
    },
-   "realized_pl_sar": 3.4344190140902526,
-   "purified_sar": 0.34344190140902525,
-   "closed_trades": 2
+   "realized_pl_sar": 18.619208823872853,
+   "purified_sar": 1.8619208823872855,
+   "closed_trades": 3
   },
   {
    "id": 10,
    "position": {
-    "ticker": "CVS",
-    "entry_bar": "2026-11-03",
-    "entry_px_usd": 91.41000366210938,
-    "shares": 0.29165298032966724,
+    "ticker": "KMB",
+    "entry_bar": "2026-11-04",
+    "entry_px_usd": 108.79000091552734,
+    "shares": 0.24505928647524147,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-11-05T02:02:39Z"
+    "opened_utc": "2026-11-06T02:04:57Z"
    },
-   "realized_pl_sar": 19.62785399202761,
+   "realized_pl_sar": 7.083136106279653,
    "purified_sar": 1.9627853992027613,
-   "closed_trades": 3
+   "closed_trades": 4
   },
   {
    "id": 11,
@@ -360,54 +360,94 @@
  ],
  "pending_orders": [
   {
-   "id": "SELL:AMZN:2026-11-03",
+   "id": "SELL:AAPL:2026-11-04",
    "action": "SELL",
-   "ticker": "AMZN",
-   "signal_bar": "2026-11-03",
-   "rsi": 77.706,
-   "created_utc": "2026-11-05T02:02:39Z"
-  },
-  {
-   "id": "SELL:BAX:2026-11-03",
-   "action": "SELL",
-   "ticker": "BAX",
-   "signal_bar": "2026-11-03",
-   "rsi": 83.2756,
-   "created_utc": "2026-11-05T02:02:39Z"
-  },
-  {
-   "id": "SELL:CVS:2026-11-03",
-   "action": "SELL",
-   "ticker": "CVS",
-   "signal_bar": "2026-11-03",
-   "rsi": 74.1148,
-   "created_utc": "2026-11-05T02:02:39Z"
-  },
-  {
-   "id": "BUY:AAPL:2026-11-03",
-   "action": "BUY",
    "ticker": "AAPL",
-   "signal_bar": "2026-11-03",
-   "rsi": 6.513,
-   "created_utc": "2026-11-05T02:02:39Z"
+   "signal_bar": "2026-11-04",
+   "rsi": 76.7222,
+   "created_utc": "2026-11-06T02:04:57Z"
   },
   {
-   "id": "BUY:CSX:2026-11-03",
-   "action": "BUY",
+   "id": "SELL:CSX:2026-11-04",
+   "action": "SELL",
    "ticker": "CSX",
-   "signal_bar": "2026-11-03",
-   "rsi": 6.7062,
-   "created_utc": "2026-11-05T02:02:39Z"
+   "signal_bar": "2026-11-04",
+   "rsi": 70.0579,
+   "created_utc": "2026-11-06T02:04:57Z"
   },
   {
-   "id": "BUY:KMB:2026-11-03",
+   "id": "SELL:GOOGL:2026-11-04",
+   "action": "SELL",
+   "ticker": "GOOGL",
+   "signal_bar": "2026-11-04",
+   "rsi": 74.1704,
+   "created_utc": "2026-11-06T02:04:57Z"
+  },
+  {
+   "id": "SELL:HPQ:2026-11-04",
+   "action": "SELL",
+   "ticker": "HPQ",
+   "signal_bar": "2026-11-04",
+   "rsi": 72.553,
+   "created_utc": "2026-11-06T02:04:57Z"
+  },
+  {
+   "id": "SELL:MSFT:2026-11-04",
+   "action": "SELL",
+   "ticker": "MSFT",
+   "signal_bar": "2026-11-04",
+   "rsi": 89.6356,
+   "created_utc": "2026-11-06T02:04:57Z"
+  },
+  {
+   "id": "SELL:NEM:2026-11-04",
+   "action": "SELL",
+   "ticker": "NEM",
+   "signal_bar": "2026-11-04",
+   "rsi": 87.5172,
+   "created_utc": "2026-11-06T02:04:57Z"
+  },
+  {
+   "id": "SELL:QCOM:2026-11-04",
+   "action": "SELL",
+   "ticker": "QCOM",
+   "signal_bar": "2026-11-04",
+   "rsi": 75.5432,
+   "created_utc": "2026-11-06T02:04:57Z"
+  },
+  {
+   "id": "SELL:SCHW:2026-11-04",
+   "action": "SELL",
+   "ticker": "SCHW",
+   "signal_bar": "2026-11-04",
+   "rsi": 95.571,
+   "created_utc": "2026-11-06T02:04:57Z"
+  },
+  {
+   "id": "BUY:DVN:2026-11-04",
    "action": "BUY",
-   "ticker": "KMB",
-   "signal_bar": "2026-11-03",
-   "rsi": 8.0204,
-   "created_utc": "2026-11-05T02:02:39Z"
+   "ticker": "DVN",
+   "signal_bar": "2026-11-04",
+   "rsi": 2.6734,
+   "created_utc": "2026-11-06T02:04:57Z"
+  },
+  {
+   "id": "BUY:NOC:2026-11-04",
+   "action": "BUY",
+   "ticker": "NOC",
+   "signal_bar": "2026-11-04",
+   "rsi": 2.7048,
+   "created_utc": "2026-11-06T02:04:57Z"
+  },
+  {
+   "id": "BUY:CLF:2026-11-04",
+   "action": "BUY",
+   "ticker": "CLF",
+   "signal_bar": "2026-11-04",
+   "rsi": 2.7323,
+   "created_utc": "2026-11-06T02:04:57Z"
   }
  ],
- "last_run_utc": "2026-11-05T02:02:39Z",
- "last_decided_bar": "2026-11-03"
+ "last_run_utc": "2026-11-06T02:04:57Z",
+ "last_decided_bar": "2026-11-04"
 }
