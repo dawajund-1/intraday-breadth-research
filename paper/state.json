@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-11-06",
+  "bar_id": "2026-11-09",
   "decided": true
  },
  "slots": [
@@ -203,21 +203,45 @@
   },
   {
    "id": 14,
-   "position": null,
+   "position": {
+    "ticker": "CVX",
+    "entry_bar": "2026-11-09",
+    "entry_px_usd": 210.77999877929688,
+    "shares": 0.1264825892133869,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-10T03:59:46Z"
+   },
    "realized_pl_sar": 6.078824450433686,
    "purified_sar": 0.7433195206546728,
    "closed_trades": 4
   },
   {
    "id": 15,
-   "position": null,
+   "position": {
+    "ticker": "HAL",
+    "entry_bar": "2026-11-09",
+    "entry_px_usd": 31.8799991607666,
+    "shares": 0.8362610006843839,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-10T03:59:46Z"
+   },
    "realized_pl_sar": -7.195161763839209,
    "purified_sar": 0.6177751787224424,
    "closed_trades": 6
   },
   {
    "id": 16,
-   "position": null,
+   "position": {
+    "ticker": "LMT",
+    "entry_bar": "2026-11-09",
+    "entry_px_usd": 588.1900024414062,
+    "shares": 0.04532548987460185,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-10T03:59:46Z"
+   },
    "realized_pl_sar": 20.194817697208208,
    "purified_sar": 2.037944793447079,
    "closed_trades": 5
@@ -254,14 +278,30 @@
   },
   {
    "id": 19,
-   "position": null,
+   "position": {
+    "ticker": "NSC",
+    "entry_bar": "2026-11-09",
+    "entry_px_usd": 325.82000732421875,
+    "shares": 0.08182431833742801,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-10T03:59:46Z"
+   },
    "realized_pl_sar": 6.303105684523487,
    "purified_sar": 0.6303105684523487,
    "closed_trades": 2
   },
   {
    "id": 20,
-   "position": null,
+   "position": {
+    "ticker": "OXY",
+    "entry_bar": "2026-11-09",
+    "entry_px_usd": 55.7599983215332,
+    "shares": 0.47812053089148915,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-10T03:59:46Z"
+   },
    "realized_pl_sar": 6.544968367607055,
    "purified_sar": 0.7364620475263252,
    "closed_trades": 3
@@ -298,21 +338,45 @@
   },
   {
    "id": 23,
-   "position": null,
+   "position": {
+    "ticker": "RTX",
+    "entry_bar": "2026-11-09",
+    "entry_px_usd": 196.30999755859375,
+    "shares": 0.1358056152593178,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-10T03:59:46Z"
+   },
    "realized_pl_sar": -1.070391394973143,
    "purified_sar": 0.059465147664521115,
    "closed_trades": 2
   },
   {
    "id": 24,
-   "position": null,
+   "position": {
+    "ticker": "TXN",
+    "entry_bar": "2026-11-09",
+    "entry_px_usd": 295.7300109863281,
+    "shares": 0.09014979545390987,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-10T03:59:46Z"
+   },
    "realized_pl_sar": 2.679676612518932,
    "purified_sar": 0.26796766125189325,
    "closed_trades": 1
   },
   {
    "id": 25,
-   "position": null,
+   "position": {
+    "ticker": "WDC",
+    "entry_bar": "2026-11-09",
+    "entry_px_usd": 289.7799987792969,
+    "shares": 0.09200082860206259,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-10T03:59:46Z"
+   },
    "realized_pl_sar": -0.6025677263758524,
    "purified_sar": 0.0,
    "closed_trades": 1
@@ -320,70 +384,38 @@
  ],
  "pending_orders": [
   {
-   "id": "BUY:HAL:2026-11-06",
-   "action": "BUY",
-   "ticker": "HAL",
-   "signal_bar": "2026-11-06",
-   "rsi": 1.4341,
-   "created_utc": "2026-11-07T01:43:14Z"
+   "id": "SELL:CAT:2026-11-09",
+   "action": "SELL",
+   "ticker": "CAT",
+   "signal_bar": "2026-11-09",
+   "rsi": 74.7182,
+   "created_utc": "2026-11-10T03:59:46Z"
   },
   {
-   "id": "BUY:LMT:2026-11-06",
-   "action": "BUY",
-   "ticker": "LMT",
-   "signal_bar": "2026-11-06",
-   "rsi": 2.4213,
-   "created_utc": "2026-11-07T01:43:14Z"
+   "id": "SELL:FCX:2026-11-09",
+   "action": "SELL",
+   "ticker": "FCX",
+   "signal_bar": "2026-11-09",
+   "rsi": 74.3023,
+   "created_utc": "2026-11-10T03:59:46Z"
   },
   {
-   "id": "BUY:WDC:2026-11-06",
-   "action": "BUY",
-   "ticker": "WDC",
-   "signal_bar": "2026-11-06",
-   "rsi": 3.2107,
-   "created_utc": "2026-11-07T01:43:14Z"
+   "id": "SELL:KMB:2026-11-09",
+   "action": "SELL",
+   "ticker": "KMB",
+   "signal_bar": "2026-11-09",
+   "rsi": 77.6546,
+   "created_utc": "2026-11-10T03:59:46Z"
   },
   {
-   "id": "BUY:CVX:2026-11-06",
-   "action": "BUY",
-   "ticker": "CVX",
-   "signal_bar": "2026-11-06",
-   "rsi": 3.2719,
-   "created_utc": "2026-11-07T01:43:14Z"
-  },
-  {
-   "id": "BUY:OXY:2026-11-06",
-   "action": "BUY",
-   "ticker": "OXY",
-   "signal_bar": "2026-11-06",
-   "rsi": 3.5851,
-   "created_utc": "2026-11-07T01:43:14Z"
-  },
-  {
-   "id": "BUY:RTX:2026-11-06",
-   "action": "BUY",
-   "ticker": "RTX",
-   "signal_bar": "2026-11-06",
-   "rsi": 5.5165,
-   "created_utc": "2026-11-07T01:43:14Z"
-  },
-  {
-   "id": "BUY:NSC:2026-11-06",
-   "action": "BUY",
-   "ticker": "NSC",
-   "signal_bar": "2026-11-06",
-   "rsi": 6.4239,
-   "created_utc": "2026-11-07T01:43:14Z"
-  },
-  {
-   "id": "BUY:TXN:2026-11-06",
-   "action": "BUY",
-   "ticker": "TXN",
-   "signal_bar": "2026-11-06",
-   "rsi": 7.7366,
-   "created_utc": "2026-11-07T01:43:14Z"
+   "id": "SELL:NOC:2026-11-09",
+   "action": "SELL",
+   "ticker": "NOC",
+   "signal_bar": "2026-11-09",
+   "rsi": 79.0596,
+   "created_utc": "2026-11-10T03:59:46Z"
   }
  ],
- "last_run_utc": "2026-11-07T01:43:14Z",
- "last_decided_bar": "2026-11-06"
+ "last_run_utc": "2026-11-10T03:59:46Z",
+ "last_decided_bar": "2026-11-09"
 }
