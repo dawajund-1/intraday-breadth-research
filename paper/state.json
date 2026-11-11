@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-11-09",
+  "bar_id": "2026-11-10",
   "decided": true
  },
  "slots": [
@@ -38,18 +38,10 @@
   },
   {
    "id": 3,
-   "position": {
-    "ticker": "FCX",
-    "entry_bar": "2026-11-02",
-    "entry_px_usd": 62.970001220703125,
-    "shares": 0.4233762026867293,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-11-03T03:22:14Z"
-   },
-   "realized_pl_sar": -14.385246269974175,
+   "position": null,
+   "realized_pl_sar": -18.63236160517161,
    "purified_sar": 0.4044041686905899,
-   "closed_trades": 4
+   "closed_trades": 5
   },
   {
    "id": 4,
@@ -128,48 +120,24 @@
   },
   {
    "id": 9,
-   "position": {
-    "ticker": "NOC",
-    "entry_bar": "2026-11-06",
-    "entry_px_usd": 525.010009765625,
-    "shares": 0.050779984198589964,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-11-07T01:43:14Z"
-   },
-   "realized_pl_sar": 12.967825965180921,
-   "purified_sar": 1.8619208823872855,
-   "closed_trades": 4
+   "position": null,
+   "realized_pl_sar": 17.435732661721616,
+   "purified_sar": 2.308711552041355,
+   "closed_trades": 5
   },
   {
    "id": 10,
-   "position": {
-    "ticker": "KMB",
-    "entry_bar": "2026-11-04",
-    "entry_px_usd": 108.79000091552734,
-    "shares": 0.24505928647524147,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-11-06T02:04:57Z"
-   },
-   "realized_pl_sar": 7.083136106279653,
-   "purified_sar": 1.9627853992027613,
-   "closed_trades": 4
+   "position": null,
+   "realized_pl_sar": 8.86806636275773,
+   "purified_sar": 2.141278424850569,
+   "closed_trades": 5
   },
   {
    "id": 11,
-   "position": {
-    "ticker": "CAT",
-    "entry_bar": "2026-10-30",
-    "entry_px_usd": 622.75,
-    "shares": 0.04281011641910879,
-    "basis_sar": 99.975,
-    "stake_sar": 100.0,
-    "opened_utc": "2026-10-31T01:27:39Z"
-   },
-   "realized_pl_sar": 3.483860243221031,
+   "position": null,
+   "realized_pl_sar": -2.6689384149592854,
    "purified_sar": 0.780411429549082,
-   "closed_trades": 3
+   "closed_trades": 4
   },
   {
    "id": 12,
@@ -384,38 +352,70 @@
  ],
  "pending_orders": [
   {
-   "id": "SELL:CAT:2026-11-09",
+   "id": "SELL:CLF:2026-11-10",
    "action": "SELL",
-   "ticker": "CAT",
-   "signal_bar": "2026-11-09",
-   "rsi": 74.7182,
-   "created_utc": "2026-11-10T03:59:46Z"
+   "ticker": "CLF",
+   "signal_bar": "2026-11-10",
+   "rsi": 78.8256,
+   "created_utc": "2026-11-11T01:45:16Z"
   },
   {
-   "id": "SELL:FCX:2026-11-09",
+   "id": "SELL:LMT:2026-11-10",
    "action": "SELL",
-   "ticker": "FCX",
-   "signal_bar": "2026-11-09",
-   "rsi": 74.3023,
-   "created_utc": "2026-11-10T03:59:46Z"
+   "ticker": "LMT",
+   "signal_bar": "2026-11-10",
+   "rsi": 77.2258,
+   "created_utc": "2026-11-11T01:45:16Z"
   },
   {
-   "id": "SELL:KMB:2026-11-09",
+   "id": "SELL:RTX:2026-11-10",
    "action": "SELL",
-   "ticker": "KMB",
-   "signal_bar": "2026-11-09",
-   "rsi": 77.6546,
-   "created_utc": "2026-11-10T03:59:46Z"
+   "ticker": "RTX",
+   "signal_bar": "2026-11-10",
+   "rsi": 81.009,
+   "created_utc": "2026-11-11T01:45:16Z"
   },
   {
-   "id": "SELL:NOC:2026-11-09",
+   "id": "SELL:TXN:2026-11-10",
    "action": "SELL",
-   "ticker": "NOC",
-   "signal_bar": "2026-11-09",
-   "rsi": 79.0596,
-   "created_utc": "2026-11-10T03:59:46Z"
+   "ticker": "TXN",
+   "signal_bar": "2026-11-10",
+   "rsi": 76.0877,
+   "created_utc": "2026-11-11T01:45:16Z"
+  },
+  {
+   "id": "BUY:COF:2026-11-10",
+   "action": "BUY",
+   "ticker": "COF",
+   "signal_bar": "2026-11-10",
+   "rsi": 2.0265,
+   "created_utc": "2026-11-11T01:45:16Z"
+  },
+  {
+   "id": "BUY:XOM:2026-11-10",
+   "action": "BUY",
+   "ticker": "XOM",
+   "signal_bar": "2026-11-10",
+   "rsi": 8.329,
+   "created_utc": "2026-11-11T01:45:16Z"
+  },
+  {
+   "id": "BUY:EXPE:2026-11-10",
+   "action": "BUY",
+   "ticker": "EXPE",
+   "signal_bar": "2026-11-10",
+   "rsi": 12.7932,
+   "created_utc": "2026-11-11T01:45:16Z"
+  },
+  {
+   "id": "BUY:ORLY:2026-11-10",
+   "action": "BUY",
+   "ticker": "ORLY",
+   "signal_bar": "2026-11-10",
+   "rsi": 16.0896,
+   "created_utc": "2026-11-11T01:45:16Z"
   }
  ],
- "last_run_utc": "2026-11-10T03:59:46Z",
- "last_decided_bar": "2026-11-09"
+ "last_run_utc": "2026-11-11T01:45:16Z",
+ "last_decided_bar": "2026-11-10"
 }
