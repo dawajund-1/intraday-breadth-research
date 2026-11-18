@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-11-16",
+  "bar_id": "2026-11-17",
   "decided": true
  },
  "slots": [
@@ -24,17 +24,17 @@
   {
    "id": 2,
    "position": {
-    "ticker": "GIS",
-    "entry_bar": "2026-11-13",
-    "entry_px_usd": 34.31999969482422,
-    "shares": 0.7768065337139435,
+    "ticker": "BA",
+    "entry_bar": "2026-11-17",
+    "entry_px_usd": 163.91000366210938,
+    "shares": 0.16265023125103448,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-11-14T02:02:41Z"
+    "opened_utc": "2026-11-18T03:24:49Z"
    },
-   "realized_pl_sar": -30.22946527075979,
-   "purified_sar": 0.0,
-   "closed_trades": 2
+   "realized_pl_sar": -29.20603059492653,
+   "purified_sar": 0.10234346758332578,
+   "closed_trades": 3
   },
   {
    "id": 3,
@@ -219,17 +219,17 @@
   {
    "id": 15,
    "position": {
-    "ticker": "LUV",
-    "entry_bar": "2026-11-16",
-    "entry_px_usd": 46.439998626708984,
-    "shares": 0.5740740910501893,
+    "ticker": "EMR",
+    "entry_bar": "2026-11-17",
+    "entry_px_usd": 159.14999389648438,
+    "shares": 0.167514929452906,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-11-17T04:22:28Z"
+    "opened_utc": "2026-11-18T03:24:49Z"
    },
-   "realized_pl_sar": -1.2632866698523344,
+   "realized_pl_sar": -3.117680835726432,
    "purified_sar": 1.2109626881211297,
-   "closed_trades": 7
+   "closed_trades": 8
   },
   {
    "id": 16,
@@ -279,17 +279,17 @@
   {
    "id": 19,
    "position": {
-    "ticker": "SBUX",
-    "entry_bar": "2026-11-16",
-    "entry_px_usd": 108.72000122070312,
-    "shares": 0.24521706862272588,
+    "ticker": "HON",
+    "entry_bar": "2026-11-17",
+    "entry_px_usd": 218.9600067138672,
+    "shares": 0.121757394878229,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-11-17T04:22:28Z"
+    "opened_utc": "2026-11-18T03:24:49Z"
    },
-   "realized_pl_sar": 6.910046021528615,
+   "realized_pl_sar": 5.754268222294968,
    "purified_sar": 0.6910046021528614,
-   "closed_trades": 3
+   "closed_trades": 4
   },
   {
    "id": 20,
@@ -360,54 +360,38 @@
  ],
  "pending_orders": [
   {
-   "id": "SELL:GIS:2026-11-16",
+   "id": "SELL:MCD:2026-11-17",
    "action": "SELL",
-   "ticker": "GIS",
-   "signal_bar": "2026-11-16",
-   "rsi": 82.9106,
-   "created_utc": "2026-11-17T04:22:28Z"
+   "ticker": "MCD",
+   "signal_bar": "2026-11-17",
+   "rsi": 71.6292,
+   "created_utc": "2026-11-18T03:24:49Z"
   },
   {
-   "id": "SELL:LUV:2026-11-16",
-   "action": "SELL",
-   "ticker": "LUV",
-   "signal_bar": "2026-11-16",
-   "rsi": 77.0405,
-   "created_utc": "2026-11-17T04:22:28Z"
-  },
-  {
-   "id": "SELL:SBUX:2026-11-16",
-   "action": "SELL",
-   "ticker": "SBUX",
-   "signal_bar": "2026-11-16",
-   "rsi": 75.5354,
-   "created_utc": "2026-11-17T04:22:28Z"
-  },
-  {
-   "id": "BUY:BA:2026-11-16",
+   "id": "BUY:ACN:2026-11-17",
    "action": "BUY",
-   "ticker": "BA",
-   "signal_bar": "2026-11-16",
-   "rsi": 3.2729,
-   "created_utc": "2026-11-17T04:22:28Z"
+   "ticker": "ACN",
+   "signal_bar": "2026-11-17",
+   "rsi": 2.6504,
+   "created_utc": "2026-11-18T03:24:49Z"
   },
   {
-   "id": "BUY:EMR:2026-11-16",
+   "id": "BUY:HD:2026-11-17",
    "action": "BUY",
-   "ticker": "EMR",
-   "signal_bar": "2026-11-16",
-   "rsi": 4.2891,
-   "created_utc": "2026-11-17T04:22:28Z"
+   "ticker": "HD",
+   "signal_bar": "2026-11-17",
+   "rsi": 3.336,
+   "created_utc": "2026-11-18T03:24:49Z"
   },
   {
-   "id": "BUY:HON:2026-11-16",
+   "id": "BUY:LOW:2026-11-17",
    "action": "BUY",
-   "ticker": "HON",
-   "signal_bar": "2026-11-16",
-   "rsi": 5.8698,
-   "created_utc": "2026-11-17T04:22:28Z"
+   "ticker": "LOW",
+   "signal_bar": "2026-11-17",
+   "rsi": 3.3399,
+   "created_utc": "2026-11-18T03:24:49Z"
   }
  ],
- "last_run_utc": "2026-11-17T04:22:28Z",
- "last_decided_bar": "2026-11-16"
+ "last_run_utc": "2026-11-18T03:24:49Z",
+ "last_decided_bar": "2026-11-17"
 }
