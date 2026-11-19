@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-11-17",
+  "bar_id": "2026-11-18",
   "decided": true
  },
  "slots": [
@@ -234,17 +234,17 @@
   {
    "id": 16,
    "position": {
-    "ticker": "MCD",
-    "entry_bar": "2026-11-16",
-    "entry_px_usd": 274.6700134277344,
-    "shares": 0.09706192411504083,
+    "ticker": "ACN",
+    "entry_bar": "2026-11-18",
+    "entry_px_usd": 227.49000549316406,
+    "shares": 0.11719196165213999,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-11-17T04:22:28Z"
+    "opened_utc": "2026-11-19T02:59:32Z"
    },
-   "realized_pl_sar": 23.88444960123951,
+   "realized_pl_sar": 23.626560140080088,
    "purified_sar": 2.406907983850209,
-   "closed_trades": 6
+   "closed_trades": 7
   },
   {
    "id": 17,
@@ -338,14 +338,30 @@
   },
   {
    "id": 23,
-   "position": null,
+   "position": {
+    "ticker": "HD",
+    "entry_bar": "2026-11-18",
+    "entry_px_usd": 337.6400146484375,
+    "shares": 0.07895983545599392,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-19T02:59:32Z"
+   },
    "realized_pl_sar": 1.4401485022316507,
    "purified_sar": 0.3105191373850005,
    "closed_trades": 3
   },
   {
    "id": 24,
-   "position": null,
+   "position": {
+    "ticker": "LOW",
+    "entry_bar": "2026-11-18",
+    "entry_px_usd": 222.77999877929688,
+    "shares": 0.11966962988635016,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-19T02:59:32Z"
+   },
    "realized_pl_sar": 7.413397546917082,
    "purified_sar": 0.7413397546917082,
    "closed_trades": 2
@@ -360,38 +376,54 @@
  ],
  "pending_orders": [
   {
-   "id": "SELL:MCD:2026-11-17",
+   "id": "SELL:FFIV:2026-11-18",
    "action": "SELL",
-   "ticker": "MCD",
-   "signal_bar": "2026-11-17",
-   "rsi": 71.6292,
-   "created_utc": "2026-11-18T03:24:49Z"
+   "ticker": "FFIV",
+   "signal_bar": "2026-11-18",
+   "rsi": 87.2269,
+   "created_utc": "2026-11-19T02:59:32Z"
   },
   {
-   "id": "BUY:ACN:2026-11-17",
-   "action": "BUY",
-   "ticker": "ACN",
-   "signal_bar": "2026-11-17",
-   "rsi": 2.6504,
-   "created_utc": "2026-11-18T03:24:49Z"
+   "id": "SELL:HON:2026-11-18",
+   "action": "SELL",
+   "ticker": "HON",
+   "signal_bar": "2026-11-18",
+   "rsi": 74.5559,
+   "created_utc": "2026-11-19T02:59:32Z"
   },
   {
-   "id": "BUY:HD:2026-11-17",
-   "action": "BUY",
-   "ticker": "HD",
-   "signal_bar": "2026-11-17",
-   "rsi": 3.336,
-   "created_utc": "2026-11-18T03:24:49Z"
+   "id": "SELL:ILMN:2026-11-18",
+   "action": "SELL",
+   "ticker": "ILMN",
+   "signal_bar": "2026-11-18",
+   "rsi": 76.5977,
+   "created_utc": "2026-11-19T02:59:32Z"
   },
   {
-   "id": "BUY:LOW:2026-11-17",
+   "id": "SELL:LULU:2026-11-18",
+   "action": "SELL",
+   "ticker": "LULU",
+   "signal_bar": "2026-11-18",
+   "rsi": 86.9192,
+   "created_utc": "2026-11-19T02:59:32Z"
+  },
+  {
+   "id": "SELL:TJX:2026-11-18",
+   "action": "SELL",
+   "ticker": "TJX",
+   "signal_bar": "2026-11-18",
+   "rsi": 86.031,
+   "created_utc": "2026-11-19T02:59:32Z"
+  },
+  {
+   "id": "BUY:AMGN:2026-11-18",
    "action": "BUY",
-   "ticker": "LOW",
-   "signal_bar": "2026-11-17",
-   "rsi": 3.3399,
-   "created_utc": "2026-11-18T03:24:49Z"
+   "ticker": "AMGN",
+   "signal_bar": "2026-11-18",
+   "rsi": 0.8366,
+   "created_utc": "2026-11-19T02:59:32Z"
   }
  ],
- "last_run_utc": "2026-11-18T03:24:49Z",
- "last_decided_bar": "2026-11-17"
+ "last_run_utc": "2026-11-19T02:59:32Z",
+ "last_decided_bar": "2026-11-18"
 }
