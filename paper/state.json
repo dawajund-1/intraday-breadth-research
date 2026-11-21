@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-11-19",
+  "bar_id": "2026-11-20",
   "decided": true
  },
  "slots": [
@@ -98,7 +98,15 @@
   },
   {
    "id": 7,
-   "position": null,
+   "position": {
+    "ticker": "BKNG",
+    "entry_bar": "2026-11-20",
+    "entry_px_usd": 144.91000366210938,
+    "shares": 0.18397625647821975,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-21T03:01:57Z"
+   },
    "realized_pl_sar": -12.73629424195002,
    "purified_sar": 0.0,
    "closed_trades": 3
@@ -195,7 +203,15 @@
   },
   {
    "id": 14,
-   "position": null,
+   "position": {
+    "ticker": "C",
+    "entry_bar": "2026-11-20",
+    "entry_px_usd": 110.62000274658203,
+    "shares": 0.24100523719091796,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-21T03:01:57Z"
+   },
    "realized_pl_sar": 13.443832862675535,
    "purified_sar": 1.4798203618788577,
    "closed_trades": 6
@@ -262,14 +278,30 @@
   },
   {
    "id": 19,
-   "position": null,
+   "position": {
+    "ticker": "MRK",
+    "entry_bar": "2026-11-20",
+    "entry_px_usd": 133.72000122070312,
+    "shares": 0.19937181989699518,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-21T03:01:57Z"
+   },
    "realized_pl_sar": 5.218016522685886,
    "purified_sar": 0.6910046021528614,
    "closed_trades": 5
   },
   {
    "id": 20,
-   "position": null,
+   "position": {
+    "ticker": "PFE",
+    "entry_bar": "2026-11-20",
+    "entry_px_usd": 27.399999618530273,
+    "shares": 0.9729927142761775,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-21T03:01:57Z"
+   },
    "realized_pl_sar": 18.198187514976098,
    "purified_sar": 1.9017839622632295,
    "closed_trades": 5
@@ -336,54 +368,21 @@
   },
   {
    "id": 25,
-   "position": null,
+   "position": {
+    "ticker": "STT",
+    "entry_bar": "2026-11-20",
+    "entry_px_usd": 155.3800048828125,
+    "shares": 0.17157934845031672,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-21T03:01:57Z"
+   },
    "realized_pl_sar": 1.3970987870028182,
    "purified_sar": 0.19996665133786706,
    "closed_trades": 2
   }
  ],
- "pending_orders": [
-  {
-   "id": "BUY:MRK:2026-11-19",
-   "action": "BUY",
-   "ticker": "MRK",
-   "signal_bar": "2026-11-19",
-   "rsi": 0.7223,
-   "created_utc": "2026-11-20T02:53:26Z"
-  },
-  {
-   "id": "BUY:PFE:2026-11-19",
-   "action": "BUY",
-   "ticker": "PFE",
-   "signal_bar": "2026-11-19",
-   "rsi": 0.7752,
-   "created_utc": "2026-11-20T02:53:26Z"
-  },
-  {
-   "id": "BUY:BKNG:2026-11-19",
-   "action": "BUY",
-   "ticker": "BKNG",
-   "signal_bar": "2026-11-19",
-   "rsi": 0.8407,
-   "created_utc": "2026-11-20T02:53:26Z"
-  },
-  {
-   "id": "BUY:STT:2026-11-19",
-   "action": "BUY",
-   "ticker": "STT",
-   "signal_bar": "2026-11-19",
-   "rsi": 1.1114,
-   "created_utc": "2026-11-20T02:53:26Z"
-  },
-  {
-   "id": "BUY:C:2026-11-19",
-   "action": "BUY",
-   "ticker": "C",
-   "signal_bar": "2026-11-19",
-   "rsi": 1.1324,
-   "created_utc": "2026-11-20T02:53:26Z"
-  }
- ],
- "last_run_utc": "2026-11-20T02:53:26Z",
- "last_decided_bar": "2026-11-19"
+ "pending_orders": [],
+ "last_run_utc": "2026-11-21T03:01:57Z",
+ "last_decided_bar": "2026-11-20"
 }
