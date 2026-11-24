@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-21T03:01:57Z",
+ "generated_utc": "2026-11-24T05:47:21Z",
  "schema": 2,
  "status_banner": "Research-only paper-trading experiment. This breadth strategy failed its holdout validation and is not approved for real trading.",
  "trading_enabled": true,
@@ -38,16 +38,16 @@
   "proposed_cron_utc": "0 22 * * 1-5",
   "note": "PROPOSED, NOT ENABLED. 22:00 UTC is after the US close in both EDT (18:00 ET) and EST (17:00 ET), and 30 minutes after the unrelated live tracker's own window, so the two never contend."
  },
- "last_decided_bar": "2026-11-20",
- "last_run_utc": "2026-11-21T03:01:57Z",
+ "last_decided_bar": "2026-11-23",
+ "last_run_utc": "2026-11-24T05:47:21Z",
  "account": {
   "model": "independent_slots",
   "slots": 25,
   "capital_per_slot_sar": 100.0,
   "total_notional_sar": 2500.0,
-  "equity_sar": 2424.6938,
+  "equity_sar": 2493.6069,
   "realized_pl_sar": 76.0091,
-  "unrealized_pl_sar": -123.0615,
+  "unrealized_pl_sar": -54.1481,
   "purified_sar": 28.2539,
   "open_positions": 25,
   "max_positions": 25,
@@ -60,9 +60,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": 11.3663,
    "purified_sar": 1.2721,
-   "unrealized_pl_sar": -5.0853,
+   "unrealized_pl_sar": -4.7905,
    "closed_trades": 5,
-   "value_sar": 105.0088
+   "value_sar": 105.3036
   },
   {
    "id": 2,
@@ -70,9 +70,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": -29.206,
    "purified_sar": 0.1023,
-   "unrealized_pl_sar": -4.8917,
+   "unrealized_pl_sar": -0.9271,
    "closed_trades": 3,
-   "value_sar": 65.7999
+   "value_sar": 69.7645
   },
   {
    "id": 3,
@@ -80,9 +80,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": -18.6324,
    "purified_sar": 0.4044,
-   "unrealized_pl_sar": -9.3579,
+   "unrealized_pl_sar": -8.6732,
    "closed_trades": 5,
-   "value_sar": 71.6053
+   "value_sar": 72.29
   },
   {
    "id": 4,
@@ -90,9 +90,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": 5.4355,
    "purified_sar": 1.0907,
-   "unrealized_pl_sar": -8.403,
+   "unrealized_pl_sar": -3.8571,
    "closed_trades": 4,
-   "value_sar": 95.9417
+   "value_sar": 100.4876
   },
   {
    "id": 5,
@@ -100,9 +100,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": -11.8366,
    "purified_sar": 0.5361,
-   "unrealized_pl_sar": -0.7245,
+   "unrealized_pl_sar": 2.3284,
    "closed_trades": 4,
-   "value_sar": 86.9028
+   "value_sar": 89.9557
   },
   {
    "id": 6,
@@ -110,9 +110,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": 37.0638,
    "purified_sar": 3.8968,
-   "unrealized_pl_sar": -9.5553,
+   "unrealized_pl_sar": -7.8236,
    "closed_trades": 7,
-   "value_sar": 123.6117
+   "value_sar": 125.3434
   },
   {
    "id": 7,
@@ -120,9 +120,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": -12.7363,
    "purified_sar": 0.0,
-   "unrealized_pl_sar": 0.0,
+   "unrealized_pl_sar": 0.0207,
    "closed_trades": 3,
-   "value_sar": 87.2637
+   "value_sar": 87.2844
   },
   {
    "id": 8,
@@ -130,9 +130,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": 25.4343,
    "purified_sar": 2.7501,
-   "unrealized_pl_sar": -1.9615,
+   "unrealized_pl_sar": -1.3507,
    "closed_trades": 6,
-   "value_sar": 120.7228
+   "value_sar": 121.3335
   },
   {
    "id": 9,
@@ -140,9 +140,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": 19.2322,
    "purified_sar": 2.4884,
-   "unrealized_pl_sar": -7.6078,
+   "unrealized_pl_sar": -2.609,
    "closed_trades": 6,
-   "value_sar": 109.1361
+   "value_sar": 114.1348
   },
   {
    "id": 10,
@@ -150,9 +150,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": 8.939,
    "purified_sar": 2.1484,
-   "unrealized_pl_sar": -6.8394,
+   "unrealized_pl_sar": -3.2041,
    "closed_trades": 6,
-   "value_sar": 99.9513
+   "value_sar": 103.5865
   },
   {
    "id": 11,
@@ -160,9 +160,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": -2.6689,
    "purified_sar": 0.7804,
-   "unrealized_pl_sar": -4.1479,
+   "unrealized_pl_sar": -1.4683,
    "closed_trades": 4,
-   "value_sar": 92.4028
+   "value_sar": 95.0824
   },
   {
    "id": 12,
@@ -170,9 +170,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": 5.4551,
    "purified_sar": 0.6067,
-   "unrealized_pl_sar": -21.1799,
+   "unrealized_pl_sar": -19.0684,
    "closed_trades": 2,
-   "value_sar": 83.6685
+   "value_sar": 85.7799
   },
   {
    "id": 13,
@@ -180,9 +180,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": -6.9691,
    "purified_sar": 0.3926,
-   "unrealized_pl_sar": -3.4563,
+   "unrealized_pl_sar": 0.6913,
    "closed_trades": 3,
-   "value_sar": 89.182
+   "value_sar": 93.3296
   },
   {
    "id": 14,
@@ -190,9 +190,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": 13.4438,
    "purified_sar": 1.4798,
-   "unrealized_pl_sar": 0.0,
+   "unrealized_pl_sar": 3.3711,
    "closed_trades": 6,
-   "value_sar": 111.964
+   "value_sar": 115.3351
   },
   {
    "id": 15,
@@ -200,9 +200,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": -3.1177,
    "purified_sar": 1.211,
-   "unrealized_pl_sar": -5.1636,
+   "unrealized_pl_sar": -0.5277,
    "closed_trades": 8,
-   "value_sar": 90.5077
+   "value_sar": 95.1437
   },
   {
    "id": 16,
@@ -210,9 +210,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": 23.6266,
    "purified_sar": 2.4069,
-   "unrealized_pl_sar": -2.7775,
+   "unrealized_pl_sar": -2.2852,
    "closed_trades": 7,
-   "value_sar": 118.4422
+   "value_sar": 118.9344
   },
   {
    "id": 17,
@@ -220,9 +220,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": -22.5169,
    "purified_sar": 0.1214,
-   "unrealized_pl_sar": -14.1656,
+   "unrealized_pl_sar": -8.6824,
    "closed_trades": 3,
-   "value_sar": 63.1961
+   "value_sar": 68.6793
   },
   {
    "id": 18,
@@ -230,9 +230,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": 21.291,
    "purified_sar": 2.2198,
-   "unrealized_pl_sar": -4.2727,
+   "unrealized_pl_sar": -2.6676,
    "closed_trades": 5,
-   "value_sar": 114.7985
+   "value_sar": 116.4036
   },
   {
    "id": 19,
@@ -240,9 +240,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": 5.218,
    "purified_sar": 0.691,
-   "unrealized_pl_sar": 0.0,
+   "unrealized_pl_sar": 1.3084,
    "closed_trades": 5,
-   "value_sar": 104.527
+   "value_sar": 105.8354
   },
   {
    "id": 20,
@@ -260,9 +260,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": -14.0051,
    "purified_sar": 0.1252,
-   "unrealized_pl_sar": -8.7826,
+   "unrealized_pl_sar": -1.8504,
    "closed_trades": 3,
-   "value_sar": 77.0872
+   "value_sar": 84.0194
   },
   {
    "id": 22,
@@ -270,9 +270,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": -7.2564,
    "purified_sar": 0.376,
-   "unrealized_pl_sar": -4.2329,
+   "unrealized_pl_sar": 0.1394,
    "closed_trades": 2,
-   "value_sar": 88.1347
+   "value_sar": 92.5071
   },
   {
    "id": 23,
@@ -280,9 +280,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": 1.4401,
    "purified_sar": 0.3105,
-   "unrealized_pl_sar": 0.4145,
+   "unrealized_pl_sar": 2.4932,
    "closed_trades": 3,
-   "value_sar": 101.5442
+   "value_sar": 103.6228
   },
   {
    "id": 24,
@@ -290,9 +290,9 @@
    "stake_sar": 100.0,
    "realized_pl_sar": 7.4134,
    "purified_sar": 0.7413,
-   "unrealized_pl_sar": -0.8706,
+   "unrealized_pl_sar": 1.5078,
    "closed_trades": 2,
-   "value_sar": 105.8015
+   "value_sar": 108.1799
   },
   {
    "id": 25,
@@ -300,214 +300,263 @@
    "stake_sar": 100.0,
    "realized_pl_sar": 1.3971,
    "purified_sar": 0.2,
-   "unrealized_pl_sar": 0.0,
+   "unrealized_pl_sar": 3.7769,
    "closed_trades": 2,
-   "value_sar": 101.1971
+   "value_sar": 104.974
   }
  ],
- "pending_orders": [],
+ "pending_orders": [
+  {
+   "id": "SELL:AMGN:2026-11-23",
+   "action": "SELL",
+   "ticker": "AMGN",
+   "signal_bar": "2026-11-23",
+   "rsi": 78.1733,
+   "created_utc": "2026-11-24T05:47:21Z"
+  },
+  {
+   "id": "SELL:F:2026-11-23",
+   "action": "SELL",
+   "ticker": "F",
+   "signal_bar": "2026-11-23",
+   "rsi": 85.6264,
+   "created_utc": "2026-11-24T05:47:21Z"
+  },
+  {
+   "id": "SELL:HD:2026-11-23",
+   "action": "SELL",
+   "ticker": "HD",
+   "signal_bar": "2026-11-23",
+   "rsi": 89.0303,
+   "created_utc": "2026-11-24T05:47:21Z"
+  },
+  {
+   "id": "SELL:LOW:2026-11-23",
+   "action": "SELL",
+   "ticker": "LOW",
+   "signal_bar": "2026-11-23",
+   "rsi": 83.0966,
+   "created_utc": "2026-11-24T05:47:21Z"
+  },
+  {
+   "id": "SELL:UAL:2026-11-23",
+   "action": "SELL",
+   "ticker": "UAL",
+   "signal_bar": "2026-11-23",
+   "rsi": 71.5038,
+   "created_utc": "2026-11-24T05:47:21Z"
+  },
+  {
+   "id": "SELL:VRTX:2026-11-23",
+   "action": "SELL",
+   "ticker": "VRTX",
+   "signal_bar": "2026-11-23",
+   "rsi": 76.9633,
+   "created_utc": "2026-11-24T05:47:21Z"
+  }
+ ],
  "watchlist": [
   {
    "ticker": "AA",
-   "price_usd": 33.42,
-   "price_sar": 125.325,
-   "rsi": 0.49,
+   "price_usd": 35.39,
+   "price_sar": 132.7125,
+   "rsi": 57.68,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "AAPL",
-   "price_usd": 342.56,
-   "price_sar": 1284.6,
-   "rsi": 2.87,
+   "price_usd": 349.08,
+   "price_sar": 1309.0499,
+   "rsi": 60.67,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "ABT",
-   "price_usd": 103.0,
-   "price_sar": 386.25,
-   "rsi": 2.46,
+   "price_usd": 103.32,
+   "price_sar": 387.45,
+   "rsi": 28.8,
    "status": "HOLDING",
    "slot": 1,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": -5.0853,
+   "unrealized_pl_sar": -4.7905,
    "shares": 0.245669,
    "entry_bar": "2026-11-13",
    "stake_sar": 100.0
   },
   {
    "ticker": "ACN",
-   "price_usd": 221.17,
-   "price_sar": 829.3875,
-   "rsi": 23.1,
+   "price_usd": 222.29,
+   "price_sar": 833.5875,
+   "rsi": 35.76,
    "status": "HOLDING",
    "slot": 16,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": -2.7775,
+   "unrealized_pl_sar": -2.2852,
    "shares": 0.117192,
    "entry_bar": "2026-11-18",
    "stake_sar": 100.0
   },
   {
    "ticker": "ADBE",
-   "price_usd": 217.71,
-   "price_sar": 816.4125,
-   "rsi": 3.39,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "ADP",
-   "price_usd": 301.71,
-   "price_sar": 1131.4125,
-   "rsi": 19.46,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "AFL",
-   "price_usd": 124.32,
-   "price_sar": 466.2,
-   "rsi": 5.9,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "AIG",
-   "price_usd": 79.68,
-   "price_sar": 298.8,
-   "rsi": 18.4,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "AKAM",
-   "price_usd": 85.11,
-   "price_sar": 319.1625,
-   "rsi": 21.78,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "ALL",
-   "price_usd": 267.0,
-   "price_sar": 1001.25,
-   "rsi": 39.39,
+   "price_usd": 223.98,
+   "price_sar": 839.925,
+   "rsi": 56.58,
    "status": "FLAT",
    "slot": null,
    "pending": null,
    "signal": null
   },
   {
-   "ticker": "AMAT",
-   "price_usd": 302.63,
-   "price_sar": 1134.8625,
-   "rsi": 2.27,
+   "ticker": "ADP",
+   "price_usd": 302.11,
+   "price_sar": 1132.9124,
+   "rsi": 31.93,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "AFL",
+   "price_usd": 125.0,
+   "price_sar": 468.75,
+   "rsi": 54.32,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "AIG",
+   "price_usd": 80.56,
+   "price_sar": 302.1,
+   "rsi": 68.11,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "AKAM",
+   "price_usd": 89.22,
+   "price_sar": 334.575,
+   "rsi": 60.01,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "ALL",
+   "price_usd": 265.28,
+   "price_sar": 994.8,
+   "rsi": 12.55,
    "status": "FLAT",
    "slot": null,
    "pending": null,
    "signal": "BUY"
   },
   {
+   "ticker": "AMAT",
+   "price_usd": 346.87,
+   "price_sar": 1300.7625,
+   "rsi": 66.7,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
    "ticker": "AMGN",
-   "price_usd": 435.64,
-   "price_sar": 1633.6501,
-   "rsi": 0.48,
+   "price_usd": 449.04,
+   "price_sar": 1683.9,
+   "rsi": 78.17,
    "status": "HOLDING",
    "slot": 5,
-   "pending": null,
-   "signal": null,
-   "unrealized_pl_sar": -0.7245,
+   "pending": "SELL",
+   "signal": "SELL",
+   "unrealized_pl_sar": 2.3284,
    "shares": 0.060754,
    "entry_bar": "2026-11-19",
    "stake_sar": 100.0
   },
   {
    "ticker": "AMZN",
-   "price_usd": 246.82,
-   "price_sar": 925.575,
-   "rsi": 13.42,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "APA",
-   "price_usd": 45.03,
-   "price_sar": 168.8625,
-   "rsi": 33.67,
+   "price_usd": 255.39,
+   "price_sar": 957.7125,
+   "rsi": 54.6,
    "status": "FLAT",
    "slot": null,
    "pending": null,
    "signal": null
   },
   {
-   "ticker": "AXP",
-   "price_usd": 301.7,
-   "price_sar": 1131.375,
-   "rsi": 0.72,
+   "ticker": "APA",
+   "price_usd": 44.06,
+   "price_sar": 165.225,
+   "rsi": 14.0,
    "status": "FLAT",
    "slot": null,
    "pending": null,
    "signal": "BUY"
   },
   {
+   "ticker": "AXP",
+   "price_usd": 306.9,
+   "price_sar": 1150.875,
+   "rsi": 46.13,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
    "ticker": "BA",
-   "price_usd": 155.89,
-   "price_sar": 584.5875,
-   "rsi": 0.23,
+   "price_usd": 162.39,
+   "price_sar": 608.9625,
+   "rsi": 66.09,
    "status": "HOLDING",
    "slot": 2,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": -4.8917,
+   "unrealized_pl_sar": -0.9271,
    "shares": 0.16265,
    "entry_bar": "2026-11-17",
    "stake_sar": 100.0
   },
   {
    "ticker": "BAC",
-   "price_usd": 47.04,
-   "price_sar": 176.4,
-   "rsi": 0.96,
+   "price_usd": 48.14,
+   "price_sar": 180.525,
+   "rsi": 52.91,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "BAX",
-   "price_usd": 25.39,
-   "price_sar": 95.2125,
-   "rsi": 24.19,
+   "price_usd": 26.59,
+   "price_sar": 99.7125,
+   "rsi": 85.99,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "BBY",
-   "price_usd": 97.95,
-   "price_sar": 367.3125,
-   "rsi": 17.03,
+   "price_usd": 97.0,
+   "price_sar": 363.75,
+   "rsi": 10.51,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -515,9 +564,9 @@
   },
   {
    "ticker": "BIIB",
-   "price_usd": 249.59,
-   "price_sar": 935.9625,
-   "rsi": 53.03,
+   "price_usd": 256.71,
+   "price_sar": 962.6625,
+   "rsi": 87.54,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -525,111 +574,111 @@
   },
   {
    "ticker": "BKNG",
-   "price_usd": 144.91,
-   "price_sar": 543.4125,
-   "rsi": 0.52,
+   "price_usd": 144.94,
+   "price_sar": 543.525,
+   "rsi": 1.46,
    "status": "HOLDING",
    "slot": 7,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": 0.0,
+   "unrealized_pl_sar": 0.0207,
    "shares": 0.183976,
    "entry_bar": "2026-11-20",
    "stake_sar": 100.0
   },
   {
    "ticker": "BKR",
-   "price_usd": 44.81,
-   "price_sar": 168.0375,
-   "rsi": 1.4,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "BLK",
-   "price_usd": 1101.72,
-   "price_sar": 4131.4499,
-   "rsi": 0.61,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "BRK-B",
-   "price_usd": 570.0,
-   "price_sar": 2137.5,
-   "rsi": 2.82,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "BSX",
-   "price_usd": 41.98,
-   "price_sar": 157.425,
-   "rsi": 10.12,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "C",
-   "price_usd": 110.62,
-   "price_sar": 414.825,
-   "rsi": 0.35,
-   "status": "HOLDING",
-   "slot": 14,
-   "pending": null,
-   "signal": null,
-   "unrealized_pl_sar": 0.0,
-   "shares": 0.241005,
-   "entry_bar": "2026-11-20",
-   "stake_sar": 100.0
-  },
-  {
-   "ticker": "CAT",
-   "price_usd": 510.45,
-   "price_sar": 1914.1875,
-   "rsi": 0.73,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "CB",
-   "price_usd": 371.63,
-   "price_sar": 1393.6125,
-   "rsi": 46.81,
+   "price_usd": 46.04,
+   "price_sar": 172.65,
+   "rsi": 51.15,
    "status": "FLAT",
    "slot": null,
    "pending": null,
    "signal": null
   },
   {
+   "ticker": "BLK",
+   "price_usd": 1144.52,
+   "price_sar": 4291.9501,
+   "rsi": 59.89,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "BRK-B",
+   "price_usd": 572.36,
+   "price_sar": 2146.3499,
+   "rsi": 40.84,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "BSX",
+   "price_usd": 42.33,
+   "price_sar": 158.7375,
+   "rsi": 36.99,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "C",
+   "price_usd": 114.35,
+   "price_sar": 428.8125,
+   "rsi": 52.81,
+   "status": "HOLDING",
+   "slot": 14,
+   "pending": null,
+   "signal": null,
+   "unrealized_pl_sar": 3.3711,
+   "shares": 0.241005,
+   "entry_bar": "2026-11-20",
+   "stake_sar": 100.0
+  },
+  {
+   "ticker": "CAT",
+   "price_usd": 547.04,
+   "price_sar": 2051.3999,
+   "rsi": 63.24,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "CB",
+   "price_usd": 368.67,
+   "price_sar": 1382.5126,
+   "rsi": 19.89,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": "BUY"
+  },
+  {
    "ticker": "CCL",
-   "price_usd": 26.59,
-   "price_sar": 99.7125,
-   "rsi": 10.12,
+   "price_usd": 27.91,
+   "price_sar": 104.6625,
+   "rsi": 60.9,
    "status": "HOLDING",
    "slot": 4,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": -8.403,
+   "unrealized_pl_sar": -3.8571,
    "shares": 0.91836,
    "entry_bar": "2026-11-16",
    "stake_sar": 100.0
   },
   {
    "ticker": "CHTR",
-   "price_usd": 128.73,
-   "price_sar": 482.7375,
-   "rsi": 5.79,
+   "price_usd": 127.92,
+   "price_sar": 479.7,
+   "rsi": 4.82,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -637,9 +686,9 @@
   },
   {
    "ticker": "CI",
-   "price_usd": 270.9,
-   "price_sar": 1015.875,
-   "rsi": 2.21,
+   "price_usd": 270.46,
+   "price_sar": 1014.225,
+   "rsi": 2.05,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -647,9 +696,9 @@
   },
   {
    "ticker": "CL",
-   "price_usd": 98.71,
-   "price_sar": 370.1625,
-   "rsi": 59.33,
+   "price_usd": 97.93,
+   "price_sar": 367.2375,
+   "rsi": 40.38,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -657,19 +706,19 @@
   },
   {
    "ticker": "CLF",
-   "price_usd": 10.67,
-   "price_sar": 40.0125,
-   "rsi": 0.75,
+   "price_usd": 11.16,
+   "price_sar": 41.85,
+   "rsi": 45.8,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "CMCSA",
-   "price_usd": 24.9,
-   "price_sar": 93.375,
-   "rsi": 24.97,
+   "price_usd": 24.72,
+   "price_sar": 92.7,
+   "rsi": 11.95,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -677,43 +726,43 @@
   },
   {
    "ticker": "CMG",
-   "price_usd": 35.55,
-   "price_sar": 133.3125,
-   "rsi": 23.1,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "COF",
-   "price_usd": 178.66,
-   "price_sar": 669.975,
-   "rsi": 0.94,
-   "status": "HOLDING",
-   "slot": 3,
-   "pending": null,
-   "signal": null,
-   "unrealized_pl_sar": -9.3579,
-   "shares": 0.135254,
-   "entry_bar": "2026-11-11",
-   "stake_sar": 100.0
-  },
-  {
-   "ticker": "COP",
-   "price_usd": 136.12,
-   "price_sar": 510.45,
-   "rsi": 51.53,
+   "price_usd": 36.25,
+   "price_sar": 135.9375,
+   "rsi": 60.92,
    "status": "FLAT",
    "slot": null,
    "pending": null,
    "signal": null
   },
   {
+   "ticker": "COF",
+   "price_usd": 180.01,
+   "price_sar": 675.0375,
+   "rsi": 31.71,
+   "status": "HOLDING",
+   "slot": 3,
+   "pending": null,
+   "signal": null,
+   "unrealized_pl_sar": -8.6732,
+   "shares": 0.135254,
+   "entry_bar": "2026-11-11",
+   "stake_sar": 100.0
+  },
+  {
+   "ticker": "COP",
+   "price_usd": 132.19,
+   "price_sar": 495.7125,
+   "rsi": 14.27,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": "BUY"
+  },
+  {
    "ticker": "COST",
-   "price_usd": 1102.15,
-   "price_sar": 4133.0626,
-   "rsi": 64.51,
+   "price_usd": 1097.91,
+   "price_sar": 4117.1626,
+   "rsi": 40.95,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -721,43 +770,43 @@
   },
   {
    "ticker": "CRM",
-   "price_usd": 180.62,
-   "price_sar": 677.325,
-   "rsi": 0.47,
+   "price_usd": 185.46,
+   "price_sar": 695.475,
+   "rsi": 49.27,
    "status": "HOLDING",
    "slot": 12,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": -21.1799,
+   "unrealized_pl_sar": -19.0684,
    "shares": 0.116333,
    "entry_bar": "2026-10-30",
    "stake_sar": 100.0
   },
   {
    "ticker": "CSCO",
-   "price_usd": 90.64,
-   "price_sar": 339.9,
-   "rsi": 10.31,
+   "price_usd": 96.8,
+   "price_sar": 363.0,
+   "rsi": 69.92,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "CSX",
-   "price_usd": 49.1,
-   "price_sar": 184.125,
-   "rsi": 3.84,
+   "price_usd": 49.86,
+   "price_sar": 186.975,
+   "rsi": 48.56,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "CVS",
-   "price_usd": 80.84,
-   "price_sar": 303.15,
-   "rsi": 27.54,
+   "price_usd": 79.65,
+   "price_sar": 298.6875,
+   "rsi": 15.38,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -765,101 +814,101 @@
   },
   {
    "ticker": "CVX",
-   "price_usd": 208.37,
-   "price_sar": 781.3875,
-   "rsi": 49.3,
+   "price_usd": 206.17,
+   "price_sar": 773.1375,
+   "rsi": 25.66,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": null
+   "signal": "BUY"
   },
   {
    "ticker": "DAL",
-   "price_usd": 80.01,
-   "price_sar": 300.0375,
-   "rsi": 3.95,
+   "price_usd": 84.34,
+   "price_sar": 316.275,
+   "rsi": 66.79,
    "status": "HOLDING",
    "slot": 9,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": -7.6078,
+   "unrealized_pl_sar": -2.609,
    "shares": 0.307852,
    "entry_bar": "2026-11-16",
    "stake_sar": 100.0
   },
   {
    "ticker": "DD",
-   "price_usd": 145.43,
-   "price_sar": 545.3625,
-   "rsi": 1.39,
+   "price_usd": 151.25,
+   "price_sar": 567.1875,
+   "rsi": 70.82,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "DE",
-   "price_usd": 609.25,
-   "price_sar": 2284.6875,
-   "rsi": 0.28,
+   "price_usd": 633.03,
+   "price_sar": 2373.8626,
+   "rsi": 62.25,
    "status": "HOLDING",
    "slot": 10,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": -6.8394,
+   "unrealized_pl_sar": -3.2041,
    "shares": 0.040765,
    "entry_bar": "2026-11-16",
    "stake_sar": 100.0
   },
   {
    "ticker": "DG",
-   "price_usd": 130.53,
-   "price_sar": 489.4875,
-   "rsi": 5.89,
+   "price_usd": 134.18,
+   "price_sar": 503.175,
+   "rsi": 67.93,
    "status": "HOLDING",
    "slot": 11,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": -4.1479,
+   "unrealized_pl_sar": -1.4683,
    "shares": 0.19577,
    "entry_bar": "2026-11-16",
    "stake_sar": 100.0
   },
   {
    "ticker": "DHR",
-   "price_usd": 220.36,
-   "price_sar": 826.35,
-   "rsi": 8.1,
+   "price_usd": 225.66,
+   "price_sar": 846.225,
+   "rsi": 57.23,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "DIS",
-   "price_usd": 117.98,
-   "price_sar": 442.425,
-   "rsi": 27.91,
+   "price_usd": 120.27,
+   "price_sar": 451.0125,
+   "rsi": 62.47,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "DLTR",
-   "price_usd": 137.96,
-   "price_sar": 517.35,
-   "rsi": 20.25,
+   "price_usd": 139.1,
+   "price_sar": 521.625,
+   "rsi": 47.43,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "DUK",
-   "price_usd": 129.78,
-   "price_sar": 486.675,
-   "rsi": 61.67,
+   "price_usd": 129.47,
+   "price_sar": 485.5125,
+   "rsi": 45.96,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -867,9 +916,9 @@
   },
   {
    "ticker": "DVN",
-   "price_usd": 41.54,
-   "price_sar": 155.775,
-   "rsi": 7.53,
+   "price_usd": 40.95,
+   "price_sar": 153.5625,
+   "rsi": 3.84,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -877,19 +926,19 @@
   },
   {
    "ticker": "EBAY",
-   "price_usd": 115.59,
-   "price_sar": 433.4625,
-   "rsi": 15.56,
+   "price_usd": 117.64,
+   "price_sar": 441.15,
+   "rsi": 54.27,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "ELV",
-   "price_usd": 394.48,
-   "price_sar": 1479.3,
-   "rsi": 26.28,
+   "price_usd": 379.55,
+   "price_sar": 1423.3125,
+   "rsi": 10.73,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -897,304 +946,22 @@
   },
   {
    "ticker": "EMR",
-   "price_usd": 150.93,
-   "price_sar": 565.9875,
-   "rsi": 7.18,
+   "price_usd": 158.31,
+   "price_sar": 593.6625,
+   "rsi": 62.15,
    "status": "HOLDING",
    "slot": 15,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": -5.1636,
+   "unrealized_pl_sar": -0.5277,
    "shares": 0.167515,
    "entry_bar": "2026-11-17",
    "stake_sar": 100.0
   },
   {
    "ticker": "EOG",
-   "price_usd": 148.6,
-   "price_sar": 557.25,
-   "rsi": 5.49,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "ETN",
-   "price_usd": 311.33,
-   "price_sar": 1167.4874,
-   "rsi": 1.76,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "EXPE",
-   "price_usd": 234.96,
-   "price_sar": 881.1,
-   "rsi": 8.48,
-   "status": "HOLDING",
-   "slot": 6,
-   "pending": null,
-   "signal": null,
-   "unrealized_pl_sar": -9.5553,
-   "shares": 0.102621,
-   "entry_bar": "2026-11-11",
-   "stake_sar": 100.0
-  },
-  {
-   "ticker": "F",
-   "price_usd": 11.17,
-   "price_sar": 41.8875,
-   "rsi": 0.36,
-   "status": "HOLDING",
-   "slot": 13,
-   "pending": null,
-   "signal": null,
-   "unrealized_pl_sar": -3.4563,
-   "shares": 2.304235,
-   "entry_bar": "2026-11-16",
-   "stake_sar": 100.0
-  },
-  {
-   "ticker": "FCX",
-   "price_usd": 45.99,
-   "price_sar": 172.4625,
-   "rsi": 0.63,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "FFIV",
-   "price_usd": 303.99,
-   "price_sar": 1139.9625,
-   "rsi": 20.1,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "FITB",
-   "price_usd": 49.39,
-   "price_sar": 185.2125,
-   "rsi": 0.99,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "GE",
-   "price_usd": 309.62,
-   "price_sar": 1161.075,
-   "rsi": 4.55,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "GILD",
-   "price_usd": 166.43,
-   "price_sar": 624.1125,
-   "rsi": 17.0,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "GIS",
-   "price_usd": 35.74,
-   "price_sar": 134.025,
-   "rsi": 89.98,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": null
-  },
-  {
-   "ticker": "GLW",
-   "price_usd": 94.38,
-   "price_sar": 353.925,
-   "rsi": 2.73,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "GOOGL",
-   "price_usd": 265.29,
-   "price_sar": 994.8375,
-   "rsi": 4.92,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "GS",
-   "price_usd": 790.69,
-   "price_sar": 2965.0875,
-   "rsi": 0.44,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "HAL",
-   "price_usd": 30.53,
-   "price_sar": 114.4875,
-   "rsi": 11.11,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "HD",
-   "price_usd": 339.04,
-   "price_sar": 1271.4,
-   "rsi": 54.24,
-   "status": "HOLDING",
-   "slot": 23,
-   "pending": null,
-   "signal": null,
-   "unrealized_pl_sar": 0.4145,
-   "shares": 0.07896,
-   "entry_bar": "2026-11-18",
-   "stake_sar": 100.0
-  },
-  {
-   "ticker": "HON",
-   "price_usd": 212.64,
-   "price_sar": 797.4,
-   "rsi": 11.94,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "HPQ",
-   "price_usd": 27.96,
-   "price_sar": 104.85,
-   "rsi": 27.38,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "IBM",
-   "price_usd": 224.44,
-   "price_sar": 841.65,
-   "rsi": 12.37,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "ILMN",
-   "price_usd": 192.82,
-   "price_sar": 723.075,
-   "rsi": 15.58,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "INTU",
-   "price_usd": 270.44,
-   "price_sar": 1014.15,
-   "rsi": 0.68,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "ISRG",
-   "price_usd": 399.05,
-   "price_sar": 1496.4375,
-   "rsi": 0.74,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "ITW",
-   "price_usd": 273.57,
-   "price_sar": 1025.8875,
-   "rsi": 2.98,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "JNJ",
-   "price_usd": 270.47,
-   "price_sar": 1014.2625,
-   "rsi": 41.08,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": null
-  },
-  {
-   "ticker": "JPM",
-   "price_usd": 310.53,
-   "price_sar": 1164.4875,
-   "rsi": 0.91,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "KMB",
-   "price_usd": 106.38,
-   "price_sar": 398.925,
-   "rsi": 44.31,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": null
-  },
-  {
-   "ticker": "KO",
-   "price_usd": 96.99,
-   "price_sar": 363.7125,
-   "rsi": 43.7,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": null
-  },
-  {
-   "ticker": "KR",
-   "price_usd": 68.44,
-   "price_sar": 256.65,
-   "rsi": 36.73,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": null
-  },
-  {
-   "ticker": "LIN",
-   "price_usd": 502.83,
-   "price_sar": 1885.6124,
+   "price_usd": 145.34,
+   "price_sar": 545.025,
    "rsi": 1.6,
    "status": "FLAT",
    "slot": null,
@@ -1202,94 +969,376 @@
    "signal": "BUY"
   },
   {
-   "ticker": "LLY",
-   "price_usd": 1347.11,
-   "price_sar": 5051.6624,
-   "rsi": 2.51,
+   "ticker": "ETN",
+   "price_usd": 336.34,
+   "price_sar": 1261.275,
+   "rsi": 67.42,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "EXPE",
+   "price_usd": 239.46,
+   "price_sar": 897.975,
+   "rsi": 51.71,
+   "status": "HOLDING",
+   "slot": 6,
+   "pending": null,
+   "signal": null,
+   "unrealized_pl_sar": -7.8236,
+   "shares": 0.102621,
+   "entry_bar": "2026-11-11",
+   "stake_sar": 100.0
+  },
+  {
+   "ticker": "F",
+   "price_usd": 11.65,
+   "price_sar": 43.6875,
+   "rsi": 85.63,
+   "status": "HOLDING",
+   "slot": 13,
+   "pending": "SELL",
+   "signal": "SELL",
+   "unrealized_pl_sar": 0.6913,
+   "shares": 2.304235,
+   "entry_bar": "2026-11-16",
+   "stake_sar": 100.0
+  },
+  {
+   "ticker": "FCX",
+   "price_usd": 49.71,
+   "price_sar": 186.4125,
+   "rsi": 57.24,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "FFIV",
+   "price_usd": 321.27,
+   "price_sar": 1204.7625,
+   "rsi": 70.49,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "FITB",
+   "price_usd": 50.75,
+   "price_sar": 190.3125,
+   "rsi": 54.08,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "GE",
+   "price_usd": 321.26,
+   "price_sar": 1204.725,
+   "rsi": 62.34,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "GILD",
+   "price_usd": 170.59,
+   "price_sar": 639.7125,
+   "rsi": 83.47,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "GIS",
+   "price_usd": 35.07,
+   "price_sar": 131.5125,
+   "rsi": 47.42,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "GLW",
+   "price_usd": 108.31,
+   "price_sar": 406.1625,
+   "rsi": 67.72,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "GOOGL",
+   "price_usd": 282.1,
+   "price_sar": 1057.875,
+   "rsi": 71.69,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "GS",
+   "price_usd": 823.62,
+   "price_sar": 3088.575,
+   "rsi": 47.11,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "HAL",
+   "price_usd": 30.57,
+   "price_sar": 114.6375,
+   "rsi": 15.18,
    "status": "FLAT",
    "slot": null,
    "pending": null,
    "signal": "BUY"
+  },
+  {
+   "ticker": "HD",
+   "price_usd": 346.06,
+   "price_sar": 1297.725,
+   "rsi": 89.03,
+   "status": "HOLDING",
+   "slot": 23,
+   "pending": "SELL",
+   "signal": "SELL",
+   "unrealized_pl_sar": 2.4932,
+   "shares": 0.07896,
+   "entry_bar": "2026-11-18",
+   "stake_sar": 100.0
+  },
+  {
+   "ticker": "HON",
+   "price_usd": 221.97,
+   "price_sar": 832.3875,
+   "rsi": 71.17,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "HPQ",
+   "price_usd": 28.9,
+   "price_sar": 108.375,
+   "rsi": 80.88,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "IBM",
+   "price_usd": 233.0,
+   "price_sar": 873.75,
+   "rsi": 78.95,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "ILMN",
+   "price_usd": 205.28,
+   "price_sar": 769.8,
+   "rsi": 67.36,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "INTU",
+   "price_usd": 275.46,
+   "price_sar": 1032.975,
+   "rsi": 18.3,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": "BUY"
+  },
+  {
+   "ticker": "ISRG",
+   "price_usd": 416.23,
+   "price_sar": 1560.8625,
+   "rsi": 64.58,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "ITW",
+   "price_usd": 281.08,
+   "price_sar": 1054.0499,
+   "rsi": 69.72,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "JNJ",
+   "price_usd": 270.05,
+   "price_sar": 1012.6875,
+   "rsi": 37.36,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "JPM",
+   "price_usd": 316.66,
+   "price_sar": 1187.475,
+   "rsi": 45.83,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "KMB",
+   "price_usd": 107.72,
+   "price_sar": 403.95,
+   "rsi": 70.6,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "KO",
+   "price_usd": 95.88,
+   "price_sar": 359.55,
+   "rsi": 21.97,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": "BUY"
+  },
+  {
+   "ticker": "KR",
+   "price_usd": 67.15,
+   "price_sar": 251.8125,
+   "rsi": 14.08,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": "BUY"
+  },
+  {
+   "ticker": "LIN",
+   "price_usd": 517.0,
+   "price_sar": 1938.75,
+   "rsi": 73.33,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
+  },
+  {
+   "ticker": "LLY",
+   "price_usd": 1364.6,
+   "price_sar": 5117.2499,
+   "rsi": 53.6,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
   },
   {
    "ticker": "LMT",
-   "price_usd": 565.5,
-   "price_sar": 2120.625,
-   "rsi": 5.52,
+   "price_usd": 571.67,
+   "price_sar": 2143.7624,
+   "rsi": 49.12,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "LOW",
-   "price_usd": 220.84,
-   "price_sar": 828.15,
-   "rsi": 46.78,
+   "price_usd": 226.14,
+   "price_sar": 848.025,
+   "rsi": 83.1,
    "status": "HOLDING",
    "slot": 24,
-   "pending": null,
-   "signal": null,
-   "unrealized_pl_sar": -0.8706,
+   "pending": "SELL",
+   "signal": "SELL",
+   "unrealized_pl_sar": 1.5078,
    "shares": 0.11967,
    "entry_bar": "2026-11-18",
    "stake_sar": 100.0
   },
   {
    "ticker": "LULU",
-   "price_usd": 102.62,
-   "price_sar": 384.825,
-   "rsi": 22.71,
+   "price_usd": 104.63,
+   "price_sar": 392.3625,
+   "rsi": 49.7,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "LUV",
-   "price_usd": 44.08,
-   "price_sar": 165.3,
-   "rsi": 16.39,
+   "price_usd": 45.47,
+   "price_sar": 170.5125,
+   "rsi": 57.56,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "LVS",
-   "price_usd": 38.85,
-   "price_sar": 145.6875,
-   "rsi": 9.81,
+   "price_usd": 39.14,
+   "price_sar": 146.775,
+   "rsi": 51.43,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "MA",
-   "price_usd": 625.59,
-   "price_sar": 2345.9626,
-   "rsi": 2.75,
+   "price_usd": 635.48,
+   "price_sar": 2383.0499,
+   "rsi": 62.5,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "MAR",
-   "price_usd": 406.64,
-   "price_sar": 1524.9001,
-   "rsi": 6.93,
+   "price_usd": 415.63,
+   "price_sar": 1558.6125,
+   "rsi": 58.52,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "MCD",
-   "price_usd": 273.24,
-   "price_sar": 1024.65,
-   "rsi": 46.24,
+   "price_usd": 276.38,
+   "price_sar": 1036.425,
+   "rsi": 84.1,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1297,19 +1346,19 @@
   },
   {
    "ticker": "MCK",
-   "price_usd": 1069.4301,
-   "price_sar": 4010.3627,
-   "rsi": 36.16,
+   "price_usd": 1048.42,
+   "price_sar": 3931.5752,
+   "rsi": 12.8,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": null
+   "signal": "BUY"
   },
   {
    "ticker": "MDLZ",
-   "price_usd": 66.28,
-   "price_sar": 248.55,
-   "rsi": 51.51,
+   "price_usd": 66.25,
+   "price_sar": 248.4375,
+   "rsi": 49.08,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1317,39 +1366,39 @@
   },
   {
    "ticker": "MDT",
-   "price_usd": 99.94,
-   "price_sar": 374.775,
-   "rsi": 4.97,
+   "price_usd": 100.72,
+   "price_sar": 377.7,
+   "rsi": 57.25,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "MET",
-   "price_usd": 95.67,
-   "price_sar": 358.7625,
-   "rsi": 1.25,
+   "price_usd": 98.72,
+   "price_sar": 370.2,
+   "rsi": 63.4,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "MGM",
-   "price_usd": 32.36,
-   "price_sar": 121.35,
-   "rsi": 9.24,
+   "price_usd": 33.69,
+   "price_sar": 126.3375,
+   "rsi": 69.28,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "MO",
-   "price_usd": 74.87,
-   "price_sar": 280.7625,
-   "rsi": 16.29,
+   "price_usd": 73.8,
+   "price_sar": 276.75,
+   "rsi": 6.77,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1357,121 +1406,121 @@
   },
   {
    "ticker": "MRK",
-   "price_usd": 133.72,
-   "price_sar": 501.45,
-   "rsi": 18.16,
+   "price_usd": 135.47,
+   "price_sar": 508.0125,
+   "rsi": 51.15,
    "status": "HOLDING",
    "slot": 19,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": 0.0,
+   "unrealized_pl_sar": 1.3084,
    "shares": 0.199372,
    "entry_bar": "2026-11-20",
    "stake_sar": 100.0
   },
   {
    "ticker": "MSFT",
-   "price_usd": 484.52,
-   "price_sar": 1816.95,
-   "rsi": 2.91,
+   "price_usd": 492.5,
+   "price_sar": 1846.875,
+   "rsi": 44.97,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "MU",
-   "price_usd": 594.51,
-   "price_sar": 2229.4125,
-   "rsi": 0.71,
+   "price_usd": 707.7,
+   "price_sar": 2653.875,
+   "rsi": 67.25,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "NEE",
-   "price_usd": 83.45,
-   "price_sar": 312.9375,
-   "rsi": 9.74,
+   "price_usd": 83.97,
+   "price_sar": 314.8875,
+   "rsi": 54.07,
    "status": "HOLDING",
    "slot": 8,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": -1.9615,
+   "unrealized_pl_sar": -1.3507,
    "shares": 0.313205,
    "entry_bar": "2026-11-13",
    "stake_sar": 100.0
   },
   {
    "ticker": "NEM",
-   "price_usd": 94.68,
-   "price_sar": 355.05,
-   "rsi": 1.51,
+   "price_usd": 100.73,
+   "price_sar": 377.7375,
+   "rsi": 56.08,
    "status": "HOLDING",
    "slot": 17,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": -14.1656,
+   "unrealized_pl_sar": -8.6824,
    "shares": 0.241683,
    "entry_bar": "2026-11-16",
    "stake_sar": 100.0
   },
   {
    "ticker": "NKE",
-   "price_usd": 32.92,
-   "price_sar": 123.45,
-   "rsi": 4.97,
+   "price_usd": 33.76,
+   "price_sar": 126.6,
+   "rsi": 40.13,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "NOC",
-   "price_usd": 534.31,
-   "price_sar": 2003.6625,
-   "rsi": 8.73,
+   "price_usd": 542.14,
+   "price_sar": 2033.0251,
+   "rsi": 59.82,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "NSC",
-   "price_usd": 311.01,
-   "price_sar": 1166.2875,
-   "rsi": 8.77,
+   "price_usd": 316.65,
+   "price_sar": 1187.4375,
+   "rsi": 53.99,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "NTAP",
-   "price_usd": 157.65,
-   "price_sar": 591.1875,
-   "rsi": 0.78,
+   "price_usd": 171.64,
+   "price_sar": 643.65,
+   "rsi": 65.61,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "ORCL",
-   "price_usd": 101.19,
-   "price_sar": 379.4625,
-   "rsi": 0.73,
+   "price_usd": 113.68,
+   "price_sar": 426.3,
+   "rsi": 67.07,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "ORLY",
-   "price_usd": 92.65,
-   "price_sar": 347.4375,
-   "rsi": 42.72,
+   "price_usd": 93.62,
+   "price_sar": 351.075,
+   "rsi": 85.26,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1479,9 +1528,9 @@
   },
   {
    "ticker": "OXY",
-   "price_usd": 53.9,
-   "price_sar": 202.125,
-   "rsi": 14.6,
+   "price_usd": 52.7,
+   "price_sar": 197.625,
+   "rsi": 4.4,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1489,9 +1538,9 @@
   },
   {
    "ticker": "PEP",
-   "price_usd": 140.54,
-   "price_sar": 527.025,
-   "rsi": 45.51,
+   "price_usd": 140.21,
+   "price_sar": 525.7875,
+   "rsi": 38.72,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1513,9 +1562,9 @@
   },
   {
    "ticker": "PG",
-   "price_usd": 169.37,
-   "price_sar": 635.1375,
-   "rsi": 50.58,
+   "price_usd": 169.6,
+   "price_sar": 636.0,
+   "rsi": 56.26,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1523,9 +1572,9 @@
   },
   {
    "ticker": "PM",
-   "price_usd": 184.09,
-   "price_sar": 690.3375,
-   "rsi": 1.54,
+   "price_usd": 182.5,
+   "price_sar": 684.375,
+   "rsi": 1.03,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1533,113 +1582,113 @@
   },
   {
    "ticker": "PNC",
-   "price_usd": 213.12,
-   "price_sar": 799.2,
-   "rsi": 0.71,
+   "price_usd": 217.13,
+   "price_sar": 814.2375,
+   "rsi": 49.95,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "PPG",
-   "price_usd": 117.12,
-   "price_sar": 439.2,
-   "rsi": 11.35,
+   "price_usd": 120.62,
+   "price_sar": 452.325,
+   "rsi": 65.41,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "PRU",
-   "price_usd": 117.73,
-   "price_sar": 441.4875,
-   "rsi": 1.35,
+   "price_usd": 119.46,
+   "price_sar": 447.975,
+   "rsi": 49.93,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "QCOM",
-   "price_usd": 149.94,
-   "price_sar": 562.275,
-   "rsi": 7.47,
+   "price_usd": 165.38,
+   "price_sar": 620.175,
+   "rsi": 68.97,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "REGN",
-   "price_usd": 920.69,
-   "price_sar": 3452.5875,
-   "rsi": 6.79,
+   "price_usd": 942.24,
+   "price_sar": 3533.4,
+   "rsi": 73.21,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "ROST",
-   "price_usd": 213.46,
-   "price_sar": 800.475,
-   "rsi": 13.88,
+   "price_usd": 217.04,
+   "price_sar": 813.9,
+   "rsi": 44.1,
    "status": "HOLDING",
    "slot": 18,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": -4.2727,
+   "unrealized_pl_sar": -2.6676,
    "shares": 0.119557,
    "entry_bar": "2026-11-16",
    "stake_sar": 100.0
   },
   {
    "ticker": "RTX",
-   "price_usd": 190.17,
-   "price_sar": 713.1375,
-   "rsi": 8.0,
+   "price_usd": 194.77,
+   "price_sar": 730.3875,
+   "rsi": 66.02,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "SBUX",
-   "price_usd": 103.13,
-   "price_sar": 386.7375,
-   "rsi": 12.63,
+   "price_usd": 106.36,
+   "price_sar": 398.85,
+   "rsi": 64.5,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "SCHW",
-   "price_usd": 90.16,
-   "price_sar": 338.1,
-   "rsi": 9.09,
+   "price_usd": 92.37,
+   "price_sar": 346.3875,
+   "rsi": 66.54,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "SHW",
-   "price_usd": 339.74,
-   "price_sar": 1274.025,
-   "rsi": 13.6,
+   "price_usd": 349.47,
+   "price_sar": 1310.5125,
+   "rsi": 82.12,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "SLB",
-   "price_usd": 45.89,
-   "price_sar": 172.0875,
-   "rsi": 1.24,
+   "price_usd": 46.16,
+   "price_sar": 173.1,
+   "rsi": 17.81,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1647,9 +1696,9 @@
   },
   {
    "ticker": "SO",
-   "price_usd": 93.13,
-   "price_sar": 349.2375,
-   "rsi": 28.9,
+   "price_usd": 93.11,
+   "price_sar": 349.1625,
+   "rsi": 27.99,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1657,43 +1706,43 @@
   },
   {
    "ticker": "STT",
-   "price_usd": 155.38,
-   "price_sar": 582.675,
-   "rsi": 0.39,
+   "price_usd": 161.25,
+   "price_sar": 604.6875,
+   "rsi": 56.9,
    "status": "HOLDING",
    "slot": 25,
    "pending": null,
    "signal": null,
-   "unrealized_pl_sar": 0.0,
+   "unrealized_pl_sar": 3.7769,
    "shares": 0.171579,
    "entry_bar": "2026-11-20",
    "stake_sar": 100.0
   },
   {
    "ticker": "STX",
-   "price_usd": 457.01,
-   "price_sar": 1713.7875,
-   "rsi": 9.19,
+   "price_usd": 520.1,
+   "price_sar": 1950.3749,
+   "rsi": 66.52,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "SWKS",
-   "price_usd": 73.91,
-   "price_sar": 277.1625,
-   "rsi": 0.99,
+   "price_usd": 77.12,
+   "price_sar": 289.2,
+   "rsi": 45.44,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "T",
-   "price_usd": 22.31,
-   "price_sar": 83.6625,
-   "rsi": 76.58,
+   "price_usd": 22.3,
+   "price_sar": 83.625,
+   "rsi": 74.19,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1701,9 +1750,9 @@
   },
   {
    "ticker": "TGT",
-   "price_usd": 165.83,
-   "price_sar": 621.8625,
-   "rsi": 56.65,
+   "price_usd": 168.19,
+   "price_sar": 630.7125,
+   "rsi": 79.46,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1711,9 +1760,9 @@
   },
   {
    "ticker": "TJX",
-   "price_usd": 139.62,
-   "price_sar": 523.575,
-   "rsi": 76.48,
+   "price_usd": 139.25,
+   "price_sar": 522.1875,
+   "rsi": 63.73,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1721,29 +1770,29 @@
   },
   {
    "ticker": "TMO",
-   "price_usd": 669.54,
-   "price_sar": 2510.7749,
-   "rsi": 6.54,
+   "price_usd": 688.08,
+   "price_sar": 2580.3001,
+   "rsi": 63.06,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "TPR",
-   "price_usd": 120.02,
-   "price_sar": 450.075,
-   "rsi": 5.4,
+   "price_usd": 126.63,
+   "price_sar": 474.8625,
+   "rsi": 66.67,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "TRV",
-   "price_usd": 393.24,
-   "price_sar": 1474.65,
-   "rsi": 50.12,
+   "price_usd": 394.71,
+   "price_sar": 1480.1625,
+   "rsi": 67.67,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1751,73 +1800,73 @@
   },
   {
    "ticker": "TXN",
-   "price_usd": 263.75,
-   "price_sar": 989.0625,
-   "rsi": 1.37,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "UAL",
-   "price_usd": 101.03,
-   "price_sar": 378.8625,
-   "rsi": 6.41,
-   "status": "HOLDING",
-   "slot": 21,
-   "pending": null,
-   "signal": null,
-   "unrealized_pl_sar": -8.7826,
-   "shares": 0.240701,
-   "entry_bar": "2026-11-16",
-   "stake_sar": 100.0
-  },
-  {
-   "ticker": "UNH",
-   "price_usd": 339.85,
-   "price_sar": 1274.4375,
-   "rsi": 30.36,
+   "price_usd": 291.19,
+   "price_sar": 1091.9625,
+   "rsi": 67.11,
    "status": "FLAT",
    "slot": null,
    "pending": null,
    "signal": null
   },
   {
-   "ticker": "UNP",
-   "price_usd": 287.29,
-   "price_sar": 1077.3375,
-   "rsi": 10.67,
+   "ticker": "UAL",
+   "price_usd": 108.71,
+   "price_sar": 407.6625,
+   "rsi": 71.5,
+   "status": "HOLDING",
+   "slot": 21,
+   "pending": "SELL",
+   "signal": "SELL",
+   "unrealized_pl_sar": -1.8504,
+   "shares": 0.240701,
+   "entry_bar": "2026-11-16",
+   "stake_sar": 100.0
+  },
+  {
+   "ticker": "UNH",
+   "price_usd": 336.08,
+   "price_sar": 1260.2999,
+   "rsi": 24.61,
    "status": "FLAT",
    "slot": null,
    "pending": null,
    "signal": "BUY"
+  },
+  {
+   "ticker": "UNP",
+   "price_usd": 288.89,
+   "price_sar": 1083.3376,
+   "rsi": 31.54,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": null
   },
   {
    "ticker": "USB",
-   "price_usd": 56.05,
-   "price_sar": 210.1875,
-   "rsi": 0.9,
+   "price_usd": 57.41,
+   "price_sar": 215.2875,
+   "rsi": 56.12,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "V",
-   "price_usd": 401.87,
-   "price_sar": 1507.0125,
-   "rsi": 2.79,
+   "price_usd": 409.4,
+   "price_sar": 1535.25,
+   "rsi": 64.15,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "VLO",
-   "price_usd": 334.18,
-   "price_sar": 1253.175,
-   "rsi": 3.27,
+   "price_usd": 329.4,
+   "price_sar": 1235.25,
+   "rsi": 1.93,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1825,23 +1874,23 @@
   },
   {
    "ticker": "VRTX",
-   "price_usd": 515.02,
-   "price_sar": 1931.3251,
-   "rsi": 3.91,
+   "price_usd": 538.54,
+   "price_sar": 2019.5249,
+   "rsi": 76.96,
    "status": "HOLDING",
    "slot": 22,
-   "pending": null,
-   "signal": null,
-   "unrealized_pl_sar": -4.2329,
+   "pending": "SELL",
+   "signal": "SELL",
+   "unrealized_pl_sar": 0.1394,
    "shares": 0.049573,
    "entry_bar": "2026-11-16",
    "stake_sar": 100.0
   },
   {
    "ticker": "VZ",
-   "price_usd": 46.48,
-   "price_sar": 174.3,
-   "rsi": 75.72,
+   "price_usd": 46.45,
+   "price_sar": 174.1875,
+   "rsi": 71.62,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1849,29 +1898,29 @@
   },
   {
    "ticker": "WDC",
-   "price_usd": 261.11,
-   "price_sar": 979.1624,
-   "rsi": 14.01,
+   "price_usd": 297.25,
+   "price_sar": 1114.6875,
+   "rsi": 67.83,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "WFC",
-   "price_usd": 78.62,
-   "price_sar": 294.825,
-   "rsi": 0.48,
+   "price_usd": 80.0,
+   "price_sar": 300.0,
+   "rsi": 48.6,
    "status": "FLAT",
    "slot": null,
    "pending": null,
-   "signal": "BUY"
+   "signal": null
   },
   {
    "ticker": "WMT",
-   "price_usd": 127.95,
-   "price_sar": 479.8125,
-   "rsi": 71.05,
+   "price_usd": 129.58,
+   "price_sar": 485.925,
+   "rsi": 86.59,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -1879,29 +1928,29 @@
   },
   {
    "ticker": "WYNN",
-   "price_usd": 80.4,
-   "price_sar": 301.5,
-   "rsi": 15.31,
-   "status": "FLAT",
-   "slot": null,
-   "pending": null,
-   "signal": "BUY"
-  },
-  {
-   "ticker": "XOM",
-   "price_usd": 159.99,
-   "price_sar": 599.9625,
-   "rsi": 31.0,
+   "price_usd": 83.34,
+   "price_sar": 312.525,
+   "rsi": 71.45,
    "status": "FLAT",
    "slot": null,
    "pending": null,
    "signal": null
   },
   {
+   "ticker": "XOM",
+   "price_usd": 156.9,
+   "price_sar": 588.375,
+   "rsi": 11.9,
+   "status": "FLAT",
+   "slot": null,
+   "pending": null,
+   "signal": "BUY"
+  },
+  {
    "ticker": "YUM",
-   "price_usd": 160.7,
-   "price_sar": 602.625,
-   "rsi": 59.77,
+   "price_usd": 164.44,
+   "price_sar": 616.65,
+   "rsi": 89.94,
    "status": "FLAT",
    "slot": null,
    "pending": null,
@@ -3354,188 +3403,6 @@
   {
    "timestamp_utc": "2026-11-21T03:01:57Z",
    "bar_id": "2026-11-20",
-   "ticker": "DHR",
-   "rsi": "8.1048",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #57 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "NOC",
-   "rsi": "8.7288",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #58 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "NSC",
-   "rsi": "8.7746",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #59 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "SCHW",
-   "rsi": "9.0937",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #60 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "STX",
-   "rsi": "9.1947",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #61 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "MGM",
-   "rsi": "9.2438",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #62 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "LVS",
-   "rsi": "9.8131",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #63 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "BSX",
-   "rsi": "10.1191",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #64 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "CSCO",
-   "rsi": "10.307",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #65 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "UNP",
-   "rsi": "10.6704",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #66 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "HAL",
-   "rsi": "11.1118",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #67 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "PPG",
-   "rsi": "11.3515",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #68 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "HON",
-   "rsi": "11.9361",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #69 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "IBM",
-   "rsi": "12.3685",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #70 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "SBUX",
-   "rsi": "12.6326",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #71 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "AMZN",
-   "rsi": "13.4177",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #72 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "SHW",
-   "rsi": "13.5952",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #73 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "WDC",
-   "rsi": "14.0052",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #74 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "OXY",
-   "rsi": "14.6003",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #75 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "WYNN",
-   "rsi": "15.3138",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #76 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "EBAY",
-   "rsi": "15.5564",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #77 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "ILMN",
-   "rsi": "15.5803",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #78 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "MO",
-   "rsi": "16.2939",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #79 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "LUV",
-   "rsi": "16.3859",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #80 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "GILD",
-   "rsi": "17.0033",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #81 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
-   "ticker": "BBY",
-   "rsi": "17.0295",
-   "reason": "valid entry signal but no free slot (25/25 used, ranked #82 by RSI)"
-  },
-  {
-   "timestamp_utc": "2026-11-21T03:01:57Z",
-   "bar_id": "2026-11-20",
    "ticker": "AIG",
    "rsi": "18.4011",
    "reason": "valid entry signal but no free slot (25/25 used, ranked #83 by RSI)"
@@ -3630,9 +3497,191 @@
    "ticker": "SO",
    "rsi": "28.9047",
    "reason": "valid entry signal but no free slot (25/25 used, ranked #96 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "PM",
+   "rsi": "1.0266",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #1 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "EOG",
+   "rsi": "1.6042",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #2 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "VLO",
+   "rsi": "1.9319",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #3 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "CI",
+   "rsi": "2.0527",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #4 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "DVN",
+   "rsi": "3.838",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #5 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "OXY",
+   "rsi": "4.4016",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #6 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "CHTR",
+   "rsi": "4.8151",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #7 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "MO",
+   "rsi": "6.7668",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #8 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "BBY",
+   "rsi": "10.5094",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #9 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "ELV",
+   "rsi": "10.7276",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #10 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "XOM",
+   "rsi": "11.8993",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #11 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "CMCSA",
+   "rsi": "11.9452",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #12 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "ALL",
+   "rsi": "12.5526",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #13 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "MCK",
+   "rsi": "12.7992",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #14 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "APA",
+   "rsi": "13.9986",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #15 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "KR",
+   "rsi": "14.0782",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #16 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "COP",
+   "rsi": "14.2689",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #17 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "HAL",
+   "rsi": "15.1802",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #18 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "CVS",
+   "rsi": "15.3802",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #19 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "SLB",
+   "rsi": "17.8144",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #20 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "INTU",
+   "rsi": "18.3042",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #21 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "CB",
+   "rsi": "19.8868",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #22 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "KO",
+   "rsi": "21.9671",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #23 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "UNH",
+   "rsi": "24.6131",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #24 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "CVX",
+   "rsi": "25.6636",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #25 by RSI)"
+  },
+  {
+   "timestamp_utc": "2026-11-24T05:47:21Z",
+   "bar_id": "2026-11-23",
+   "ticker": "SO",
+   "rsi": "27.9924",
+   "reason": "valid entry signal but no free slot (25/25 used, ranked #26 by RSI)"
   }
  ],
- "skipped_total": 805,
+ "skipped_total": 831,
  "weekly": [
   {
    "key": "2026-W42",
@@ -3699,6 +3748,17 @@
    "purification_sar": 1.477799,
    "skipped": 410,
    "cumulative_sar": 76.009116
+  },
+  {
+   "key": "2026-W48",
+   "label": "2026-W48 (Nov 23 - Nov 29)",
+   "closed": 0,
+   "wins": 0,
+   "losses": 0,
+   "net_pl_sar": 0.0,
+   "purification_sar": 0.0,
+   "skipped": 26,
+   "cumulative_sar": 76.009116
   }
  ],
  "monthly": [
@@ -3721,11 +3781,11 @@
    "losses": 22,
    "net_pl_sar": 5.457816,
    "purification_sar": 13.020766,
-   "skipped": 572,
+   "skipped": 598,
    "cumulative_sar": 76.009116
   }
  ],
  "universe_size": 150,
  "fetch_failures": [],
- "bar_id": "2026-11-20"
+ "bar_id": "2026-11-23"
 }

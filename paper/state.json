@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-11-20",
+  "bar_id": "2026-11-23",
   "decided": true
  },
  "slots": [
@@ -382,7 +382,56 @@
    "closed_trades": 2
   }
  ],
- "pending_orders": [],
- "last_run_utc": "2026-11-21T03:01:57Z",
- "last_decided_bar": "2026-11-20"
+ "pending_orders": [
+  {
+   "id": "SELL:AMGN:2026-11-23",
+   "action": "SELL",
+   "ticker": "AMGN",
+   "signal_bar": "2026-11-23",
+   "rsi": 78.1733,
+   "created_utc": "2026-11-24T05:47:21Z"
+  },
+  {
+   "id": "SELL:F:2026-11-23",
+   "action": "SELL",
+   "ticker": "F",
+   "signal_bar": "2026-11-23",
+   "rsi": 85.6264,
+   "created_utc": "2026-11-24T05:47:21Z"
+  },
+  {
+   "id": "SELL:HD:2026-11-23",
+   "action": "SELL",
+   "ticker": "HD",
+   "signal_bar": "2026-11-23",
+   "rsi": 89.0303,
+   "created_utc": "2026-11-24T05:47:21Z"
+  },
+  {
+   "id": "SELL:LOW:2026-11-23",
+   "action": "SELL",
+   "ticker": "LOW",
+   "signal_bar": "2026-11-23",
+   "rsi": 83.0966,
+   "created_utc": "2026-11-24T05:47:21Z"
+  },
+  {
+   "id": "SELL:UAL:2026-11-23",
+   "action": "SELL",
+   "ticker": "UAL",
+   "signal_bar": "2026-11-23",
+   "rsi": 71.5038,
+   "created_utc": "2026-11-24T05:47:21Z"
+  },
+  {
+   "id": "SELL:VRTX:2026-11-23",
+   "action": "SELL",
+   "ticker": "VRTX",
+   "signal_bar": "2026-11-23",
+   "rsi": 76.9633,
+   "created_utc": "2026-11-24T05:47:21Z"
+  }
+ ],
+ "last_run_utc": "2026-11-24T05:47:21Z",
+ "last_decided_bar": "2026-11-23"
 }
