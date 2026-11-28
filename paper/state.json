@@ -2,7 +2,7 @@
  "schema": 2,
  "initialized_utc": "2026-10-10T18:16:33Z",
  "bar_guard": {
-  "bar_id": "2026-11-25",
+  "bar_id": "2026-11-27",
   "decided": true
  },
  "slots": [
@@ -39,17 +39,17 @@
   {
    "id": 3,
    "position": {
-    "ticker": "COF",
-    "entry_bar": "2026-11-11",
-    "entry_px_usd": 197.11000061035156,
-    "shares": 0.13525442604356577,
+    "ticker": "AMAT",
+    "entry_bar": "2026-11-27",
+    "entry_px_usd": 322.0400085449219,
+    "shares": 0.08278474503978021,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-11-12T02:45:50Z"
+    "opened_utc": "2026-11-28T03:47:03Z"
    },
-   "realized_pl_sar": -18.63236160517161,
+   "realized_pl_sar": -24.833560851674548,
    "purified_sar": 0.4044041686905899,
-   "closed_trades": 5
+   "closed_trades": 6
   },
   {
    "id": 4,
@@ -84,36 +84,44 @@
   {
    "id": 6,
    "position": {
-    "ticker": "EXPE",
-    "entry_bar": "2026-11-11",
-    "entry_px_usd": 259.7900085449219,
-    "shares": 0.10262134463647032,
+    "ticker": "AMZN",
+    "entry_bar": "2026-11-27",
+    "entry_px_usd": 254.1199951171875,
+    "shares": 0.10491106765410464,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-11-12T02:45:50Z"
+    "opened_utc": "2026-11-28T03:47:03Z"
    },
-   "realized_pl_sar": 37.06383739338757,
+   "realized_pl_sar": 31.97189387196471,
    "purified_sar": 3.8968454550920275,
-   "closed_trades": 7
+   "closed_trades": 8
   },
   {
    "id": 7,
    "position": {
-    "ticker": "BKNG",
-    "entry_bar": "2026-11-20",
-    "entry_px_usd": 144.91000366210938,
-    "shares": 0.18397625647821975,
+    "ticker": "GS",
+    "entry_bar": "2026-11-27",
+    "entry_px_usd": 812.8699951171875,
+    "shares": 0.03279737247055915,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-11-21T03:01:57Z"
+    "opened_utc": "2026-11-28T03:47:03Z"
    },
-   "realized_pl_sar": -12.73629424195002,
-   "purified_sar": 0.0,
-   "closed_trades": 3
+   "realized_pl_sar": -8.981524046220997,
+   "purified_sar": 0.3754770195729023,
+   "closed_trades": 4
   },
   {
    "id": 8,
-   "position": null,
+   "position": {
+    "ticker": "INTU",
+    "entry_bar": "2026-11-27",
+    "entry_px_usd": 271.94000244140625,
+    "shares": 0.09803633066357832,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-28T03:47:03Z"
+   },
    "realized_pl_sar": 25.7498623422412,
    "purified_sar": 2.781669892591276,
    "closed_trades": 7
@@ -136,21 +144,29 @@
   {
    "id": 10,
    "position": {
-    "ticker": "DE",
-    "entry_bar": "2026-11-16",
-    "entry_px_usd": 653.989990234375,
-    "shares": 0.04076514992293027,
+    "ticker": "MU",
+    "entry_bar": "2026-11-27",
+    "entry_px_usd": 646.9500122070312,
+    "shares": 0.041208747966556186,
     "basis_sar": 99.975,
     "stake_sar": 100.0,
-    "opened_utc": "2026-11-17T04:22:28Z"
+    "opened_utc": "2026-11-28T03:47:03Z"
    },
-   "realized_pl_sar": 8.938992721136344,
-   "purified_sar": 2.1483710606884308,
-   "closed_trades": 6
+   "realized_pl_sar": 8.95220674485708,
+   "purified_sar": 2.149692463060504,
+   "closed_trades": 7
   },
   {
    "id": 11,
-   "position": null,
+   "position": {
+    "ticker": "ORCL",
+    "entry_bar": "2026-11-27",
+    "entry_px_usd": 107.12999725341797,
+    "shares": 0.24885653583034525,
+    "basis_sar": 99.975,
+    "stake_sar": 100.0,
+    "opened_utc": "2026-11-28T03:47:03Z"
+   },
    "realized_pl_sar": -0.42600225593064067,
    "purified_sar": 1.0047050454519466,
    "closed_trades": 5
@@ -288,86 +304,54 @@
  ],
  "pending_orders": [
   {
-   "id": "SELL:BKNG:2026-11-25",
+   "id": "SELL:C:2026-11-27",
    "action": "SELL",
-   "ticker": "BKNG",
-   "signal_bar": "2026-11-25",
-   "rsi": 82.5969,
-   "created_utc": "2026-11-26T04:00:52Z"
+   "ticker": "C",
+   "signal_bar": "2026-11-27",
+   "rsi": 77.257,
+   "created_utc": "2026-11-28T03:47:03Z"
   },
   {
-   "id": "SELL:COF:2026-11-25",
+   "id": "SELL:DAL:2026-11-27",
    "action": "SELL",
-   "ticker": "COF",
-   "signal_bar": "2026-11-25",
-   "rsi": 74.5994,
-   "created_utc": "2026-11-26T04:00:52Z"
+   "ticker": "DAL",
+   "signal_bar": "2026-11-27",
+   "rsi": 70.1132,
+   "created_utc": "2026-11-28T03:47:03Z"
   },
   {
-   "id": "SELL:DE:2026-11-25",
+   "id": "SELL:EMR:2026-11-27",
    "action": "SELL",
-   "ticker": "DE",
-   "signal_bar": "2026-11-25",
-   "rsi": 71.4889,
-   "created_utc": "2026-11-26T04:00:52Z"
+   "ticker": "EMR",
+   "signal_bar": "2026-11-27",
+   "rsi": 86.9672,
+   "created_utc": "2026-11-28T03:47:03Z"
   },
   {
-   "id": "SELL:EXPE:2026-11-25",
+   "id": "SELL:NEM:2026-11-27",
    "action": "SELL",
-   "ticker": "EXPE",
-   "signal_bar": "2026-11-25",
-   "rsi": 72.1675,
-   "created_utc": "2026-11-26T04:00:52Z"
+   "ticker": "NEM",
+   "signal_bar": "2026-11-27",
+   "rsi": 89.3578,
+   "created_utc": "2026-11-28T03:47:03Z"
   },
   {
-   "id": "BUY:AMZN:2026-11-25",
-   "action": "BUY",
-   "ticker": "AMZN",
-   "signal_bar": "2026-11-25",
-   "rsi": 17.6754,
-   "created_utc": "2026-11-26T04:00:52Z"
+   "id": "SELL:STT:2026-11-27",
+   "action": "SELL",
+   "ticker": "STT",
+   "signal_bar": "2026-11-27",
+   "rsi": 85.8395,
+   "created_utc": "2026-11-28T03:47:03Z"
   },
   {
-   "id": "BUY:INTU:2026-11-25",
+   "id": "BUY:VRTX:2026-11-27",
    "action": "BUY",
-   "ticker": "INTU",
-   "signal_bar": "2026-11-25",
-   "rsi": 19.5467,
-   "created_utc": "2026-11-26T04:00:52Z"
-  },
-  {
-   "id": "BUY:ORCL:2026-11-25",
-   "action": "BUY",
-   "ticker": "ORCL",
-   "signal_bar": "2026-11-25",
-   "rsi": 25.3087,
-   "created_utc": "2026-11-26T04:00:52Z"
-  },
-  {
-   "id": "BUY:MU:2026-11-25",
-   "action": "BUY",
-   "ticker": "MU",
-   "signal_bar": "2026-11-25",
-   "rsi": 25.8815,
-   "created_utc": "2026-11-26T04:00:52Z"
-  },
-  {
-   "id": "BUY:GS:2026-11-25",
-   "action": "BUY",
-   "ticker": "GS",
-   "signal_bar": "2026-11-25",
-   "rsi": 26.3884,
-   "created_utc": "2026-11-26T04:00:52Z"
-  },
-  {
-   "id": "BUY:AMAT:2026-11-25",
-   "action": "BUY",
-   "ticker": "AMAT",
-   "signal_bar": "2026-11-25",
-   "rsi": 27.3517,
-   "created_utc": "2026-11-26T04:00:52Z"
+   "ticker": "VRTX",
+   "signal_bar": "2026-11-27",
+   "rsi": 23.6346,
+   "created_utc": "2026-11-28T03:47:03Z"
   }
  ],
- "last_run_utc": "2026-11-26T04:00:52Z",
- "last_decided_bar": "2026-11-25"
+ "last_run_utc": "2026-11-28T03:47:03Z",
+ "last_decided_bar": "2026-11-27"
 }
